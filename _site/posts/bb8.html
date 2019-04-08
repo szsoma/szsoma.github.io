@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>És megszületé' BB8, kinek csupa div a teste &#9642; UIthings Blog</title>
+<meta name="description" content="Akárhányszor láttam egy div-ekkel összehákolt CSS rajzot Codepenen, mindig arra gondoltam, hogy mekkora beteg állat, aki ilyeneket csinál.
+Aztán megcsináltam én is BB8-et…
+
+">
+<meta name="description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+">
+<meta name="keywords" content="fejlodes, animation, frontend, sass, codepen">
+<link rel="canonical" href="http://localhost:4000/posts/bb8">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="És megszületé' BB8, kinek csupa div a teste" />
+<meta name="twitter:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+" />
+<meta name="twitter:image" content="http://localhost:4000" />
+<meta name="author" content="">
+<link rel="author" href="">
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="És megszületé' BB8, kinek csupa div a teste">
+<meta property="og:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+">
+<meta property="og:url" content="http://localhost:4000/posts/bb8">
+<meta property="og:site_name" content="UIthings Blog">
+<link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic">
+<style>
+    html {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    }
+</style>
+<link rel="shortcut icon" type="image/png" href="/assets/img/fav.png"/>
+   <body>
+       <div class="wrapper" id="blep">
+          <header>
+   <div class="menu">
+     <div class="logo">
+      <link rel="canonical" href="https://uithings.hu/cloudflare-ssl-for-github-pages/">
+          <object type="image/svg+xml" data="/assets/img/uithings.svg" class="logosvg">Your browser does not support svg images</object>
+     </div>
+       <ul>
+           <li><a href="/about">rólam</a>
+           <li><a href="/archive">archive</a>
+           <li><a href="/donate">sör</a>
+       </ul>
+   </div>
+   <div class="social">
+     <ul>
+            <a href="https://twitter.com/szs0ma" target="_blank" class="smaller">
+              <span class="icon-twitter"></span>
+            </a>
+       <li>
+            <a href="https://github.com/szsoma" target="_blank" class="smaller">
+              <span class="icon-github"></span>
+            </a>
+       <li>
+            <a href="mailto:soma.szoboszlai@innonic.com" target="_blank">
+              <span class="icon-mail_outline"></span>
+            </a>
+       <li>
+            <a href="/feed.xml" target="_blank">
+                <span class="icon-rss_feed"></span>
+            </a>
+     </ul>
+   </div>
+</header>
+           <style>
+  .progress-bar {
+      background: linear-gradient(to right, #1825e0 var(--scroll), transparent 0);
+      background-repeat: no-repeat;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      z-index: 1;
+  }
+</style>
+<div class="progress-bar"></div>
+<script>
+  var element = document.documentElement,
+    body = document.body,
+    scrollTop = 'scrollTop',
+    scrollHeight = 'scrollHeight',
+    progress = document.querySelector('.progress-bar'),
+    scroll;
+  document.addEventListener('scroll', function() {
+    scroll = (element[scrollTop]||body[scrollTop]) / ((element[scrollHeight]||body[scrollHeight]) - element.clientHeight) * 100;
+    progress.style.setProperty('--scroll', scroll + '%');
+  }); 
+</script>
+<article class="post">
+<style>
+  .bb8 {
+    margin-bottom: 2em;
+  }
+  .bb8::before {
+    background-image: url('https://www.metro.us/sites/default/files/styles/mystyle/public/main/articles/2015/12/18/bb8_4.jpg');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .bb8::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255,100,0,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .bb8-container,
+  .bb8-container::before,
+  .bb8-container::after {
+    height: 25rem;
+  }
+  .bb8-bleed-container,
+  .bb8-bleed-container::before,
+  .bb8-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .bb8-container,
+        .bb8-container::before,
+        .bb8-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="post-title-container
+  bb8 bb8-bleed-container bleed-hero-container
+    ">
+    <!--Post hero image source-->
+   <div class="heading-container hero-heading hero-heading-post">
+     <h1>
+          És megszületé' BB8, kinek csupa div a teste
+     </h1>
+     <div class="post-meta">
+        <span>14/11/2017</span>
+        <span>
+              <a href="/tag/fejlodes">#fejlodes</a>
+              <a href="/tag/animation">#animation</a>
+              <a href="/tag/frontend">#frontend</a>
+              <a href="/tag/sass">#sass</a>
+              <a href="/tag/codepen">#codepen</a>
+        </span>
+        <span class="post-meta-link-nohero">
+    4 perc
+</span>  
+     </div>
+   </div>
+ </div>
+   <p class="lead">Akárhányszor láttam egy div-ekkel összehákolt CSS rajzot Codepenen, mindig arra gondoltam, hogy mekkora beteg állat, aki ilyeneket csinál.<br />
+Aztán megcsináltam én is <strong>BB8</strong>-et…
+<!--break-->
+
+<p>Itt is van BB8, akit PUG és SASS előfeldolgozókkal csináltam Codepenen és nem áll másból, mint sok-sok divből.
+
+<p data-height="700" data-theme-id="30084" data-slug-hash="mqmMRo" data-default-tab="result" data-user="szsoma" data-embed-version="2" data-pen-title="BB8 with sass" class="codepen">See the Pen <a href="https://codepen.io/szsoma/pen/mqmMRo/">BB8 with sass</a> by Soma Szoboszlai (<a href="https://codepen.io/szsoma">@szsoma</a>) on <a href="https://codepen.io">CodePen</a>.
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<p><br />
+<h2 id="a-html-struktúra-puggal-készült">A HTML struktúra PUGgal készült.</h2>
+<p>Ez egy node.js template engine, ami egy igazi HTML kódot generál nekünk. Mindezt egy sokkal kevesebb, egyszerűbben írható kódból.
+
+<p><img src="https://pbs.twimg.com/profile_images/423167899570688000/uyWQMN6L.jpeg" alt="800x400" title="a pug" />
+
+<p>A <a href="https://pugjs.org/api/getting-started.html" target="_blank">kis mopsszal</a> gyorsabban lehet megírni a HTML-t, és a Codepen-en nem is kell törődnünk az installal és a fordítással. Érdemes még tudni róla, hogy korábban JADEként volt ismert, de aztán átnevezték. Van egy fontos dolog, amit be kell tartani vele, mégpedig az, hogy a taboknak nagy szerepük van. Mivel nem kell törődni záró tagekkel, a tabolás jelenti a hierarchiát a kódunkban, csak úgy, mint a SASS kódokban.
+<h3 id="itt-egy-rövid-példa">Itt egy rövid példa:</h3>
+
+<pre><code class="language-HTML">PUG:
+.dot.dot-1
+        .line.line-1
+        .line.line-2
+        .line.line-3
+
+HTML:
+&lt;div class="dot dot-1"&gt;
+        &lt;div class="line line-1"&gt;&lt;/div&gt;
+        &lt;div class="line line-2"&gt;&lt;/div&gt;
+        &lt;div class="line line-3"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Látszik, hogy rengeteg karaktert tudunk spórolni vele. Na de vissza BB8-re!
+
+<p>A lényeg, hogy egy bb8-headre és egy bb8-bodyra van osztva a droid. Ezek a szülők és bennük pedig további divek vannak classokkal. Ahogy azt a fentebbi kód is mutatja. Az alakzatok (pl narancs körök, vonalak, lencse csillogása stb) túllógását úgy oldottam meg, hogy a szülő kapott egy
+
+<pre><code class="language-CSS">overflow: hidden
+</code></pre>
+
+<p>tulajdonságot. Ez a “kilógó” részeket le fogja vágni nekünk. Vagyis így maszkoltam ki. (ha már grafikus vagyok:)
+
+<h2 id="sass">SASS</h2>
+<p>BB8 méretét is dinamikusan szerettem volna megoldani, ezért egy változóban megadtam az alap méretet, ami 220px:
+
+<pre><code class="language-CSS">$d: 220px //bb8s size
+</code></pre>
+
+<p>Ezután minden kis alkatrészének méretét ezzel a $d értékkel fejeztem ki. Pl:
+
+<pre><code class="language-CSS">.body-shadow
+	width: $d
+	height: $d
+.circle
+  width: $d*.6
+</code></pre>
+
+<p>Ha ezt a $d változót módosítjuk, akkor nem fog szétesni a droid a nagyítás miatt, mert az arányok megmaradnak. Ez tök jó, mert később majd tovább dolgozhatok a reszponzivitáson. A CSS ilyen hiányosságának kiküszöbölésére <a href="http://sass-lang.com/" target="_blank">SASS-t</a> használtam. Egy bonyolultabb oldalnál érdemes elgondolkozni rajta, ugyanis rengeteg lehetőséget ad nekünk a CSS mellett:
+
+<ol>
+ <li>Változók használata
+ <li>Egyszerű aritmetikai műveletek
+ <li>Ciklusok használata
+ <li>Beépített függvények használata
+ <li>Saját függvények írása
+ <li>Beágyazhatóság az átláthatóbb kódért
+ <li>if-else és még sok más
+</ol>
+
+<p>Ebben a példában azt láthatjátok, hogy hogyan oldottam meg a korábbi szerencsekerekes penemben a színezést SASS segítségével. <br />
+<a href="https://codepen.io/szsoma/pen/bYEXGx" target="_blank">Pen itt!!</a> 
+<br />
+<a href="https://szsoma.github.io/posts/luckywheel">Blog post itt!</a>
+
+<p><img src="https://soma.shoprenter.hu/custom/soma/image/data/sass-variables.png" alt="800x600" title="sass variables" />
+
+<h2 id="de-most-akkor-sass-vagy-scss">De most akkor SASS vagy SCSS?</h2>
+<p>Amikor SASSról beszélünk akkor nem mindig tiszta mit is használunk. Amikor azt mondjuk, hogy “Itt egy SASS mixin” akkor azt két formában is leírhatjuk:
+<ol>
+ <li><strong>SASS</strong>, ami egy “indented” (beágyazott vagy ilyesmi) szintaktika. Ezt használtam BB8-hez, mert gyors, nem kell írogatni a zárójeleket.
+ <li><strong>SCSS</strong>, ami az előfeldolgozónak egy CSS szerű szintaktikája, csak kibővítve a plusz funkciókkal. Ezt használtam a Lucky Wheel penben.
+</ol>
+
+<p>Okés, erről majd kicsit később csinálok egy postot. (Annyi minden van már a fejemben, hogy miről kellene írni, hogy kezdek elveszni. 😥)
+
+<h2 id="konklúzió">Konklúzió</h2>
+<p>Egy ilyen kis hülyeségnek a megalkotása érdemben lehet, hogy nem fog hozzásegíteni egy menő protfólióhoz, referenciamunkához vagy épp álláshoz. Viszont nagyon vicces, és tök menő, hogy miket meg lehet oldani CSSsel. Ennek a pennek a célja a pozícionálás gyakorlása volt. Szerintem egy ilyen feladattal jól el lehet mélyíteni a tudást és a végére tuti kikupálódik az ember belőle. 😎
+
+</article>
+<div class="share-btn">
+    <span> Köszi, hogy elolvastad. Oszd meg a barátaiddal is!</span> <br>
+    <a href="https://twitter.com/intent/tweet?text=És megszületé' BB8, kinek csupa div a teste&url=http://localhost:4000/posts/bb8&via=szs0ma&related=szs0ma" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/posts/bb8" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://plus.google.com/share?url=http://localhost:4000/posts/bb8" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+</div>
+<aside class="related">
+<h2>Related posts</h2>
+<ul class="related-posts">
+   <li>
+    <a href="/posts/box-shadow">
+        <span>Mi a franc az a spread?</span>
+        <small>23/11</small>
+    </a>
+   <li>
+    <a href="/posts/luckywheel">
+        <span>Spin 2 Win!</span>
+        <small>04/11</small>
+    </a>
+   <li>
+    <a href="/posts/john-maeda">
+        <span>“Ha túl akarsz élni, jobb ha megtanulsz kódolni”</span>
+        <small>27/09</small>
+    </a>
+</aside>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+   (function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = 'https://https-szsoma-github-io.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+           <footer>
+    <span>© UIthings.hu - UI, UX, egy csöpp frontend és
+</span>
+    <span>Szoboszlai Soma</span>
+</footer>
+       </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-107802094-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>SVG thumbnail bővítmény Windowsra &#9642; UIthings Blog</title>
+<meta name="description" content="Ami MacOS alatt egyértelmű az Windowson már annyira nem. Ilyen idegesítő dolog, hogy az SVG képeknek csak ikonja van a file kezelőben, nem pedig magát a képet jeleníti meg thumbnailként. Erre kínál megoldást ez a kis Explorer bővítmény → Továbbá pár szó az SVG ikon rendszerünkről.
+
+">
+<meta name="description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+">
+<meta name="keywords" content="news, tech, ui">
+<link rel="canonical" href="http://localhost:4000/posts/svg-preview">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="SVG thumbnail bővítmény Windowsra" />
+<meta name="twitter:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+" />
+<meta name="twitter:image" content="http://localhost:4000" />
+<meta name="author" content="">
+<link rel="author" href="">
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SVG thumbnail bővítmény Windowsra">
+<meta property="og:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+">
+<meta property="og:url" content="http://localhost:4000/posts/svg-preview">
+<meta property="og:site_name" content="UIthings Blog">
+<link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic">
+<style>
+    html {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    }
+</style>
+<link rel="shortcut icon" type="image/png" href="/assets/img/fav.png"/>
+   <body>
+       <div class="wrapper" id="blep">
+          <header>
+   <div class="menu">
+     <div class="logo">
+      <link rel="canonical" href="https://uithings.hu/cloudflare-ssl-for-github-pages/">
+          <object type="image/svg+xml" data="/assets/img/uithings.svg" class="logosvg">Your browser does not support svg images</object>
+     </div>
+       <ul>
+           <li><a href="/about">rólam</a>
+           <li><a href="/archive">archive</a>
+           <li><a href="/donate">sör</a>
+       </ul>
+   </div>
+   <div class="social">
+     <ul>
+            <a href="https://twitter.com/szs0ma" target="_blank" class="smaller">
+              <span class="icon-twitter"></span>
+            </a>
+       <li>
+            <a href="https://github.com/szsoma" target="_blank" class="smaller">
+              <span class="icon-github"></span>
+            </a>
+       <li>
+            <a href="mailto:soma.szoboszlai@innonic.com" target="_blank">
+              <span class="icon-mail_outline"></span>
+            </a>
+       <li>
+            <a href="/feed.xml" target="_blank">
+                <span class="icon-rss_feed"></span>
+            </a>
+     </ul>
+   </div>
+</header>
+           <style>
+  .progress-bar {
+      background: linear-gradient(to right, #1825e0 var(--scroll), transparent 0);
+      background-repeat: no-repeat;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      z-index: 1;
+  }
+</style>
+<div class="progress-bar"></div>
+<script>
+  var element = document.documentElement,
+    body = document.body,
+    scrollTop = 'scrollTop',
+    scrollHeight = 'scrollHeight',
+    progress = document.querySelector('.progress-bar'),
+    scroll;
+  document.addEventListener('scroll', function() {
+    scroll = (element[scrollTop]||body[scrollTop]) / ((element[scrollHeight]||body[scrollHeight]) - element.clientHeight) * 100;
+    progress.style.setProperty('--scroll', scroll + '%');
+  }); 
+</script>
+<article class="post">
+<style>
+  .svg-preview {
+    margin-bottom: 2em;
+  }
+  .svg-preview::before {
+    background-image: url('https://images.unsplash.com/photo-1503525148566-ef5c2b9c93bd?auto=format&fit=crop&w=3900&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .svg-preview::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(100,255,0,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .svg-preview-container,
+  .svg-preview-container::before,
+  .svg-preview-container::after {
+    height: 25rem;
+  }
+  .svg-preview-bleed-container,
+  .svg-preview-bleed-container::before,
+  .svg-preview-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .svg-preview-container,
+        .svg-preview-container::before,
+        .svg-preview-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="post-title-container
+  svg-preview svg-preview-bleed-container bleed-hero-container
+    ">
+    <!--Post hero image source-->
+   <div class="heading-container hero-heading hero-heading-post">
+     <h1>
+          SVG thumbnail bővítmény Windowsra
+     </h1>
+     <div class="post-meta">
+        <span>07/12/2017</span>
+        <span>
+              <a href="/tag/news">#news</a>
+              <a href="/tag/tech">#tech</a>
+              <a href="/tag/ui">#ui</a>
+        </span>
+        <span class="post-meta-link-nohero">
+    1 perc
+  </span>  
+     </div>
+   </div>
+ </div>
+   <p class="lead">Ami MacOS alatt egyértelmű az Windowson már annyira nem. Ilyen idegesítő dolog, hogy az SVG képeknek csak ikonja van a file kezelőben, nem pedig magát a képet jeleníti meg thumbnailként. Erre kínál megoldást ez a kis Explorer bővítmény → Továbbá pár szó az SVG ikon rendszerünkről.
+<!--break-->
+
+<h2 id="neem-az-az-explorer">Neem az az Explorer…</h2>
+<p>Aki sokat dolgozik SVG képekkel, az nagyon tudja szidni a Windowst, hogy miért nem lehet thumbnailekben megmutatni milyen kép van az SVG fileban. Egyszerűen csak egy ikont látunk:
+
+<p><img src="https://soma.shoprenter.hu/custom/soma/image/data/2017/svg-noextension.png" alt="800x400" title="no svg preview" />
+
+<p>Mivel már SVG ikonokat használunk a Shoprenteres boltokban, elég szép darabszámra duzzadt az ikon mappánk. Hogy számosítsuk is:
+<ul>
+ <li>225 SVG ikon, ami
+ <li>356Kb
+</ul>
+
+<p>Az ikonok tematikusan vannak mappákba rendezve. A mappákban pedig sorszámozva vannak. Ha készül egy új design, akkor a grafikus elkészíti az SVG ikont, elnevezi ahogy kell és feltölti a többihez. Így használjuk a látványterveinkben is őket. Ezután a front-endes már Zeplin segítségével ki tudja menteni a látványtervből vagy akár téma és sorszám alapján a szerveren is megkeresheti. Az ikonokból Fontelloval font készül és így lesz használva az új webshopban.
+
+<h2 id="az-életmentő">Az életmentő</h2>
+<p>Miután megelégeltem, hogy állandóan meg kellett nyitni böngészőben az ikonokat, ha látni akartam őket, elkezdtem megoldások után nézelődni. <a href="https://svgextension.codeplex.com/" target="_blank">Megtaláltam ezt a bővítményt Windows Explorerhez!</a>
+Egyszerűen csak telepíteni kell és a ha a nézetet nagyra állítjuk bejönnek a thumbnailek:
+
+<p><img src="https://soma.shoprenter.hu/custom/soma/image/data/2017/svg-extension.png" alt="800x400" title="liquid mukodese" />
+
+<p>Hát nem csodálatos?! Imádom… Használjátok ti is egészséggel. Keep on Hacking! 👨‍💻
+
+</article>
+<div class="share-btn">
+    <span> Köszi, hogy elolvastad. Oszd meg a barátaiddal is!</span> <br>
+    <a href="https://twitter.com/intent/tweet?text=SVG thumbnail bővítmény Windowsra&url=http://localhost:4000/posts/svg-preview&via=szs0ma&related=szs0ma" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/posts/svg-preview" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://plus.google.com/share?url=http://localhost:4000/posts/svg-preview" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+</div>
+<aside class="related">
+<h2>Related posts</h2>
+<ul class="related-posts">
+   <li>
+    <a href="/posts/illusztracio">
+        <span>iPad-et vettem</span>
+        <small>17/09</small>
+    </a>
+   <li>
+    <a href="/posts/podcaster-felmeres">
+        <span>Podcaster Felmérés</span>
+        <small>07/09</small>
+    </a>
+   <li>
+    <a href="/posts/podcast-update-1">
+        <span>Esti Meeting update</span>
+        <small>07/06</small>
+    </a>
+   <li>
+    <a href="/posts/tudasmegosztas">
+        <span>Tudásmegosztás for the win!</span>
+        <small>18/11</small>
+    </a>
+</aside>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+   (function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = 'https://https-szsoma-github-io.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+           <footer>
+    <span>© UIthings.hu - UI, UX, egy csöpp frontend és
+</span>
+    <span>Szoboszlai Soma</span>
+</footer>
+       </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-107802094-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    

@@ -1,0 +1,4 @@
+---
+slug: fejlodes
+name: Fejlődés
+---

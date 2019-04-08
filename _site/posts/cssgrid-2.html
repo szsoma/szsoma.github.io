@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>CSS Grid Layout Part2 - Alapok &#9642; UIthings Blog</title>
+<meta name="description" content="A bevezető törióra után gyerünk a gridbe! 😎
+Ebben a postban megmutatom az alapokat egy példán át és még egy layout challenge is becsúszik.
+
+">
+<meta name="description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+">
+<meta name="keywords" content="frontend, ui, design, grid">
+<link rel="canonical" href="http://localhost:4000/posts/cssgrid-2">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="CSS Grid Layout Part2 - Alapok" />
+<meta name="twitter:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+" />
+<meta name="twitter:image" content="http://localhost:4000" />
+<meta name="author" content="">
+<link rel="author" href="">
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS Grid Layout Part2 - Alapok">
+<meta property="og:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+">
+<meta property="og:url" content="http://localhost:4000/posts/cssgrid-2">
+<meta property="og:site_name" content="UIthings Blog">
+<link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic">
+<style>
+    html {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    }
+</style>
+<link rel="shortcut icon" type="image/png" href="/assets/img/fav.png"/>
+   <body>
+       <div class="wrapper" id="blep">
+          <header>
+   <div class="menu">
+     <div class="logo">
+      <link rel="canonical" href="https://uithings.hu/cloudflare-ssl-for-github-pages/">
+          <object type="image/svg+xml" data="/assets/img/uithings.svg" class="logosvg">Your browser does not support svg images</object>
+     </div>
+       <ul>
+           <li><a href="/about">rólam</a>
+           <li><a href="/archive">archive</a>
+           <li><a href="/donate">sör</a>
+       </ul>
+   </div>
+   <div class="social">
+     <ul>
+            <a href="https://twitter.com/szs0ma" target="_blank" class="smaller">
+              <span class="icon-twitter"></span>
+            </a>
+       <li>
+            <a href="https://github.com/szsoma" target="_blank" class="smaller">
+              <span class="icon-github"></span>
+            </a>
+       <li>
+            <a href="mailto:soma.szoboszlai@innonic.com" target="_blank">
+              <span class="icon-mail_outline"></span>
+            </a>
+       <li>
+            <a href="/feed.xml" target="_blank">
+                <span class="icon-rss_feed"></span>
+            </a>
+     </ul>
+   </div>
+</header>
+           <style>
+  .progress-bar {
+      background: linear-gradient(to right, #1825e0 var(--scroll), transparent 0);
+      background-repeat: no-repeat;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      z-index: 1;
+  }
+</style>
+<div class="progress-bar"></div>
+<script>
+  var element = document.documentElement,
+    body = document.body,
+    scrollTop = 'scrollTop',
+    scrollHeight = 'scrollHeight',
+    progress = document.querySelector('.progress-bar'),
+    scroll;
+  document.addEventListener('scroll', function() {
+    scroll = (element[scrollTop]||body[scrollTop]) / ((element[scrollHeight]||body[scrollHeight]) - element.clientHeight) * 100;
+    progress.style.setProperty('--scroll', scroll + '%');
+  }); 
+</script>
+<article class="post">
+<style>
+  .cssgrid-2 {
+    margin-bottom: 2em;
+  }
+  .cssgrid-2::before {
+    background-image: url('https://images.unsplash.com/photo-1507914997623-5b75b37d9cad?auto=format&fit=crop&w=1052&q=80');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .cssgrid-2::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255,100,0,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .cssgrid-2-container,
+  .cssgrid-2-container::before,
+  .cssgrid-2-container::after {
+    height: 25rem;
+  }
+  .cssgrid-2-bleed-container,
+  .cssgrid-2-bleed-container::before,
+  .cssgrid-2-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .cssgrid-2-container,
+        .cssgrid-2-container::before,
+        .cssgrid-2-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="post-title-container
+  cssgrid-2 cssgrid-2-bleed-container bleed-hero-container
+    ">
+    <!--Post hero image source-->
+   <div class="heading-container hero-heading hero-heading-post">
+     <h1>
+          CSS Grid Layout Part2 - Alapok
+     </h1>
+     <div class="post-meta">
+        <span>29/12/2017</span>
+        <span>
+              <a href="/tag/frontend">#frontend</a>
+              <a href="/tag/ui">#ui</a>
+              <a href="/tag/design">#design</a>
+              <a href="/tag/grid">#grid</a>
+        </span>
+        <span class="post-meta-link-nohero">
+    8 perc
+</span>  
+     </div>
+   </div>
+ </div>
+   <p class="lead">A bevezető törióra után gyerünk a gridbe! 😎
+Ebben a postban megmutatom az alapokat egy példán át és még egy layout challenge is becsúszik.
+<!--break-->
+
+<p>CSS Grid Layout nem más, mint egy technológia, ami segít, hogy a weboldalunk vagy appunk elemeit egyszerűen el tudjunk helyezni 2 dimenzióban a rendelkezésünkre álló területen.
+
+<p>Akárcsak a táblázatoknál a grid (vagy rácsos) elrendezés is lehetővé teszi, hogy az elemeket oszlopokba és sorokba rendezzük. Azonban ennél sokkal többről van szó.
+
+<h2 id="mivel-ad-többet-nekünk">Mivel ad többet nekünk?</h2>
+<ol>
+ <li>Egy sokkal rendszerezettebb kódot kapunk
+ <li>Felhasználóbarátabb felfogás: könnyebb elképzelni a struktúrát nekünk designereknek is
+ <li>Lehetőségünk van gyorsan és fájdalommentesen új kontentet/blokkokat beilleszteni
+ <li>Könnyebb átrendezni a tartalmunkat: pl. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/order" target="_blank">order</a> segítségével
+ <li>Időt és ideget spórol
+</ol>
+
+<p><a href="https://codepen.io/szsoma/pen/ZvXOqO" target="_blank">Belinkelek egy pent</a>, ahol kipróbálhatjátok a péda kódját!
+
+<p>Ahhoz, hogy elkezdjünk egy grid layoutot felépíteni nem kell semmi különlegeset tennünk. Főleg nem a HTML kódban:
+
+<pre><code class="language-HTML">&lt;div class="content"&gt;
+    &lt;div class="one"&gt;1&lt;/div&gt;
+    &lt;div class="two"&gt;2&lt;/div&gt;
+    &lt;div class="three"&gt;3&lt;/div&gt;
+    &lt;div class="four"&gt;4&lt;/div&gt;
+    &lt;div class="five"&gt;5&lt;/div&gt;
+    &lt;div class="six"&gt;6&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Hozzá pedig a pár sor CSS:
+
+<pre><code class="language-CSS">.content {
+    display: grid;
+    width: 960px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-gap: 20px;
+    margin: 0 auto;
+}
+
+/* hogy jobban láthatóak legyenek a boxok: */
+.content div {
+    background: tomato;
+    padding: 30px;
+}
+
+.content div:nth-child(even) {
+    background: skyblue;
+}
+</code></pre>
+
+<p>Elég egy display: grid sor a CSSben. A feladatunk ez után már csak a méretezés és az elhelyezkedések beállítása.
+
+<h2 id="fraction">fraction</h2>
+<p>A grid-template-[columns, rows] segítségével adhatjuk meg, hogy mekkora legyen a rácsunk. Az oszlop és sor számokhoz egy új flexibilis mértékegységet is kaptunk, mégpedig a fraction-t (fr). <br />
+A jelentése nagyjából annyi, hogy a content méretünket - szélesség vagy magasság - milyen arányokban akarjuk törni. Akár százalékként is tekinthetünk rá. Jelen esetben oszlopokból 3db van, ami azt jelenti, hogy 1fr pontosan 33.3% lesz. Ha kicseréljük az fr-eket százalékokra ugyanazt az eredményt fogjuk kapni.
+
+<pre><code class="language-CSS">grid-template-columns: 33.3% 33.3% 33.3%;
+</code></pre>
+<p>De persze más mértékegységeket is használhatunk. <br />
+Életünk megkönnyítésére pedig használjunk repeat() függvényt, így nem kell egymás után beírni az oszlopok méreteit.
+
+<pre><code class="language-CSS">grid-template-columns: repeat(3, 1fr);
+</code></pre>
+
+<p>A soroknál is hasonló a helyzet. Összesen 3 fraction van, abból az első sor 1-et kap a második sor 2-őt. <br />
+Abban az esetben, ha az utolsó sorba már nem marad content, a meghatározott méretű helye fenn lesz tartva, de üres lesz.
+
+<p>Mivel nekünk most jobb, ha a sorok dinamikusak, a Codepenes példában odabíztam a Gridre:
+
+<pre><code class="language-CSS">grid-auto-rows: minmax(90px, auto);
+</code></pre>
+
+<p>A minmax() CSS függvény segít nekünk a kívánt sormagasság beállításában. Az első értéke a minimum-, a második pedig a maximális magasság. Jelen esetben ez auto, magyarul a content határozza meg. Viszont ha nincs benne, akkor a minimum érték lesz az alapértelmezett.
+
+<p>A Grid tehát dinamikusan is fel tudja tölteni a sorokat és az oszlopokat. Ezt a grid-auto-flow: [column, row] segítségével tudjuk kontrollálni. Az elhelyezési módszereket majd a harmadik postban tárgyaljuk ki!
+
+<p>Megadhatunk grid-gap-eket is, amikkel el tudjuk szeparálni az egyes elemeket. Külön is meg lehet adni oszlopokra, sorokra. Az első érték a sorok a második az oszlopok közötti térközre fog vonatkozni. A mértékegységeket itt is meg tudjuk válogatni!
+
+<ul>
+ <li>px
+ <li>em, rem
+ <li>vmin, vmax
+ <li>cm
+ <li>%
+</ul>
+
+<h2 id="pozícionáljunk">Pozícionáljunk!</h2>
+<p>A Grid Layout előnye talán itt jön ki a legjobban. Annyi lehetőségünk van a boxokkal, mint a Legóban… Kb… 🙄 <br />
+Elhelyezhetjük a dolgainkat a html-ben meghatározott sorrendben, de felállíthatunk egy újat is. Sorszámozhatjuk a diveket, hogy később csak át kelljen írni pár sorszámot az új elrendezéshez. Ha jól írtuk meg a kódot nem fog összekuszálódni.
+De ha vizuálisak akarunk maradni, akkor használhatunk grid-areas-t is. Erről később!
+
+<p>Egy fontos szabály van, mégpedig az, hogy itt kicsit máshogyan kell oszlopokban és sorokban gondolkodni. Ha Photoshopban 12 oszlopos elrendezést csinálunk - a térközöktől eltekintünk most - a guideokból 13 db-ot kapunk. 2 guide közzé esik egy oszlop. Ezt kell észben tartani akkor is, amikor CSS-sel pakolgatjuk az oldalunk elemeit.
+
+<p>Csináltam egy ábrát is, hogy könnyebb legyen megérteni:
+<img src="https://soma.shoprenter.hu/custom/soma/image/data/2018/01-grid-vonalak.png" alt="800x400" title="grid-vonalak" />
+
+<p>Ennek alapján ha az első divet egy menünek szántuk, akkor az felül teljes szélességben legyen jelen. Az első vonaltól (guidetól) a negyedikig.
+Így fog kinézni kóddal:
+
+<pre><code class="language-CSS">.one {
+    grid-column: 1 / 4;
+    grid-row: 1;
+}
+</code></pre>
+
+<p>Ahogy egy box helyét beállítottuk az összes többi hozzá alakítja majd az alapértelmezett helyét.
+
+<p>Én most egy ilyen elrendezést készítettem a példánkhoz:
+
+<pre><code class="language-CSS">.one {
+  grid-column: 1 / 4;
+  grid-row: 1;
+}
+
+.two {
+  grid-column: 3 / 4;
+  grid-row: 2 / 4;
+}
+
+.three {
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
+}
+
+.four {
+  grid-column: 1 / 3;
+  grid-row: 4 / 6;
+}
+
+.six {
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+}
+
+.five {
+  grid-column: 1 / 4;
+  grid-row: 6 / 7;
+}
+</code></pre>
+
+<p>Mint látjátok nem muszáj a HTMLben felállított sorrendet követni, nyugodtan lehet Legózni a boxokkal.
+
+<h2 id="nézzük-milyen-lett-a-grid">Nézzük milyen lett a grid!</h2>
+<p>A képen az látszanak a sorok és oszlopok. Illetve az is, hogy 1-1 boxnak mekkora a területe:
+
+<p><img src="https://soma.shoprenter.hu/custom/soma/image/data/2018/01-grid-devtools.png" alt="800x400" title="grid-devtools" />
+
+<h2 id="grid-template-areas-dope">grid-template-areas: dope!</h2>
+<p>Hmmm, a kedvenc új funkcióm! <br />
+Gridben megadhatunk az egyes elemeinknek (boxoknak) egy saját nevet.
+
+<pre><code class="language-CSS">.one {
+  grid-area: nav;
+}
+
+.two {
+  grid-area: about;
+}
+stb.
+</code></pre>
+<p>A layoutot nem kell kiszámolni, hogy melyik box hanyadik guideig tartson. Elég a (itt) .content nevű szülőhöz megadni grid-template-areas után a layoutot! Vizuálisan, az előbb definiált nevekkel! Aposztrófók közzé, szóközzel elválasztva beírjuk, hogy az adott sorban milyen contentünk van. Mennyire király már! <br />
+Nyilván ez nem mindig praktikus, de a lehetőségünk meg van a kísérletezésre.
+
+<pre><code class="language-CSS">  grid-template-areas:
+    "nav nav nav nav"
+    "post1 post1 about about"
+    "post1 post1 about about"
+    "post2 post2 ad ad"
+    "post2 post2 empty empty"
+    "footer footer footer footer"
+    ;
+</code></pre>
+
+<p>Mit csináljunk az üres részekkel? Ide mehet pár “empty” és ennyi. Ez csak egy kis kapargatása a grid-areas-nak, és amúgy magának a Grid Layoutnak. Később beljebb fúrjuk magunkat!
+
+<h2>?…</h2>
+<p>Ennyi bevezető után most azon agyalok, hogy akár wireframek készítéséhez is használhatnánk a Grid Layoutot? Vajon mennyire lenne nehezebb, mint egy Justinmind, Axure, Sketch vagy… Urambocsáss PowerPointtal? 🤦 <br />
+Nyilván kicsit nehezebb lenne, de a front-end fejlesztő felhasználhatná-e valamennyire a UX-es által készített vázat az éles oldalhoz? Lehetne ezzel optimalizálni kicsit? …vagy inkább üljek vissza Ylands-et játszani? 😁
+
+<h2 id="challenge">Challenge</h2>
+<p>Mint az <a href="http://uithings.hu/posts/cssgrid" target="_blank">előző postban</a> írtam Szegedi Istvántól kaptunk egy apró layout kihívást. Ami nyilván egy front-endesnek nem igazán jelent kihívást, de nekem tök kézenfekvő volt, hogy azonnal meg akarom csinálni Grid Layouttal gyakorlás végett! <br />
+A megoldást <a href="http://uithings.hu/grid-challenge/" target="_blank">itt</a> láthatjátok. <br />
+A wireframet pedig <a href="https://raw.githubusercontent.com/pisty/layout-challenge/master/layoutideas-6-1.jpg" target="_blank">itt</a>. Ha van kedvetek hozzá készítsétek el és linkeljétek be kommentbe!
+
+<p>Jó ismerkedést a Grid Layouttal, legközelebb találkozunk!
+
+<p><sub>Borító: Unsplash</sub>
+
+</article>
+<div class="share-btn">
+    <span> Köszi, hogy elolvastad. Oszd meg a barátaiddal is!</span> <br>
+    <a href="https://twitter.com/intent/tweet?text=CSS Grid Layout Part2 - Alapok&url=http://localhost:4000/posts/cssgrid-2&via=szs0ma&related=szs0ma" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/posts/cssgrid-2" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://plus.google.com/share?url=http://localhost:4000/posts/cssgrid-2" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+</div>
+<aside class="related">
+<h2>Related posts</h2>
+<ul class="related-posts">
+   <li>
+    <a href="/posts/cssgrid">
+        <span>CSS Grid Layout Part1 - Kezdetek</span>
+        <small>26/12</small>
+    </a>
+   <li>
+    <a href="/posts/font-weights">
+        <span>Nem szeretem már a vékonyat</span>
+        <small>03/12</small>
+    </a>
+   <li>
+    <a href="/posts/luckywheel-popup">
+        <span>Éles a szerencsekerekünk!</span>
+        <small>26/11</small>
+    </a>
+   <li>
+    <a href="/posts/box-shadow">
+        <span>Mi a franc az a spread?</span>
+        <small>23/11</small>
+    </a>
+</aside>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+   (function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = 'https://https-szsoma-github-io.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+           <footer>
+    <span>© UIthings.hu - UI, UX, egy csöpp frontend és
+</span>
+    <span>Szoboszlai Soma</span>
+</footer>
+       </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-107802094-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    

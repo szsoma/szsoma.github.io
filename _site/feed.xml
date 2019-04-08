@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>UIthings Blog</title>
+    <description>© UIthings.hu - UI, UX, egy csöpp frontend és
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 08 Apr 2019 08:47:21 +0200</pubDate>
+    <lastBuildDate>Mon, 08 Apr 2019 08:47:21 +0200</lastBuildDate>
+    <generator>Jekyll v3.7.3</generator>
+    
+      <item>
+        <title>Termékfejlesztési próbálkozások</title>
+        <description>&lt;p class=&quot;lead&quot;&gt;Az elmúlt időszakban többször megpóbáltunk újabb folyamatokat kipróbálni a termékfejlesztésben. Ezen kívül folyamatosan keresem én is az új ötleteket. Most valami mix van a fejemben Design Thinking Agile és Leanből.&lt;/p&gt;
+&lt;!--break--&gt;
+
+&lt;h2 id=&quot;előzmények&quot;&gt;Előzmények&lt;/h2&gt;
+&lt;p&gt;Az Amuse konferencián beszélgettünk PM-ekkel, designerekkel arról, hogy mik a folyamataik, de nagyjából ugyanaz jött le, mint ami a Youtube videókból, cikkekből:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Mindenki csak keresi az utat, cikkezik róla, hogy épp mit próbálnak ki. Implementálnak új keretrendszereket, de nincs tankönyvi megoldás.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Minden szervezetben, minden csapatban más és más termékfejlesztési folyamat működik hatékonyan. Ezért nincs itt egyetértés és egy bevált módszer, de ez valószínűleg így is van jól. &lt;br /&gt;
+Nagyjából alakulóban van a fejemben a következő folyamat, amit ki lehetne próbálni. Ez erősen elméleti és nem volt tesztelve. Össze gyűjtöttem a módszertanokat és megpróbáltam egybe gyúrni, így jött létre valami &lt;em&gt;dual track&lt;/em&gt; szerű folyamat.&lt;/p&gt;
+
+&lt;h2 id=&quot;részei&quot;&gt;Részei&lt;/h2&gt;
+
+&lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;../assets/img/DTAL.svg&quot;&gt;
+  &lt;img src=&quot;../assets/img/DTAL.svg&quot; alt=&quot;Design Thinking, Lean UX and Agile UX&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;design-thinking&quot;&gt;Design Thinking&lt;/h3&gt;
+&lt;p&gt;Először is az alapja a Design Thinking. Ezt nagyon jól leírta az &lt;a href=&quot;https://www.interaction-design.org/literature/topics/design-thinking&quot; target=&quot;_blank&quot;&gt;Interaction Design Foundation&lt;/a&gt;, kurzusuk is van belőle. Biztosítja az “Out of the box” gondolkodásmódot és hogy új, menő ötleteket generáljunk. Ez egy nagyon klassz módszertan, viszont erősen elméleti szintű. Nem ad semmi kézzel foghatót, csupán egy felfogást.
+Példának okáért itt egy videó, ami tök jól személelteti ezt :)&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/QlLEhCEOOSE&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;A Design Thinking egy megvalósítási módja a Design Sprint, ami arra sarkall minket, hogy viszonylag gyorsan viszonylag sok új ötletet és megoldást generáljunk egy adott problémára. Viszont a 4-5 napos design sprintekből azért ne vonjunk le messzemenő következtetéseket egy termék további jövőjéről. Ennyi idő alatt nem lehet megváltani a világot, ezt arra találták ki, hogy egy átfogó képet kapjunk egy termékről. Egy fontosabb funkcióról elkészítünk egy prototípust, amit tesztelünk és nagyjából ennyi fér bele. A Design Sprintet 🏃 nagyon felkapta a szakma, divatos lett és lehet, hogy túl sokat várunk tőle! Kezeljük fenntartásokkal.&lt;/p&gt;
+
+&lt;h3 id=&quot;lean-ux&quot;&gt;Lean UX&lt;/h3&gt;
+&lt;p&gt;A Lean UX természetesen a Erik Ries Lean szemléletéből nőtte ki magát a UX-es szakmában és főleg Jeff Gothelf nevéhez kötjük. Alapelve, hogy kicsit háttérbe szorítjuk a szállítandó UX munkákat és jobban koncentrálunk a probléma megértésére, megoldás elkészítésére és tesztelésére.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Lean UX is where prototyping shines. As with the initial sketches, focusing the prototype on critical components of the experience is essential.” – Jeff Gothelf, Smashing Magazine&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://assets.justinmind.com/blog/wp-content/uploads/2018/07/think-make-check-loop-in-lean-ux-design.png&quot; alt=&quot;800x400&quot; title=&quot;Lean UX&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Az agyalós szakasz ezekből a lépésekből állhat:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Kutatás&lt;/li&gt;
+  &lt;li&gt;Ötletelés&lt;/li&gt;
+  &lt;li&gt;Mentális modellek kialakítása&lt;/li&gt;
+  &lt;li&gt;Vázlatok&lt;/li&gt;
+  &lt;li&gt;Storyboardok&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Fontos részét képezik a hipotézisek és ezek tesztelése. Ebből aztán elkészülhet az MVP (Minimum Viable Product), ami akár csak egy landing page is lehet. &lt;a href=&quot;https://www.justinmind.com/blog/complete-guide-to-lean-ux/&quot; target=&quot;_blank&quot;&gt;További infó itt!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;agile-ux&quot;&gt;Agile UX&lt;/h3&gt;
+&lt;p&gt;A két megközelítés kicsit más eredményt szül: az Agile UX egy sokkal csiszoltabb terméket szállít, a Lean UX inkább több csiszolatlan “gyémántot”. Végül mindkét megoldás eredményezheti ugyanazt a jó terméket, csak különböző utakon és iterációkon át eljutva. Agile UX-ben a fejlesztők és a designerek szorosan együtt dolgoznak (egymás öldöklése nélkül…tényleg!). Így a termékfejlesztés szempontjából egy nagyon dinamikus és hatékony munkafolyamatot alakíthatunk ki. Design szempontból bevonhatjuk a fejlesztőket is a tervezés folyamatába. Ahogy egyre több időt töltünk el együtt a fejlesztőkkel, mi designerek is átlátjuk majd a fejlesztési korlátozásokat és fordítva. A fejlesztők is találkozhatnak egy-egy userrel, user problémával a kutatás fázisában.&lt;/p&gt;
+
+&lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;../assets/img/dual-track.svg&quot;&gt;
+  &lt;img src=&quot;../assets/img/dual-track.svg&quot; alt=&quot;Dual track Product development&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;track-1-discovery-&quot;&gt;Track 1: Discovery 🤔&lt;/h2&gt;
+&lt;p&gt;Alapesetben onnan indulnék ki, hogy a termékünkhöz megvannak az alap UX eszközeink: perszónák, user és customer journey-k, value proposition, stb. stb. Optimális esetben a Discovery fázis kb 2 héttel is a Delivery előtt jár.&lt;/p&gt;
+
+&lt;p&gt;A termékfejlesztői csapat állhat PO-ból, PM-ből, CMO-ból, UX-esből, CEO-ból stb. Nagyon klassz, ha a CTO és egyéb fejlesztők is be tudnak csatlakozni néha. Eddigi munkánkat mindig nagyon jó feedbackekkel és igényekkel támogatták az ügyfélszolgálatosok is, hiszen ők azok, akik rendszeresen kapcsolatban vannak az ügyfelekkel.&lt;br /&gt;
+Talán a legfontosabb, amit ki kell emelni minden előtt az a kommunikáció. Ezt nekem is még tanulni kell, konfrontálódni, megosztani az ötleteket és figyelmesen meghallgatni a többiek ötletét is. Közösen agyalni és igen, &lt;strong&gt;néha az egónkat elnyomva haladni tovább.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Discovery Backlog, Research&lt;/strong&gt;&lt;br /&gt;
+Az első út a kutatás, nálam ez egy csendes, agyalós és hosszú folyamat. Nem mindig lehet erőltetni az ötleteket. Olyan mint a művészet, nem sajtolhatod ki magadból, hogy &lt;em&gt;“márpedig 4 új feature ötletet hozok holnap”&lt;/em&gt; …majd jön magától. Néha este, néha sörözés közepette, néha meetingeken jönnek a legjobb gondolatok.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Discovery Sprint&lt;/strong&gt;&lt;br /&gt;
+A discovery meetingekre hozzuk el az új ötleteket, lehetséges megoldásokat, hipotéziseket és közösen vitassuk meg őket. Az se baj ha nincs. Volt már olyan esetem is, amikor konkrét Design Sprint módszerekkel mentem neki egy-egy hipotézisnek. Kíváncsi voltam mit hoz ki a csapat egy Crazy8’s-el vagy Solution Sketch-el. Nem volt rossz ötlet elég jó megoldások születtek, tudom ajánlani.&lt;br /&gt;
+Általában egy óra ötletelés és egy jó kis lista/jegyzet után wireframe készítés következik. Azért nevezem ezt is Sprintnek, mert egy-egy ötleten nem elég egy meeting ideje alatt dolgozni. Van amit 1 nap alatt kipörgetünk és van, hogy valamire csak a következő héten térünk vissza, hagyjuk ülepedni a dolgot. Néha még plusz problémák is felvetődnek, amikhez kutatunk kicsit, hátha okosabbak leszünk. Amihez csak lehet, próbáljunk meg felhasználói interjúkat is készíteni. Nyilván apróbb vagy korábban tesztelt ötleteknél ezt kihagyjuk, szerintem nem kell mindenhez, de mindenképp hasznos és fontos dolog nagyobb feladatok, döntések előtt! További infóért olvasd el a Mom test című könyvet!&lt;br /&gt;
+A design folyamat mindig wireframezésből és feedback adásból áll. A végén pedig egy prototípus születik.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Validate Ideas&lt;/strong&gt;&lt;br /&gt;
+Optimális esetben a poolból már leegyeztetett felhasználói teszt időpontok vannak, hogy tesztelhessük mit alkottunk. Építsünk új mentális modelleket ha kell. Végezzünk Card Sortingot, 5mp-es tesztet az ügyfelekkel. Romboljunk le korábbi feltevéseket! Próbáljuk észben tartani &lt;em&gt;Hick törvényét&lt;/em&gt; és egyszerűsítsük le a döntési folyamatokat. (ez nagyon érdekes téma, később egy másik postban kifejtem).&lt;/p&gt;
+
+&lt;p&gt;Szerintem a &lt;a href=&quot;https://uxmag.com/articles/the-rite-way-to-prototype&quot; target=&quot;_blank&quot;&gt;RITE&lt;/a&gt; metodológia elég jól használható. A lényege, hogy a rendelkezésünkre álló kb. 6 felhasználót osszuk fel kettesével. Én még rangsorolnám is őket, hogy a legrelevánsabb userek maradjanak a legutolsó körre. Minden 2. teszt után vonjuk le a következtetéseket és javítsuk a hibáinkat, így menjünk neki a következő 2 tesztnek.&lt;br /&gt;
+A felhasználói tesztek és pár kör iteráció után jobb esetben készen lett egy validált feature igény, amit átdobhatunk a “második útra”, a fejlesztési fázisba.&lt;/p&gt;
+
+&lt;p&gt;Eddig tartott kb. a Lean design folyamatunk, most pattintsuk át az agyunkat Agile UX-be és folytassuk a munkát a fejlesztőkkel. ☝️&lt;/p&gt;
+
+&lt;h2 id=&quot;track-2-delivery-&quot;&gt;Track 2: Delivery 👨‍💻&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Delivery Backlog&lt;/strong&gt;&lt;br /&gt;
+Amíg a fejlesztésre váró ötleteink várakoznak, elkezdhetjük rangsorolni őket.
+Az Impact Effort táblázat elég jó segítséget nyújthat ebben. Lényege, hogy helyezzük el a feature-öket egy 2x2-es mátrixban ezek alapján:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Alacsony befektetés - Magas hatás&lt;/li&gt;
+  &lt;li&gt;Magas befektetés - Magas hatás&lt;/li&gt;
+  &lt;li&gt;Alacsony (erőforrás) befektetés - Alacsony hatás (a felhasználói élményre)&lt;/li&gt;
+  &lt;li&gt;Magas befektetés - Alacsony hatás&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.edrawsoft.com/images/business/impact-effort-matrix.png&quot; alt=&quot;800x400&quot; title=&quot;impact effort matrix&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ezt a workshopot pl. a PM / PO facilitálhatja. Talán a legjobb, ha ezt az eredményt is olyan agilisan kezeljük, mint a designt. Tartsuk fenn a változás jogát. A kategorizálás után mindenki döntse el maga, hogy milyen sorrendben fejleszt! 😉&lt;br /&gt;
+Létezik már egy pontosabb táblázat is, ami 3x3-as és egy középső értéket is tartalmaz.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Deliverables&lt;/strong&gt;&lt;br /&gt;
+Az izgalmas részek most jönnek. 🙃 &lt;br /&gt;
+Ha épp új terméket fejlesztünk akkor itt az ideje, hogy elkezdjünk használható UI terveket faragni a wireframjeinkből. Ezzel együtt belekezdünk egy Design System létrehozásában is, ami majd tartalmazza az arculatot, UI kit-et, Style Guide-ot.&lt;br /&gt;
+Design Systemhez erősen ajánlott tisztában lenni az Atomic Design módszertanával. Ezt &lt;a href=&quot;http://atomicdesign.bradfrost.com/chapter-1/&quot; target=&quot;_blank&quot;&gt;Brad Frost találta ki&lt;/a&gt; és már nem újkeletű dolog. Lényegében arról szól, hogy hogyan építsük fel a legkisebb atomokból a termék designunkat.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Atomok - Gomb, Ikonok, Színek stb.&lt;/li&gt;
+  &lt;li&gt;Molekulák - Egy tab, egy egyszerű login form stb.&lt;/li&gt;
+  &lt;li&gt;Organizmusok - Header, Footer, termékkártya stb&lt;/li&gt;
+  &lt;li&gt;Templates - Előzőekből összeválogatott wf szerű sablon oldal&lt;/li&gt;
+  &lt;li&gt;Oldalak - Kész kreatívok&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Az így felépített és egymásba linkelt tervekben nagyon könnyen tudunk módosítani. Egy szín vagy ikon cserénél elég csak a megfelelő atomot módosítani és az egész termék tervben módosul a látvány. Fejlesztői és design időből is 10-20%-ot is megspórolhatunk egy jól működő rendszerrel. Figma-val, Sketch-el és a többi komponenseket támogató szoftverrel is létrehozhatunk DS-t.&lt;br /&gt;
+A kész UI kitből a front-end Style Guideot, CSS libraryt készít, hogy nekik is egy moduláris eszköztárból kelljen csak behúzni a későbbi fejlesztendő dolgokat.&lt;/p&gt;
+
+&lt;p&gt;Ha meglévő terméket fejlesztünk egyszerűen csak a meglévő Design Systemből építkezünk. A kész tervekkel itt is iterálunk: egyrészt a business-el, másrészt a fejlesztőkkel a megvalósíthatóság végett.
+Szerencsésebb esetben a gyors moduláris designnak köszönhetően még maradhat időnk egy utolsó hi-fi tesztre (A/B-teszt, 5mp, kisebb logikai hibák javítására). Tesztelni sose késő! 🙃 Ha pedig bejönnek új design elemek, hozzá csapjuk a meglévő DS-hez és commitolunk.&lt;/p&gt;
+
+&lt;p&gt;És végül ha fix egy terv: csak tegyük le a fejlesztők barlangja elé és rohanjunk ki a szobából! 😘&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 31 Jan 2019 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/posts/dual-track-design</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/dual-track-design</guid>
+        
+        <category>product design</category>
+        
+        <category>tech</category>
+        
+        <category>UX</category>
+        
+        <category>design</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Product / UX Designer Roadmap</title>
+        <description>&lt;p class=&quot;lead&quot;&gt;Marty Cagan Inspired című könyve óta tudjuk, hogy a roadmapok mégse segítenek annyira a terméktervezésnél. Én azért csináltam egy tanulósat magamnak.&lt;/p&gt;
+&lt;!--break--&gt;
+
+&lt;h2 id=&quot;előzmények&quot;&gt;Előzmények&lt;/h2&gt;
+&lt;p&gt;Abból kiindulva, hogy pszichológusnak is azok mennek, akiknek valami bajuk van magukkal. Én is valahogy ez alapján csináltam roadmapot. Bajom volt az itthoni tanulással. Kellett valami iránymutatás, egy folyamatábra, amin lépkedhetek a Product Design tapasztalatszerzés közepette. Ha ez másoknak is tud segíteni akkor az pedig plusz win. &lt;br /&gt;
+Lehet még ráadásként egy folyamat vázlatot is ad a kép, de ezt elég szabadon kell értelmezni.&lt;/p&gt;
+
+&lt;p&gt;Ihletnek itt volt Togi Sergey &lt;a href=&quot;https://github.com/togiberlin/ui-ux-designer-roadmap&quot; target=&quot;_blank&quot;&gt;Designer Roadmapja&lt;/a&gt;. Ő külön szedte a UI és a UX Roadmapokat, nagyon hasznos kis anyag, érdemes átfutni! 
+Tovább voltak különféle front-end és back-end fejlesztős &lt;a href=&quot;https://github.com/kamranahmedse/developer-roadmap&quot; target=&quot;_blank&quot;&gt;roadmapok&lt;/a&gt; is.&lt;br /&gt;
+Na jó… ezeket azért erősen testre szabtam, egyszerűsítettem. 😉&lt;/p&gt;
+
+&lt;h2 id=&quot;használat&quot;&gt;Használat&lt;/h2&gt;
+&lt;p&gt;Linkeket nem tettem bele, habár SVG képként töltöttem fel. A bekeretezett szövegek általában cikkeknek néha kurzusok címei. De van még sok módszer, technológia, módszertan is felsorolva.&lt;br /&gt;
+Ezeket vagy ismered vagy nem, ha nem akkor érdemes rájuk guglizni és beleásni magad a témába. Ez tehát nem egy tanterv, inkább irány mutatás, hogy miket érdemes átnézni, mikbe érdemes jobban beleásnunk magunkat. És akkor elég a beszédből, katt rá és nézd nagyba! (SVG jeeee 💪)&lt;/p&gt;
+
+&lt;h2 id=&quot;roadmap-v10&quot;&gt;Roadmap v1.0&lt;/h2&gt;
+
+&lt;p&gt;&lt;a target=&quot;_blank&quot; href=&quot;../assets/img/ux-roadmaparial.svg&quot;&gt;
+  &lt;img src=&quot;../assets/img/ux-roadmaparial.svg&quot; alt=&quot;Roadmap&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;sub&gt;Képek: Pexels&lt;/sub&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 04 Dec 2018 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/posts/design-roadmap</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/design-roadmap</guid>
+        
+        <category>design</category>
+        
+        <category>UX</category>
+        
+        <category>tanulas</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>IDF UX képzésekről tömören</title>
+        <description>&lt;p class=&quot;lead&quot;&gt;Megleptem magam egy Interaction Design Foundation egy éves előfizetéssel. Hogy megérte-e az most kiderül! 🙂&lt;/p&gt;
+&lt;!--break--&gt;
+
+&lt;h2 id=&quot;mi-az-idf&quot;&gt;Mi az IDF?&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://ewebdesign.com/wp-content/uploads/2017/04/Untitled-1.jpg&quot; alt=&quot;800x400&quot; title=&quot;IDF logo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Az Interaction Design Foundation egy nonprofit kezdeményezés. 2002-ben alapították Dániában acélból’🤘, hogy emeljék a designerek oktatásának minőségét.&lt;/p&gt;
+
+&lt;p&gt;Az IDF csapat számos szakmai kivállósággal ápol szoros kapcsolatot: pl. a Stanford és Cambridge egyetemek, ahonnan előadók jelennek meg oktató videókon, de olyanoktól is olvashatunk mint Don Norman és Clayton Christensen.&lt;/p&gt;
+
+&lt;h2 id=&quot;miért&quot;&gt;Miért?&lt;/h2&gt;
+&lt;p&gt;Az &lt;a href=&quot;http://uithings.hu/posts/ux-tapasztalatok&quot; target=&quot;_blank&quot;&gt;előző postban&lt;/a&gt; kicsit kifakadtam a manapság elérhető UX képzések miatt. Szeretek új dolgokat tanulni és olvasni, egyrészt mert ezt az utat választottuk: az IT világa folyamatosan változik és nekünk lépést kell tartani vele. Mindig van egy plusz skill, amit megtanulhatsz, elsajátíthatsz és beépíthetsz a munkafolyamataidba.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://images.pexels.com/photos/159751/book-address-book-learning-learn-159751.jpeg?auto=compress&amp;amp;cs=tinysrgb&amp;amp;dpr=2&amp;amp;h=650&amp;amp;w=940&quot; alt=&quot;800x400&quot; title=&quot;books&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Másrészt mert a tanulással biztosítod, hogy az agyad és a szellemed ne gyökösödjön be. Az új látásmódok és módszertanok elsajátítása segít a paradigmikus gondolkodás legyőzésében és úgymond.. kinyitja a világot. Sokkal befogadóbb lesz az ember. &lt;br /&gt;
+Egy plusz személyiségbeli előnye is van a tanulásnak, bár ez már lehet inkább a következő szakaszra érvényes. Az új tudás kipróbálásakor valószínűleg nagyon sok kritikát kell majd kiértékelned. Lesznek olyanok, amiket nem igazán vesz figyelembe az ember, de lesznek olyan szakmailag fontos emberek, akiktől igen is megéri kritikát kapni és átgondolni azokat. Ez sokat segít az egónk lent tartásában. 😉
+Na kanyarodjunk vissza az eredeti témához!&lt;/p&gt;
+
+&lt;p&gt;Szóval rengeteg embertől hallottam vissza több UX-es csoportban is, hogy a különféle Udemys képzésekkel ellentétben az IDF-re tényleg érdemes előfizetni. Már korábban is olvastam tőlük publikus cikkeket, és valóban jónak, tartalmasnak találtam őket, így csak rávettem magam, hogy kifizessem azt az 1 éves 144 eurót. Vagyis… kevesebbet!&lt;/p&gt;
+
+&lt;h2 id=&quot;a-rendszer&quot;&gt;A rendszer&lt;/h2&gt;
+&lt;p&gt;Akinek még diákja van 8€-t kell fizetnie egy hónapnyi tanulmányért. Ezért, ha jól emlékszem mindent meg kap, kivéve, hogy csupán 3 kurzusa lehet egyszerre aktív. Itt fontos, hogy igazolni kell a tanulói jogviszonyt. Hogy pontosan hogyan, azt nem tudom.&lt;/p&gt;
+
+&lt;p&gt;Én a 12€-ba kerülő pro csomagra fizettem elő. Egy kis trükkel sikerült az egy évből 3 hónapot ingyen megkapni. 💸&lt;/p&gt;
+
+&lt;p&gt;Mivel nem találtam, hogy havonta lehet-e fizetni ezért írtam nekik egy bánkódó emailt, hogy ugyan miért nem találom a havi fizetési lehetőséget, mert azért mégis jó lenne úgymond kipróbálni, mit adnak a pénzemért.&lt;br /&gt;
+Nos elmondták, hogy havonta sajnos nem lehet fizetni, egyben kell 1 évet, de hogy ne legyen kellemetlen kapok 3 hónapot ingyen. Meg amúgy is van egy 30 napos pénzvisszafizetési garanciájuk. Mondom jó, legyen, készséggel elfogadom!&lt;br /&gt;
+Így hát IDF deák lettem és bele is vágtam a képzésekbe.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Jelenleg 3 kurzust vettem fel:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Design Thinking&lt;/li&gt;
+  &lt;li&gt;UX Design&lt;/li&gt;
+  &lt;li&gt;UX Research&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Ezek alapján tudok véleményt mondani. A képzések modellje elég egyszerűen megszokható. Vannak cikkek és vannak videó anyagok is a tanuláshoz. Én egy 70/30%-os arányra tenném az anyagok elosztását a cikkek javára. Általában 10-20 perces prezi vetítésből és beszédből áll egy videó session, de volt már, hogy 56 perces videót tettek fel.&lt;/p&gt;
+
+&lt;h2 id=&quot;pont-gyűjtögetés&quot;&gt;Pont gyűjtögetés&lt;/h2&gt;
+&lt;p&gt;Általában minden cikk és videó után van valamilyen kérdés, amire válaszolni kell és ezek alapján gyűjtöd a pontjaidat.&lt;/p&gt;
+
+&lt;p&gt;Kettő kérdéstípus van:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Sima felelet választós 3-ból kell kiválasztani a jót. &lt;strong&gt;1 - 3 pont&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Kifejtős hosszú vagy rövid válasz. &lt;strong&gt;5 - 10 pont&lt;/strong&gt; &lt;br /&gt;
+Az utóbbiakat elvileg elovassa egy tréner és belátása szerint adja a pontszámot, de én eddig mindig max pontszámot kaptam szóval vagy nagyon jó vagyok vagy mindig megadják a maxot, ha írtál valamit 😋&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;miért-érdemes-gyűjtögetni&quot;&gt;Miért érdemes gyűjtögetni?&lt;/h3&gt;
+&lt;p&gt;Természetesen ez nem muszáj. De ha a gamification nálad is működik, olyan virtuális oklevelet kapsz az IDF-től, amit később hozzá tudsz csapni a LinkedIn profilodhoz. Ezeknek 3 szintje van:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Ha a max pontszám 70%-át teljesítettük, akkor megkapjuk az oklevelünket.&lt;/li&gt;
+  &lt;li&gt;Ha Elértük a 90%-ot akkor hozzá biggyesztenek egy “Top 10% Distinction” feliratot.&lt;/li&gt;
+  &lt;li&gt;Ha 100%-ot értünk el akkor pedig egy “Best in Class” feliratot.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Igazából semmit nem érnek, de jó buli gyűjtögetni.&lt;/p&gt;
+
+&lt;h2 id=&quot;Ár---érték-arány&quot;&gt;Ár - érték arány&lt;/h2&gt;
+&lt;p&gt;Ami eddig lejött a képzésekből az az, hogy sok nagyvállalati példa van. Sok idézetet használnak híresebb vezetőktől vagy designerektől. Némelyik fejezetben - főleg az eleje felé - azért itt is meg van a bullshit faktor, de ettől eltekintve az átadott tudás tényleg nagyon jó és sokrétű. Rengeteg képzésből választhatunk és Pro előfizetéssel akármennyit fel tudunk venni. A képzésekhez járnak különböző PDF templatek, sémák, amiket fel tudunk használni, vagy épp ezek alapján sajátot is készíthetünk. Pl. Persona template, User Interview template, customer journey, stb.&lt;/p&gt;
+
+&lt;p&gt;A szakmai cikkek és videók között van opcionálisan megcsinálható kontent is. Ilyenek pl a user peersona vagy a customer journey feladatok is.&lt;/p&gt;
+
+&lt;h2 id=&quot;Összességében&quot;&gt;Összességében…&lt;/h2&gt;
+&lt;p&gt;…az IDF egy elég jól használható tudást biztosít számunkra havi 12€-ért. (Az ügyesebbeknek az ingyenes 3 hónappal 9€)&lt;br /&gt;
+A kurzusok többsége itt is 0-ról kezd, ezért a tapasztaltabbaknak lehet, hogy unalmasab lesz a legtöbb kurzus eleje. Szerintem abszolút átvészelhető.&lt;/p&gt;
+
+&lt;p&gt;Mint minden megváltást ígérő online kurzust, úgy ezt is fenntartásokkal kell kezelni, nehogy feleslegesen fizessük ki a pénzt érte - bár 30 nap van meggondolni magunkat.&lt;/p&gt;
+
+&lt;h2 id=&quot;megérte&quot;&gt;Megérte!&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://soma.shoprenter.hu/custom/soma/image/data/2018/10-bullshit-indicator.jpg&quot; alt=&quot;800x400&quot; title=&quot;ui things bullshit indicator&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;illeszd-be-a-roadmapodba-is&quot;&gt;Illeszd be a roadmapodba is!&lt;/h3&gt;
+&lt;p&gt;Nekünk az IT szakmában dolgozóknak kiemelten fontos, hogy mindig fejlesszük a tudásunkat és képben legyünk az új technológiákkal, módszerekkel, termékfejlesztési irányzatokkal. Tanulni mindig van mit, rengeteg anyag van a neten és néha el is veszünk benne vagy épp nem tudjuk mit kellene olvasni, gyakorolni. Ilyenkor csinálhatunk magunknak egy roadmapot, amibe felírjuk a céljainkat és visszavezetve a jelen állapotig megadunk mindenféle személyes fejlődési mérföldköveket. 
+Én most készítem ezt, ha kész lesz mindenképp megosztom veletek! 😉&lt;/p&gt;
+
+&lt;p&gt;Addig is, ha nem akarsz ilyenekkel időt tölteni, itt van Togi Sergey &lt;a href=&quot;https://github.com/togiberlin/ui-ux-designer-roadmap&quot; target=&quot;_blank&quot;&gt;Designer Roadmapja&lt;/a&gt;. Külön szedte a UI és a UX Roadmapokat, nagyon hasznos kis anyag, érdemes átfutni!&lt;/p&gt;
+
+&lt;p&gt;&lt;sub&gt;Képek: Pexels&lt;/sub&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 24 Oct 2018 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/posts/idf-ux-kepzes</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/idf-ux-kepzes</guid>
+        
+        <category>design</category>
+        
+        <category>UX</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>UX tapasztalatok</title>
+        <description>&lt;p class=&quot;lead&quot;&gt;&lt;em&gt;Az információ ragályos és addiktív. Hajszolod, tanulsz, csinálod, szomjazod az új tudást, de egy idő után túlnő rajtad és megbénít. Teljesen megdermeszt és nem enged alkalmazkodni és tanulni.&lt;/em&gt;&lt;/p&gt;
+&lt;!--break--&gt;
+
+&lt;h2 id=&quot;a-ux-tanulása&quot;&gt;A UX tanulása&lt;/h2&gt;
+&lt;p&gt;Az információ ragályos és addiktív. Hajszolod, tanulsz, csinálod, szomjazod az új tudást, de egy idő után túlnő rajtad és megbénít. Teljesen megdermeszt és nem enged alkalmazkodni és tanulni. &lt;br /&gt;
+Valami ilyesmit éreztem, amikor 110%-kal bele vetettem magam a UX design és kutatás tanulásába. Aztán rájöttem, hogy ennek nagyon sok időt kell hagyni, hogy leülepedjen az emberben!&lt;/p&gt;
+
+&lt;p&gt;A User Experience / Interaction Design - vagy hívjuk aminek akarjuk - egy olyan része a design-nak, amit iszonyat nehéz tanulni és tanítani. Ez folyamatosan realizálódik az emberben miközben egyre jobban ássa bele magát a témába. Elolvasunk egy cikket aztán még egyet, rájövünk, hogy milyen sokrétű ez a tudomány. Rengeteg pszichológiai és szociológiai tudás kell hozzá. Át kell alakítani a gondolkodásmódod, hogy teljesen más nézőpontokat is be tudj fogadni. &lt;br /&gt;
+Ezek után rájövünk, hogy kellene egy könyv is, ami mélyebb tudást és talán több magyarázatot ad, mint egy cikk.
+Miután elolvastuk első UX Design-nal foglalkozó könyvünk felét, már ott tartunk, hogy hát ez nem fog máshogy menni, ide egy képzés kell! Egy tapasztaltabb UXer, aki segít átlátni a folyamatot és megmondja mire mennyi hangsúlyt kell fektetni, hogyan tanulj, mit csinálj.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://images.pexels.com/photos/261909/pexels-photo-261909.jpeg?auto=compress&amp;amp;cs=tinysrgb&amp;amp;dpr=2&amp;amp;h=750&amp;amp;w=1260&quot; alt=&quot;800x400&quot; title=&quot;ux design&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;De megspórolok neked egy kis időt: nagyon sok bullshit van itt! &lt;br /&gt;
+Attól, hogy elolvasol 50 cikket, 20 könyvet és megcsinálsz 10 Udemys kurzust nem leszel UX Designer. Ha 0-ról indulsz ez tök jó megoldás, de hamar rájössz, hogy általában mindenki azokra lő, akik 0, -1-ről indulnak. Miután elértél egy bizonyos szintet már alig tudsz számodra értéket adó oktató anyagot találni. Talán inenntől érdemesebb csak az erősen szűrt szakmai cikkekre és a saját akaraterődre hagyatkozni.&lt;/p&gt;
+
+&lt;p&gt;Alapvetően azt szűrtem le, hogy minél hamarabb bele kell kezdeni a tervezésbe (gyakorlatba). Találjunk ki magunknak valami home projektet, vigyünk végig egy általunk jónak/érdekesnek ítélt folyamatot. Tapasztaljuk meg a tervezés nehézségeit és fun részét. Keressünk patterneket, amik közel állnak hozzánk és nézzük meg mi az, ami nehézkes. Írjuk fel és logoljuk mi mennyi időbe telt megcsinálni, hogy később látható legyen a gyorsulás. A gyorsulás mindig párhuzamos a fejlődéssel.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://images.pexels.com/photos/273230/pexels-photo-273230.jpeg?auto=compress&amp;amp;cs=tinysrgb&amp;amp;dpr=2&amp;amp;h=750&amp;amp;w=1260&quot; alt=&quot;800x400&quot; title=&quot;ux design&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ha a cégünk biztosít időt, erőforrást, türelmet a kísérletezéste természetesen használjuk ki! 😛 Alapvetően kell valami olyan feature, termék vagy ötlet, amiről lehet agyalni. Ha még nagyon vakon vagyunk tudom ajánlani a &lt;a href=&quot;http://uithings.hu/posts/design-sprint&quot; target=&quot;_blank&quot;&gt;Design Sprintet&lt;/a&gt;, ami ad egy tök jó órarendet, keretet az agyalásnak. Ez kb 1 hét, de rövítsük le, hogy a tanulós délutánokba beleférjen. Senkit nem fog zavarni, magunknak tanulunk nem másnak.&lt;/p&gt;
+
+&lt;h2 id=&quot;nehézségek-a-product-teamben&quot;&gt;Nehézségek a product teamben&lt;/h2&gt;
+&lt;p&gt;Miután friss húsként bekerültünk a termékfejlesztő csapatba jöhet az igazi buli. Új csapat, új emberek, új szokások, sok elvárás.&lt;/p&gt;
+
+&lt;p&gt;Nekem az átállás elég gyors lefolyású és drasztikus volt. Ne így csináljátok!! 🤪 Kb. egyik hétről a másikra heti 2 x 2 nap egy új teamben. Két tökre különböző terméknek a tervezésébe csöppentem bele. Egyrészt félelmetes volt, másrészt izgalmas, új és tanulással teli. Egy ilyen helyzetben rengeteget tanul az ember, mert nincs más választása. Fel kell venni a ritmust és csinálni. Elsődlegesen nem is az volt a gondom, hogy tök máshogy kellett gondolkodjak mint eddig. Inkább az, hogy kb a fejlesztéssel egy időbe kellett tervezni. Ez olyan problémákat szült, hogy semmire nem volt idő, állandó volt a rohanás nem volt idő kutatni, átgondolni a terveket. &lt;br /&gt;
+Van az a közhelyes mondás, hogy teher alatt nő a pálma. Nem tudom mennyire nőtt, de tapsztalat az mindenképp rakódott le. És rájöttem, hogy ez a lényeg.&lt;/p&gt;
+
+&lt;p&gt;Tapasztalatot kell felhalmoznod, ahhoz, hogy később következtetéseket vonhass le ebből. Ez alapján feedback-et tudsz adni a csapatodnak, ami számodra is és nekik is fontos. Ha szerencséd van hallgatnak rád és változtattok a folyamaton, hogy kicsit optimálisabb legyen.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.uxteam.com/wp-content/uploads/2017/03/ux-team-business-flaws.jpg&quot; alt=&quot;800x400&quot; title=&quot;ux design&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Szerintem minden teamben valahogy máshogy kell dolgozni UX-esként. Van ahol számítanak arra, hogy egy új szemléletet hozol be a fejlesztésbe és van ahol a sok iteráció miatt akarnak, ezzel is kiszűrni az esetleges bakikat. Egy kis idő után egyre jobb hatásfokkal ismered fel, hogy mikor melyik szemléletre van szükség.&lt;/p&gt;
+
+&lt;h3 id=&quot;introvertált-ux-es&quot;&gt;Introvertált UX-es&lt;/h3&gt;
+&lt;p&gt;Sokat agyaltam azon, hogy inkább introvertált emberként mennyi lehetőségem van UX designerként dolgozni? Nos a választ még nem tudom, de folyamatosan validálom. Elsőre az jött le, hogy ha van egy jó csapat, aki ezt tiszteletben tartja akkor működhet a dolog. A kommunikációs skilleket meg ha nem is nagy mértékben, de lehet javítani.&lt;br /&gt;
+Én általában szar vagyok az azonnali ötletgenerálásban. Az 1 órás discovery meetingeken nem sokszor szoktam előállni világmeváltó ötletekkel/megoldásokkal. Mindig jobban megy az agyalás, ha van egy kis időm átgondolni és ülni rajta. Szeretek előtte inspirálódni, megnézni pár megoldást, kipróbálni, megvizsgálni őket. Utána már jönnek a gondolatok és ötletek.&lt;/p&gt;
+
+&lt;h3 id=&quot;köszi-hogy-elolvastad-eddig-ne-add-fel-egyedül-ezen-rész-miatt-akartam-megírni-ezt-a-postot&quot;&gt;Köszi, hogy elolvastad eddig, ne add fel! Egyedül ezen rész miatt akartam megírni ezt a postot:&lt;/h3&gt;
+&lt;p&gt;Az egyik legdurvább dolog, amit meg kellett tapasztalnom az a kritika körüli gondolkodás. Ez egy iszonyat érdekes felismerés volt nekem. &lt;br /&gt;
+Az alapvető probléma, hogy a design hozza azt a felfogást, hogy mi létrehozunk valami szépet a többiek több-kevesebb iránymutatásával és utána gyermekünként szeretjük ezt a látványtervet. Anyatigrisként védelmezzük a szerintünk gyönyörű megoldásainkat és megnem értett művészként vonulunk el, ha kritizálják művünket.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Én a meg nem értettség csokoládéba öntött mellszobrát cipelem a macskakövekkel kirakott nullába vezető úton. &lt;br /&gt;
+&lt;sub&gt;Papp Szabi&lt;/sub&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Nos… ezt a felfogást a UX tervezési folyamata gyökeresen át fogja alakítani benned! Ha ellenállsz felemészt, baromságnak fogod tartani a szakmát, a terméket és talán embereket, usereket is meg fogsz utálni. &lt;em&gt;Ne tedd!&lt;/em&gt; &lt;br /&gt;
+Ez itt most arról fog szólni, hogy egy csapat gondolatait kell formába öntened. Ugyan olyan alkotó vagy, de sokkal fontosabb a feladatod a csapat számára, mint amikor pl. UI-os voltál. A feladat nem más, mint beletúrni a product team fejébe és onnan kirántani azokat a gondolatokat, formákat és ötleteket, amik alapján &lt;em&gt;TE&lt;/em&gt; létre tudsz hozni egy skiccet vagy wirefram-et&lt;br /&gt;
+Ez iszonyat nehéz! Az első és legfontosabb, hogy elnyomd az egód. Az egó sok dolgoban segít és lendít tovább, de van amikor egyszerűen csak bekorlátoz és tönkre tesz. Nagyon fontos, hogy a tervezés során sok inputot fogadj be és ez alapján újragondold a terved. Ha egyszerűen csak a saját ötleteidre hagyatkozol megette a fene az egészet. Meg kell próbálni minden egyes feedback morzsát begyűjteni, rendszerezni őket és ami hasznos azt beépíteni a designba.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://images.pexels.com/photos/5836/yellow-metal-design-decoration.jpg?auto=compress&amp;amp;cs=tinysrgb&amp;amp;dpr=2&amp;amp;h=650&amp;amp;w=940&quot; alt=&quot;800x400&quot; title=&quot;ux design&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ez olyan gondolat, ami idővel érik meg az emberben, de muszáj törekedni rá, hogy működjön a folyamatod. Amikor az első napokban a csapat elkezdte szétszedni az első drótvázaimat, elég durva élmény volt. Nem tudom hány hét kellett, hogy elfogadjam, azt a tényt, hogy ők nem az &lt;em&gt;ÉN&lt;/em&gt; munkámat kritizálják, hanem a terméket. Ez leírva kurva egyszerűnek tűnik, de megélni sokkal bonyolultabb! Ők azt akarják, hogy jobb legyen a termék.&lt;/p&gt;
+
+&lt;p&gt;Meg kell tanulni jól kérdezni. &lt;em&gt;Miért gondolod így? Mi alapján szeretnéd így? Mi az, ami nem tetszik a másikba? Miért? Hogyan gondolkodtál, amíg ide jutottál?&lt;/em&gt; stb. &lt;br /&gt;
+Igen, valami ilyesmi zajlik a user testeken is, amikor prototípust tesztelünk!
+A nyitott kérdésekkel a product teamben is fel lehet tárni az ötleteket, igényeket. &lt;br /&gt;
+Ezen a ponton már olyan finomságok is bekapcsolódnak, mint a pszichológia. Nagyon izgi a designnal, web designnal, interakciókkal vagy az appot használó userekkel foglalkozó ága. Főleg ebbe szeretném nemsokára beleásni magam, de addig is ha érdekel a téma nézd meg &lt;a href=&quot;https://www.youtube.com/watch?v=Atz0emwaz7g&quot; target=&quot;_blank&quot;&gt;Joe Leech&lt;/a&gt; előadását! 🤔&lt;/p&gt;
+
+&lt;p&gt;Ma elkezdtem &lt;a href=&quot;https://www.interaction-design.org&quot; target=&quot;_blank&quot;&gt;Interaction Design Foundation&lt;/a&gt; tanulmányaimat, ami eddig nagyon komolynak tűnik. Valószínűleg azért tud még mindig jó lenni a sok Udemy és Skillshare kurzus között, mert egy zárt community és alapból 1 éves előfizetés van (144€). Ez aztán arra kényszeríti az embereket, hogy tényleg komolyan vegyék a kurzusokat, nem úgy mint a Udemy-s bullshiteket. 😃&lt;/p&gt;
+
+&lt;p&gt;Egyrészt. Másrészt pedig gondolom őket is motiválja, hogy használható tudást nyújtsanak a pénzünkért. Szóval eddig jók a tapasztalataim, később írok róluk egy hosszabb review-t is. &lt;br /&gt;
+ÉS amiről még mindenképp írni fogok - és lehet inkább ez lesz előbb - az a UX Studio 3 napos képzése. Jövő héten kezdjük és őszintén nagyon kíváncsi vagyok, hogy milyen oktatást hoztak össze az igényeink alapján!&lt;/p&gt;
+
+&lt;h3 id=&quot;update&quot;&gt;Update&lt;/h3&gt;
+&lt;p&gt;Az &lt;a href=&quot;http://estimeeting.com/&quot; target=&quot;_blank&quot;&gt;Esti Meeting&lt;/a&gt;et továbbra is nyomjuk! Hallgassátok a 8. adást és gyertek a &lt;a href=&quot;https://t.me/joinchat/IEstwxLbZ6v8i6M0l-VLQA&quot; target=&quot;_blank&quot;&gt;Telegram közösségünkbe&lt;/a&gt; beszélgetni!&lt;/p&gt;
+
+&lt;p&gt;&lt;sub&gt;Képek: Pexels&lt;/sub&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 23 Sep 2018 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/posts/ux-tapasztalatok</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/ux-tapasztalatok</guid>
+        
+        <category>design</category>
+        
+        <category>UX</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>iPad-et vettem</title>
+        <description>&lt;p class=&quot;lead&quot;&gt;Sajnos nem bírtam tovább vissza tartani a művész énem és bevásároltam egy iPad-et. Igen… Apple Pencilt is vettem… És igen, csodálatos élmény. 🖊&lt;/p&gt;
+&lt;!--break--&gt;
+
+&lt;p&gt;Hamarosan írok egy rövid tesztet róla, addig is nézzétek meg mostanában mivel töltöm eszméletlen kevés szabad időmet!&lt;/p&gt;
+
+&lt;p&gt;(jöhetnek a Dribbble likeok! 👇)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dribbble.com/shots/4986155-Monochrome-Girl-vector-illustration&quot; target=&quot;_blank&quot;&gt;Dribbble link&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned=&quot;&quot; data-instgrm-permalink=&quot;https://www.instagram.com/p/BoE-6nihzhE/?utm_source=ig_web_button_share_sheet&quot; data-instgrm-version=&quot;8&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=&quot; margin:8px 0 0 0; padding:0 4px;&quot;&gt; &lt;a href=&quot;https://www.instagram.com/p/Be3BVD0gPAh/&quot; style=&quot; color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;&quot; target=&quot;_blank&quot;&gt;#mic&lt;/a&gt;&lt;/p&gt; &lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://www.instagram.com/szsoma/&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;&quot; target=&quot;_blank&quot;&gt; Soma&lt;/a&gt; (@szsoma) által megosztott bejegyzés, &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2018-02-06T15:07:55+00:00&quot;&gt;Febr 6., 2018, időpont: 7:07 (PST időzóna szerint)&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; defer=&quot;&quot; src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dribbble.com/shots/5263208-Creativity-Is-The-Skill-Of-The-Future&quot; target=&quot;_blank&quot;&gt;Dribbble link&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned=&quot;&quot; data-instgrm-permalink=&quot;https://www.instagram.com/p/Bny5CBpB6Cn/?utm_source=ig_web_button_share_sheet&quot; data-instgrm-version=&quot;8&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=&quot; margin:8px 0 0 0; padding:0 4px;&quot;&gt; &lt;a href=&quot;https://www.instagram.com/p/Be3BVD0gPAh/&quot; style=&quot; color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;&quot; target=&quot;_blank&quot;&gt;#mic&lt;/a&gt;&lt;/p&gt; &lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://www.instagram.com/szsoma/&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;&quot; target=&quot;_blank&quot;&gt; Soma&lt;/a&gt; (@szsoma) által megosztott bejegyzés, &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2018-02-06T15:07:55+00:00&quot;&gt;Febr 6., 2018, időpont: 7:07 (PST időzóna szerint)&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; defer=&quot;&quot; src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dribbble.com/shots/5260940-Joker-illustration&quot; target=&quot;_blank&quot;&gt;Dribbble link&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned=&quot;&quot; data-instgrm-permalink=&quot;https://www.instagram.com/p/Bnrhdrghhif/?utm_source=ig_web_button_share_sheet&quot; data-instgrm-version=&quot;8&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=&quot; margin:8px 0 0 0; padding:0 4px;&quot;&gt; &lt;a href=&quot;https://www.instagram.com/p/Be3BVD0gPAh/&quot; style=&quot; color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;&quot; target=&quot;_blank&quot;&gt;#mic&lt;/a&gt;&lt;/p&gt; &lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://www.instagram.com/szsoma/&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;&quot; target=&quot;_blank&quot;&gt; Soma&lt;/a&gt; (@szsoma) által megosztott bejegyzés, &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2018-02-06T15:07:55+00:00&quot;&gt;Febr 6., 2018, időpont: 7:07 (PST időzóna szerint)&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; defer=&quot;&quot; src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
+
+</description>
+        <pubDate>Mon, 17 Sep 2018 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/posts/illusztracio</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/illusztracio</guid>
+        
+        <category>news</category>
+        
+        <category>tech</category>
+        
+        <category>design</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Podcaster Felmérés</title>
+        <description>&lt;p class=&quot;lead&quot;&gt;Nagy fába vágtuk a fejszét, segítsetek!&lt;/p&gt;
+&lt;!--break--&gt;
+
+&lt;h2 id=&quot;mi-ez&quot;&gt;Mi ez?&lt;/h2&gt;
+&lt;p&gt;Egy 4 - 4.5 perces felmérés a podcast hallgatási és felvételi szokásotokról!
+Előljáróban ennyi, semmit nem akarok spoilerezni, de egy nagyon szuper appot és oldalt akarunk megvalósítani. A projektben én viszem a UX kutatást és design-t, ezért kiemelten fontos, hogy minél több adatot szívjak be! 🤯&lt;/p&gt;
+
+&lt;p&gt;Minden kitöltést köszönök, kifejezetten a &lt;strong&gt;hosszú hosszú válaszokat!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A kérdőívet teljes nagyságban megtalálhatjátok &lt;a href=&quot;https://laciszabo.typeform.com/to/gzGcGb&quot; target=&quot;_blank&quot;&gt;ezen a linken&lt;/a&gt; &lt;br /&gt;
+Vagy ez alatt is kitölthetitek! 👇&lt;/p&gt;
+
+&lt;div class=&quot;typeform-widget&quot; data-url=&quot;https://laciszabo.typeform.com/to/gzGcGb&quot; style=&quot;width: 100%; height: 500px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt; (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id=&quot;typef_orm&quot;, b=&quot;https://embed.typeform.com/&quot;; if(!gi.call(d,id)) { js=ce.call(d,&quot;script&quot;); js.id=id; js.src=b+&quot;embed.js&quot;; q=gt.call(d,&quot;script&quot;)[0]; q.parentNode.insertBefore(js,q) } })() &lt;/script&gt;
+&lt;div style=&quot;font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;&quot;&gt; powered by &lt;a href=&quot;https://admin.typeform.com/signup?utm_campaign=gzGcGb&amp;amp;utm_source=typeform.com-11726713-Pro&amp;amp;utm_medium=typeform&amp;amp;utm_content=typeform-embedded-poweredbytypeform&amp;amp;utm_term=EN&quot; style=&quot;color: #999&quot; target=&quot;_blank&quot;&gt;Typeform&lt;/a&gt; &lt;/div&gt;
+
+&lt;h3 id=&quot;update&quot;&gt;Update&lt;/h3&gt;
+&lt;p&gt;Gőzerővel megy a UX tanulása és a folyamataink átalakítása. Ezek ellenére tervezek visszatérni az íráshoz, remélem hamarosan össze is fog jönni. Kicsit besűrűsödtek a dolgok mostanában. Addig is stay tuned!&lt;br /&gt;
+Az &lt;a href=&quot;http://estimeeting.com/&quot; target=&quot;_blank&quot;&gt;Esti Meeting&lt;/a&gt;et továbbra is nyomjuk! Holnap vesszük fel a 8. adást, tehát jövő héten már hallgathatjátok!&lt;/p&gt;
+
+&lt;p&gt;&lt;sub&gt;Utóirat: köszi Laci a Typeform accot ;)&lt;/sub&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 07 Sep 2018 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/posts/podcaster-felmeres</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/podcaster-felmeres</guid>
+        
+        <category>news</category>
+        
+        <category>tech</category>
+        
+        <category>podcast</category>
+        
+        <category>UX</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Esti Meeting update</title>
+        <description>&lt;p class=&quot;lead&quot;&gt;Hogy állunk podcast téren??&lt;/p&gt;
+&lt;!--break--&gt;
+
+&lt;p&gt;Sajnos munka és egyéb okokból kifolyólag kicsit megcsúsztunk. Az oldalunk elkészült, de ne szokjátok meg nem végleges! :) Ennél sokkal menőbb lesz majd!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://estimeeting.com/&quot; target=&quot;_blank&quot;&gt;Esti Meeting&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Mindenesetre most kint van a 4. rész, az 5-et pedig már felvettük és vágásra vár. Sikeresen betoboroztuk Mátét, aki most beszélgetett velünk első alkalommal.&lt;/p&gt;
+
+&lt;p&gt;Akinek tetszik a podcast az feliratkozhat &lt;a href=&quot;https://itunes.apple.com/us/podcast/esti-meeting/id1379086475?mt=2&quot; target=&quot;_blank&quot;&gt;iTunes-ban&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ha szeretnétek beszélgetni különböző tech, fejlesztés, UI, UX design témákban, akkor csatlakozhattok a &lt;a href=&quot;https://t.me/joinchat/IEstwxLbZ6v8i6M0l-VLQA&quot; target=&quot;_blank&quot;&gt;Telegram csatornánkhoz!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Stay tuned, hamarosan jön a 5. adás! 😉&lt;/p&gt;
+</description>
+        <pubDate>Thu, 07 Jun 2018 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/posts/podcast-update-1</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/podcast-update-1</guid>
+        
+        <category>news</category>
+        
+        <category>tech</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Termék tervezés Google Design Sprinttel 🏃</title>
+        <description>&lt;p class=&quot;lead&quot;&gt;Hogyan juss el 0-ról egy felhasználói teszten átesett prototípusig 4 nap alatt. 🏃&lt;/p&gt;
+&lt;!--break--&gt;
+
+&lt;h2 id=&quot;apropo&quot;&gt;Apropo&lt;/h2&gt;
+&lt;p&gt;Aki már tervezett appot/szolgáltatást/teljesen új funkciót nulláról az tudja, hogy mennyire nehéz belekezdeni:&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Kezdjünk inkább a designnal?&lt;/li&gt;
+  &lt;li&gt;Vagy egy rövid fejlesztéssel?&lt;/li&gt;
+  &lt;li&gt;Simán csak gyűjtsünk leadeket egy landing page-el?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;a-framework&quot;&gt;A Framework&lt;/h3&gt;
+&lt;p&gt;Nos a Google már erre is talált megoldást, mégpedig már 2010-ben. Ekkor kezdett kísérletezni a Design Sprint módszertannal. Ők azt mondták kezdjünk a Designnal!&lt;br /&gt;
+Lényegében a célok meghatározása után egyből neki ugrunk a  tervezésnek. A Design Sprint során erősen a UX designra koncentrálnak. Arra, hogy valami jól használható és szép dolgot hozzanak létre már az elején. Ehhez pedig természetesen designereket is vonnak be, már a tervezés korai fázisától.&lt;/p&gt;
+
+&lt;p&gt;Jogosan vetődik fel a kérdés, hogy ha ez a Design Sprint akkor mi a &lt;strong&gt;Design Thinking&lt;/strong&gt;?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://designthinking.ideo.com/wp-content/uploads/2017/07/design_thinking_law_hires.jpg&quot; alt=&quot;800x400&quot; title=&quot;Design Thinking&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;design-thinking-&quot;&gt;Design Thinking 🤔&lt;/h2&gt;
+&lt;p&gt;Mostanában elég sok szó esik a Design Thinking-ről. Tekinthetjük akár trendnek is a szó pozitív értelmében. Ez az innováció felhasználó-központú megközelítése, ami a tervezői eszköztárat használja arra, hogy a felhasználói igényeket, az új technológiai lehetőségeket és az üzleti siker feltételeit egy megoldásban egyesítse.&lt;/p&gt;
+
+&lt;p&gt;Nem újkeletű dolog ez, sok cégnél ülnek már designerek, esetleg designerekből átképzett vezetők magas pozíciókban.&lt;br /&gt;
+Egy kimutatás szerint a design központú cégek, például az Apple, Coca Cola, IBM, Google sokkal jobban teljesítenek hosszú távon, mint a többiek.&lt;/p&gt;
+
+&lt;p&gt;Ez persze nem azt jelenti, hogy mindenhova designereket kell ültetni, hogy szabadon “művészkedhessenek”. Ezzel a módszertannal inkább csak azt akarjuk biztosítani, hogy a termékünk sokkal felhasználóbarátabb és szebb legyen már a korai fázistól. Emellett reméljük azt, hogy nagyobb elégedettséggel fogják azt használni.&lt;/p&gt;
+
+&lt;h3 id=&quot;achtung44&quot;&gt;Achtung!!44!&lt;/h3&gt;
+&lt;p&gt;És itt kötnék át egy problémára, ami nem más mint a Design Thinking és a Design Sprint keverése.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A Design Thinking egy módszertan, a Design Sprint pedig egy 4 lépcsős folyamat a tervezésre.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Az előbbi egy nagyon klassz gondolkodásmód, amit én nagyon szeretek, de az nem konkrét megvalósítás, csak egy megközelítése a design központú tervezésnek. Tök jó, ha ezt követjük a cégünknél és a folyamatainkál, de ezzel önmagában nem kapunk eszközt. Természetesen a Design Sprint alapját is ez képezi, hiszen a termék tervezését egyből design-nal kezdjük. &lt;br /&gt;
+Maga a Design Thinking (vajon hányszor írtam le már ezt a fogalmat?! 🤔) egy megvalósulása a &lt;em&gt;Design Sprint. Az a folyamat, ami segít nekünk abban, hogy kevesebb mint 1 hét alatt eldöntsük valamiről, hogy megéri-e vele foglalkozni vagy sem.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://soma.shoprenter.hu/custom/soma/image/data/2018/05-ds.jpg&quot; alt=&quot;800x400&quot; title=&quot;Design sprint&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;design-sprint-&quot;&gt;Design Sprint 🏃&lt;/h2&gt;
+&lt;p&gt;Általában egy olyan team ül össze, akik előzetesen semmit sem foglalkoztak az ötlettel, témával. Ezért a startnál az ötlet megértésével kezdünk, a végén pedig elkészül egy olyan kattintható prototípus, amit user testeknek vethetünk alá.&lt;/p&gt;
+
+&lt;p&gt;A Sprintek mögött egy jól felépített órarend van. Ez a kulcs, ez biztosítja, hogy pörögjön a munka, az ötletelés és a végén kész legyünk magával a prototípussal is. Itt észben kell tartani, hogy nem készterméket tervezünk. Drótvázakat próbálunk ki, amikből egy használható funkciót, folyamatot próbálunk meg kihozni. Ha prototípus tervezésnél marad időnk kicsit csinosíthatunk a projekten. A lényeg az, hogy jól reprezentálja a célunkat, az app lényegét és tesztelhető legyen embereken.&lt;/p&gt;
+
+&lt;h3 id=&quot;amik-kellenek-nekünk&quot;&gt;Amik kellenek nekünk&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Egy jó team, aki tud együtt dolgozni és képesek elnyomni az egójukat a cél érdekében&lt;/li&gt;
+  &lt;li&gt;Egy sprint vezető, aki tisztában van a menetrenddel és képes kézben tartani az időt és az indulatokat egyaránt&lt;/li&gt;
+  &lt;li&gt;Timer a határidők mérésére&lt;/li&gt;
+  &lt;li&gt;Rengeteg sticky notes, toll, papír, ceruza, stb.&lt;/li&gt;
+  &lt;li&gt;Egy jókora tábla és egy adag filc a rajzolásokhoz és a sticky notes-ok felragasztásához&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*2nH0cW-EnJuBcqa6D839bA.jpeg&quot; alt=&quot;800x400&quot; title=&quot;Design sprint&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;napirend-&quot;&gt;Napirend 📅&lt;/h2&gt;
+&lt;p&gt;Kezdetben a Design Sprint 5 napos volt, most már a Design Sprint 2.0 korát éljük 2018-ban, itt már 4 nap alatt lezavarják. Talán a 4 napos annyiból jobb, hogy ha véletlen valamivel megcsúsztunk, akkor +1 napot be lehet iktatni. A következő pár bekezdésben megpróbálom átadni, hogy miket kell csináljunk a hét napjain. Fontos, hogy ez az én nézőpontom lesz, hogy nekem hogy áll kézre ez az egész. Lehet pár dolgot akarva-akaratlanul kicsit személyre szabtam. 😉&lt;/p&gt;
+
+&lt;h2 id=&quot;hÉtfŐ&quot;&gt;HÉTFŐ&lt;/h2&gt;
+&lt;p&gt;Mivel még mindenki vakon van a projekttel kapcsolatban, a hétfőt arra szánjuk, hogy megértsük azt, amit létre akarunk hozni. &lt;br /&gt;
+Először határozzuk meg, hogy mit akarunk elérni a sprint végére (optimális esetben csütörtökre esetleg péntekre)&lt;/p&gt;
+
+&lt;p&gt;Ha ezzel készen vagyunk nekiugorhatunk a célok kitűzésének! Legyen egy 6 hónapos és egy 12 hónapos célunk is.&lt;br /&gt;
+Határozzunk meg víziót, kérdőjelezzünk meg dolgokat!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Pl.: Meg fogják-e érteni a folyamatot, amit tervezünk?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Készítsünk térképet!&lt;/em&gt;&lt;br /&gt;
+Ez az egyik legfontosabb része az első napnak. Írjuk fel a tábla egyik végébe a felhasználói csoportokat, a másik végébe pedig a célt, amit el akarunk érni a termékünkkel. A különböző felhasználók különbözőképpen fogják bejárni az utat a célunkig.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://soma.shoprenter.hu/custom/soma/image/data/2018/05-map.jpg&quot; alt=&quot;800x400&quot; title=&quot;Map&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A térképünk kitárgyalásához hívjunk meg szakértőket. Például egy fejlesztőt, aki rávilágíthat a fejlesztői gondokra. A korábban felírt problémákat most a térképünk megfelelő helyére tudjuk ragasztani, ezzel kiemelve a problémásabb részeket.&lt;br /&gt;
+Végül körvonalazódni fog az a terület, amivel a legtöbb gondunk lehet, vagy amit érdemesebb lesz kidolgozni a következő részben.&lt;/p&gt;
+
+&lt;p&gt;A nap második fele már izgalmasabbnak ígérkezik. Vázlatozni fogunk! Mégpedig megoldásokat!&lt;br /&gt;
+Szánjunk időt az ötletgyűjtésre. Nézzük meg mit tud a konkurencia, találjuk ki mi miben akarunk jobbak lenni náluk. Az ötleteinket, feature javaslatainkat rendszerezzük! Nyugodtan lehet rajzolni, vázlatozni, nyilazgatni. A fő &lt;strong&gt;hangsúly az ötletgyártáson van&lt;/strong&gt;! Nem baj ha most nem tudjuk felhasználni párat, a legjobbakat osszuk meg a csapattal, beszéljük meg közösen mindenki ötletét.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Crazy8s&lt;/em&gt; 🤯 &lt;br /&gt;
+Az egyik legizgalmasabb esemény a sprint alatt! 
+Mindenki kapjon egy A/4-es lapot, amit hajtogassunk össze háromszor. Ezt kihajtogatva 8 kis téglalapot kapunk. Képzeljük el, hogy ezek iPhone screenek - ez fontos, Androiddal elképzelve nem működik sajnos! A feladat, hogy a legeslegjobb / szerintünk legfontosabb funkcióra, oldalra készítsünk 8 vázlatot 8 perc alatt. &lt;br /&gt;
+Bizony, ez 1 perc / változat, iszonyat gyorsan kell gondolkodni és kitalálni layoutokat, de ez adja a boostot!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://soma.shoprenter.hu/custom/soma/image/data/2018/05-sketch.jpg&quot; alt=&quot;800x400&quot; title=&quot;Map&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A hétfői nap végső eredményének egy “solution sketch-nek” kell legyen mindenkitől. Hogyan épül fel? Kapjon mindenki 3db A/4-es lapot. Ezekre a crazy8s alatt felskiccelt legjobb ötletünket fejtsük ki. Tekintsünk rá úgy, mint egy 3 diás prezentációra. Ragasszuk össze a lapokat, reprezentálva, hogy ez egy folyamat. Nem kell szépnek legyen, de mindhárom részhez fűzzünk pár megjegyzést, hogy érthető legyen. Legyen anonim, adjunk neki egy becenevet, hogy szerdán (a döntésnél) tudjunk rá hivatkozni. Adjuk le a sprint vezetőjének.&lt;/p&gt;
+
+&lt;h2 id=&quot;kedd&quot;&gt;KEDD&lt;/h2&gt;
+&lt;p&gt;A vezetőnek fel kell ragasztania az előző napi solution sketch-eket. A napot szavazással kezdjük. A Google &lt;strong&gt;Heat Map szavazásnak&lt;/strong&gt; hívja ezt a módszert. A lényege, hogy mindenki kap pár pontot, amivel szabadon rendelkezhet. Ennek mennyisége szerintem a létrejött vázlatok mennyiségétől függjön. Mindenki szavazhat a szerinte legjobb részmegoldásra, ötletre. Akár a saját magáéra is. Ha valaki egy megoldást nagyon jó ötletnek tart, tehet rá 3 pontot is.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://storage.googleapis.com/designsprintkit/media/03c_01_heatmap.jpg&quot; alt=&quot;800x400&quot; title=&quot;Heatmap vote&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A legjobban teljesítő megoldásokat beszéljük meg a csapattal, módosítsuk, tökéletesítsük őket. Végül gyúrjuk össze egy szuper megoldássá.&lt;/p&gt;
+
+&lt;h3 id=&quot;storyboard&quot;&gt;Storyboard&lt;/h3&gt;
+&lt;p&gt;Tervezzük meg lépésről lépésre, hogy mit fogunk fejleszteni, milyen történetet akarunk átadni a tesztelőknek!&lt;br /&gt;
+A győztes megoldást figyelembe véve - igazából azt beépítve egy történetbe - megtervezzük azt a folyamatot, amit prototípusként meg akarunk alkotni.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://designsprintkit.storage.googleapis.com/media/04a_01_storyboard.png&quot; alt=&quot;800x400&quot; title=&quot;Heatmap vote&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;szerda&quot;&gt;SZERDA&lt;/h2&gt;
+&lt;p&gt;A sok agyalás és döntés után végre dolgozni kezdünk valami “kézzel foghatón”. 👨‍💻 Legyen 2 vagy több prototípusunk is, de a designerek dolgozzanak ugyan abból a készletből (színek, ikonok, stb). Így egy viszonylag egységes látvánnyal kapunk különböző megvalósításokat.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;A prototípusunkat készíthetjük Sketchben, Figmában, Adobe XDben, Invision Studioban esetleg ha valami kód közelibbet szeretnénk akkor megpróbálkozhatunk React Studioval is!&lt;/p&gt;
+
+&lt;p&gt;Kooperáció megengedett, a csapat többi tagjával lehet egyeztetni, akár pár fős társulásokban is lehet dolgozni. Az utolsó nap a user teszté lesz. Aki ezt fogja vezetni nézelődjön, kérdezősködjön a designereknél, hogy mi hogy működik. Próbálja megérteni a koncepciókat, hogy át tudja majd adni a teszt alanyoknak.&lt;/p&gt;
+
+&lt;h2 id=&quot;csÜtÖrtÖk&quot;&gt;CSÜTÖRTÖK&lt;/h2&gt;
+&lt;p&gt;Eljött a nagy nap! Irány tesztelni! 👆&lt;br /&gt;
+Érdemes már hétfőn megkeresni a tesztelőket, nagyjából 3-5 főre lesz szükségünk.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://soma.shoprenter.hu/custom/soma/image/data/2018/05-test.jpg&quot; alt=&quot;800x400&quot; title=&quot;Map&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ha van lehetőségünk 2 szobát befoglalni a teszt idejére, tegyük meg és a sprint csapattagok számára streameljük a másik szobában lévő felhasználók munkáját. A teszt vezetője próbáljon minden fontos információt átadni az embereknek, a csapat pedig szorgalmasan jegyzetelje észrevételeit. Nap végén szánjunk kellő időt a teszt megbeszélésére.&lt;/p&gt;
+
+&lt;h2 id=&quot;konklúzió&quot;&gt;Konklúzió&lt;/h2&gt;
+&lt;p&gt;Design sprintünk a végéhez ért. Egy nehéz döntést kell még meghoznunk, hogyan is értékeljük az ötletünket? 3 lehetőségünk van:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Elbukott&lt;/li&gt;
+  &lt;li&gt;Részben validált ötlet&lt;/li&gt;
+  &lt;li&gt;Validált ötlet&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Remélem mindenkinek a 3. verzió fog megszületni csütörtökre!&lt;br /&gt;
+Ha szeretnétek többet olvasni a témáról keressétek fel a &lt;a href=&quot;https://designsprintkit.withgoogle.com/&quot; target=&quot;_blank&quot;&gt;Google Design Sprint&lt;/a&gt; bemutató oldalát!&lt;/p&gt;
+
+&lt;p&gt;Amiért elolvastátok ezt a bazihosszú cikkemet szeretnélek meglepni titeket egy kis aprósággal, ami hasznos lehet sprintelésnél. Egy &lt;a href=&quot;https://drive.google.com/file/d/1H9c3WfiWZ1dsZ0zsIH9Z_3RkIkD9-Ag_/view?usp=sharing&quot; target=&quot;_blank&quot;&gt;böngésző ablak&lt;/a&gt; (4 screen / lap) és egy &lt;a href=&quot;https://drive.google.com/file/d/1BxschK9NO6BDN4c6zpmJJp2GvuRVf6OP/view?usp=sharing&quot; target=&quot;_blank&quot;&gt;Crazy8s&lt;/a&gt; sablont (8 mobil screen / lap) találtok a linkeken.
+Jó tervezést, pre validálást! Remélem hasznos lesz számotokra! 😉&lt;/p&gt;
+</description>
+        <pubDate>Tue, 22 May 2018 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/posts/design-sprint</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/design-sprint</guid>
+        
+        <category>design</category>
+        
+        <category>sprint</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Egy Esti Meeting</title>
+        <description>&lt;p class=&quot;lead&quot;&gt;Egy szilveszteri lan party közepette született podcast…&lt;/p&gt;
+&lt;!--break--&gt;
+
+&lt;p&gt;December végén szoktunk tartani egy lan partit, aminek apropóján összegyűlnek az Innonic kockái és pizzazás közepette mindenféle játékokkal játszanak. Most főleg CS GO volt terítéken.&lt;/p&gt;
+
+&lt;p&gt;Itt találkoztam egy gyors köszönésre Kovács Lalival, aki fejlesztő nálunk (back-end/front-end). Meséltem neki a blogról és hogy először podcastban gondolkodtam, de igazából egyedül felesleges volt belevágnom. Így keveredtünk el a podcast témakörhöz.&lt;/p&gt;
+
+&lt;p&gt;Egy kis csend után végül mégis arra jutottunk, hogy nekünk csinálni kéne egy podcastot. 🎙 &lt;br /&gt;
+Berendeltünk egy jó kis mikrofont és elkezdtük tesztelgetni. A felvételhez &lt;a href=&quot;https://www.zencastr.com&quot; target=&quot;_blank&quot;&gt;Zencastr&lt;/a&gt;-t fogunk használni. Itt online vehetjük fel az adásokat és még backupol is Dropboxba. Egy másik jó funkciója, hogy automatikusan beállítja a zajszűrést és a gaint. Tudom ajánlani nektek is! 😉&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://static1.squarespace.com/static/559529cae4b01f9a920c6236/t/58320037e58c625a737c7025/1479671882066/?format=750w&quot; alt=&quot;800x400&quot; title=&quot;Zencastr.com banner&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nem is húznám az időt, itt van az első rész - ami még nem túl kiforrott, de simán lesz jobb is! 😊 Fogadjátok szeretettel: &lt;br /&gt;&lt;/p&gt;
+&lt;h&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; allow=&quot;autoplay&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/400993659&amp;amp;color=%236454ac&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&amp;amp;show_teaser=true&quot;&gt;&lt;/iframe&gt;
+
+&lt;h&gt;
+
+Shownotes &lt;br /&gt;
+Soma bevásárlás előtt, Lali fejlesztői tapasztalatai macOS alatt. &lt;br /&gt;
+Próbálgatjuk a Figma-t és addiktív, kraftolós játék a Ylands. &lt;br /&gt;
+&lt;a href=&quot;https://www.figma.com&quot; target=&quot;_blank&quot;&gt;Figma&lt;/a&gt; &lt;br /&gt;
+&lt;a href=&quot;www.innonic.com/academy-kovacs-lajos/&quot; targe=&quot;&quot; t=&quot;_blank&quot;&gt;Neo4J előadás&lt;/a&gt; &lt;br /&gt;
+&lt;a href=&quot;www.neo4j.com&quot; target=&quot;_blank&quot;&gt;Neo4J&lt;/a&gt; &lt;br /&gt;
+&lt;a href=&quot;www.ylands.com&quot; target=&quot;_blank&quot;&gt;Ylands&lt;/a&gt; &lt;br /&gt;
+
+&lt;sub&gt;Képek: Unsplash.com&lt;/sub&gt;
+&lt;/h&gt;&lt;/h&gt;
+</description>
+        <pubDate>Tue, 20 Feb 2018 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/posts/estimeeting</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/estimeeting</guid>
+        
+        <category>blog</category>
+        
+        <category>podcast</category>
+        
+        <category>news</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Update!</title>
+        <description>&lt;p class=&quot;lead&quot;&gt;Végre itt a led és podcastgyanús tervek 2.0&lt;/p&gt;
+&lt;!--break--&gt;
+
+&lt;p&gt;Az utóbbi időben időhiányban küszködöm. Hétvégén elkezdtem az előadás diáit csinálni Slides-on és mellette gőzerővel rajta vagyok a podcast dolgon is. 
+Ma megjött a mikrofon és a beállításokat tesztelgetem. Elég új még a dolog és nem tudom mi lesz belőle, de meglátjuk! 😊&lt;/p&gt;
+
+&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned=&quot;&quot; data-instgrm-permalink=&quot;https://www.instagram.com/p/Be3BVD0gPAh/&quot; data-instgrm-version=&quot;8&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=&quot; margin:8px 0 0 0; padding:0 4px;&quot;&gt; &lt;a href=&quot;https://www.instagram.com/p/Be3BVD0gPAh/&quot; style=&quot; color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;&quot; target=&quot;_blank&quot;&gt;#mic&lt;/a&gt;&lt;/p&gt; &lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://www.instagram.com/szsoma/&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;&quot; target=&quot;_blank&quot;&gt; Soma&lt;/a&gt; (@szsoma) által megosztott bejegyzés, &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2018-02-06T15:07:55+00:00&quot;&gt;Febr 6., 2018, időpont: 7:07 (PST időzóna szerint)&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; defer=&quot;&quot; src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;más&quot;&gt;Más&lt;/h2&gt;
+&lt;p&gt;Végre a korábban megrendelt LED fények is megjöttek és fel is ragasztottam az íróasztal asztallapja mögé. Imádom! 😍&lt;/p&gt;
+
+&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned=&quot;&quot; data-instgrm-permalink=&quot;https://www.instagram.com/p/Be0lyLFA9NF/&quot; data-instgrm-version=&quot;8&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=&quot; margin:8px 0 0 0; padding:0 4px;&quot;&gt; &lt;a href=&quot;https://www.instagram.com/p/Be0lyLFA9NF/&quot; style=&quot; color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;&quot; target=&quot;_blank&quot;&gt;ItsOn! :D #rgb #led #desk&lt;/a&gt;&lt;/p&gt; &lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://www.instagram.com/szsoma/&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;&quot; target=&quot;_blank&quot;&gt; Soma&lt;/a&gt; (@szsoma) által megosztott bejegyzés, &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2018-02-05T16:29:55+00:00&quot;&gt;Febr 5., 2018, időpont: 8:29 (PST időzóna szerint)&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; defer=&quot;&quot; src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
+
+</description>
+        <pubDate>Tue, 06 Feb 2018 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/posts/update</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/update</guid>
+        
+        <category>blog</category>
+        
+        <category>tech</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

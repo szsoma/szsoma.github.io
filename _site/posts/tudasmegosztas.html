@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>Tudásmegosztás for the win! &#9642; UIthings Blog</title>
+<meta name="description" content="Oszd meg, amit tanultál és tanulj belőle!
+
+">
+<meta name="description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+">
+<meta name="keywords" content="news, tech, blog, fejlodes">
+<link rel="canonical" href="http://localhost:4000/posts/tudasmegosztas">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Tudásmegosztás for the win!" />
+<meta name="twitter:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+" />
+<meta name="twitter:image" content="http://localhost:4000" />
+<meta name="author" content="">
+<link rel="author" href="">
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tudásmegosztás for the win!">
+<meta property="og:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+">
+<meta property="og:url" content="http://localhost:4000/posts/tudasmegosztas">
+<meta property="og:site_name" content="UIthings Blog">
+<link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic">
+<style>
+    html {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    }
+</style>
+<link rel="shortcut icon" type="image/png" href="/assets/img/fav.png"/>
+   <body>
+       <div class="wrapper" id="blep">
+          <header>
+   <div class="menu">
+     <div class="logo">
+      <link rel="canonical" href="https://uithings.hu/cloudflare-ssl-for-github-pages/">
+          <object type="image/svg+xml" data="/assets/img/uithings.svg" class="logosvg">Your browser does not support svg images</object>
+     </div>
+       <ul>
+           <li><a href="/about">rólam</a>
+           <li><a href="/archive">archive</a>
+           <li><a href="/donate">sör</a>
+       </ul>
+   </div>
+   <div class="social">
+     <ul>
+            <a href="https://twitter.com/szs0ma" target="_blank" class="smaller">
+              <span class="icon-twitter"></span>
+            </a>
+       <li>
+            <a href="https://github.com/szsoma" target="_blank" class="smaller">
+              <span class="icon-github"></span>
+            </a>
+       <li>
+            <a href="mailto:soma.szoboszlai@innonic.com" target="_blank">
+              <span class="icon-mail_outline"></span>
+            </a>
+       <li>
+            <a href="/feed.xml" target="_blank">
+                <span class="icon-rss_feed"></span>
+            </a>
+     </ul>
+   </div>
+</header>
+           <style>
+  .progress-bar {
+      background: linear-gradient(to right, #1825e0 var(--scroll), transparent 0);
+      background-repeat: no-repeat;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      z-index: 1;
+  }
+</style>
+<div class="progress-bar"></div>
+<script>
+  var element = document.documentElement,
+    body = document.body,
+    scrollTop = 'scrollTop',
+    scrollHeight = 'scrollHeight',
+    progress = document.querySelector('.progress-bar'),
+    scroll;
+  document.addEventListener('scroll', function() {
+    scroll = (element[scrollTop]||body[scrollTop]) / ((element[scrollHeight]||body[scrollHeight]) - element.clientHeight) * 100;
+    progress.style.setProperty('--scroll', scroll + '%');
+  }); 
+</script>
+<article class="post">
+<style>
+  .tudasmegosztas {
+    margin-bottom: 2em;
+  }
+  .tudasmegosztas::before {
+    background-image: url('https://images.unsplash.com/photo-1491186561459-68c36c4a54ae?auto=format&fit=crop&w=1352&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .tudasmegosztas::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(100,255,0,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .tudasmegosztas-container,
+  .tudasmegosztas-container::before,
+  .tudasmegosztas-container::after {
+    height: 25rem;
+  }
+  .tudasmegosztas-bleed-container,
+  .tudasmegosztas-bleed-container::before,
+  .tudasmegosztas-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .tudasmegosztas-container,
+        .tudasmegosztas-container::before,
+        .tudasmegosztas-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="post-title-container
+  tudasmegosztas tudasmegosztas-bleed-container bleed-hero-container
+    ">
+    <!--Post hero image source-->
+   <div class="heading-container hero-heading hero-heading-post">
+     <h1>
+          Tudásmegosztás for the win!
+     </h1>
+     <div class="post-meta">
+        <span>18/11/2017</span>
+        <span>
+              <a href="/tag/news">#news</a>
+              <a href="/tag/tech">#tech</a>
+              <a href="/tag/blog">#blog</a>
+              <a href="/tag/fejlodes">#fejlodes</a>
+        </span>
+        <span class="post-meta-link-nohero">
+    3 perc
+</span>  
+     </div>
+   </div>
+ </div>
+   <p class="lead">Oszd meg, amit tanultál és tanulj belőle!
+<!--break-->
+
+<p>Mostanában rengeteg podcastot hallgatok. Köztük van a <a href="http://www.szertar.com/" target="_blank">Szertár</a> is. Eszméletlen érdekes témákban készítik a beszélgetéseket, mindig valamilyen szaktekintéllyel. A jó pár végighallgatott adás valamelyikében volt, hogy az ember azért is tudott ugrásszerűen fejlődni, mert képes volt megosztani a többiekkel a tapasztalatait. Például, hogy
+
+<blockquote>
+ <p>kipurcant egy mamut a dombon túl és menjünk szedjük ki a csülkét mielőtt jön a kardfogú tigris és felzabálja!
+</blockquote>
+
+<p>Vagy valami ilyesmi…
+
+<p>Az ember életében mindig nagyon fontos volt a tapasztalatok és a tudás megosztása. Sok tízezer éven keresztül az emlékezet volt az egyetlen információtároló. Ahogy fejlődött a kultúránk egyre nagyobb igény lett a tudás megőrzésére. Kialakult az írás, ami mindent megváltoztatott.
+
+<p><img src="https://images.unsplash.com/photo-1468779036391-52341f60b55d?auto=format&amp;fit=crop&amp;w=1521&amp;q=60&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="800x400" title="books" />
+
+<p>Kis idő után a következő nagy lépés a könyvnyomtatás volt. Majd jött a távközlés forradalma végül az elektronikus információfeldolgozás korszaka.
+
+<p>Olvastam egy cikket<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>, hogy 2016-ban KB 4.66 billió weboldal volt a világhálón. És ebben nincs benne a DeepWeb. A weben tárolt adatokat pedig már a zettabyte-okban lehet mérni.
+
+<p>A mai IT világban tudásmegosztás nélkül elég nehéz lenne fejlődni. Cikkeket olvasunk, blogokat bújunk, konferenciákra járunk, hogy megismerjük az új technológiákat, praktikákat, trendeket, módszereket. Egy nagy önfejlődő hálózat vagyunk, ahol mindenki tud tanulni a másiktól. Ehhez viszont be kell kapcsolódnunk ebbe a hálózatba!
+
+<p>Szerencsére rengeteg olyan ember és oldal van, mint a Udemy, Udacity, Codepen, CSS-Tricks, FreeCodeCamp, Behance, Dribble, Kolboid, Stackoverflow, a Mediumon publikálók és sok-sok bloggertárs. Ezektől a közösségektől rengeteget tanultam az elmúlt évben és sokat formálódott a hozzáállásom is. Most megpróbálok én is tudást és tapasztalatot megosztani, hátha valakinek hasznos lesz. Már csak azért is, mert ha megosztunk egy témában valamit, akkor abban el kell merülni, utána kell olvasni. És ezzel pedig magadat is fejleszted. Mindemellett új kapcsolatokat építhetsz ki, talán egy kisebb közösség is köréd gyűlik és valljuk be: self marketingnek sem rossz! 👨‍💻
+
+<p>Le kell győzni azt az érzést, hogy ha megosztod a világgal a praktikáid, akkor már nem kellesz majd senkinek. Ez valószínű, hogy inkább pont fordítva lesz. Az embereknek imponál és később nem csak mások, de a saját hasznodra is válik. Ez is arra sarkall, hogy még jobb legyél a szakmában.
+
+<p><img src="http://new.canny-creative.com/wp-content/uploads/2014/04/How-to-Choose-a-Graphic-Design-Agency1.jpg" alt="800x400" title="bulbs" />
+
+<p>Szóval ideje megreformálni a hozzáállást, kilépni a komfortzónából és letenni valamit az asztalra! Belevágni új dolgok tanulásába, gyártani a projekteket és előadni, írni róluk, hogy aztán nagy beszélgetések szülessenek belőle. Ez fog minket előre lendíteni.
+
+<p><sub>
+	Képek: Unsplash <br />
+	Ihlet: <a href="https://blog.kolboid.eu/" target="_blank">Kolboid</a>
+</sub>
+
+<div class="footnotes">
+ <ol>
+   <li id="fn:1">
+     <p><a href="https://www.livescience.com/54094-how-big-is-the-internet.html">How Big Is the Internet, Really?</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a>
+    
+ </ol>
+</div>
+
+</article>
+<div class="share-btn">
+    <span> Köszi, hogy elolvastad. Oszd meg a barátaiddal is!</span> <br>
+    <a href="https://twitter.com/intent/tweet?text=Tudásmegosztás for the win!&url=http://localhost:4000/posts/tudasmegosztas&via=szs0ma&related=szs0ma" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/posts/tudasmegosztas" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://plus.google.com/share?url=http://localhost:4000/posts/tudasmegosztas" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+</div>
+<aside class="related">
+<h2>Related posts</h2>
+<ul class="related-posts">
+   <li>
+    <a href="/posts/illusztracio">
+        <span>iPad-et vettem</span>
+        <small>17/09</small>
+    </a>
+   <li>
+    <a href="/posts/podcaster-felmeres">
+        <span>Podcaster Felmérés</span>
+        <small>07/09</small>
+    </a>
+   <li>
+    <a href="/posts/podcast-update-1">
+        <span>Esti Meeting update</span>
+        <small>07/06</small>
+    </a>
+   <li>
+    <a href="/posts/estimeeting">
+        <span>Egy Esti Meeting</span>
+        <small>20/02</small>
+    </a>
+</aside>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+   (function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = 'https://https-szsoma-github-io.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+           <footer>
+    <span>© UIthings.hu - UI, UX, egy csöpp frontend és
+</span>
+    <span>Szoboszlai Soma</span>
+</footer>
+       </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-107802094-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>UX és a webes animációk &#9642; UIthings Blog</title>
+<meta name="description" content="Elvonja a figyelmet vagy vezeti a tekintetet?
+Kalandozásomat a animációk világába nem is kezdhettem volna mással, mint a User Experience vizsgálatával. Van-e létjogosultsága az animációknak egy weboldalon?
+
+">
+<meta name="description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+">
+<meta name="keywords" content="blog, design, ux, animation">
+<link rel="canonical" href="http://localhost:4000/posts/animacio-es-ux">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="UX és a webes animációk" />
+<meta name="twitter:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+" />
+<meta name="twitter:image" content="http://localhost:4000" />
+<meta name="author" content="">
+<link rel="author" href="">
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UX és a webes animációk">
+<meta property="og:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+">
+<meta property="og:url" content="http://localhost:4000/posts/animacio-es-ux">
+<meta property="og:site_name" content="UIthings Blog">
+<link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic">
+<style>
+    html {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    }
+</style>
+<link rel="shortcut icon" type="image/png" href="/assets/img/fav.png"/>
+   <body>
+       <div class="wrapper" id="blep">
+          <header>
+   <div class="menu">
+     <div class="logo">
+      <link rel="canonical" href="https://uithings.hu/cloudflare-ssl-for-github-pages/">
+          <object type="image/svg+xml" data="/assets/img/uithings.svg" class="logosvg">Your browser does not support svg images</object>
+     </div>
+       <ul>
+           <li><a href="/about">rólam</a>
+           <li><a href="/archive">archive</a>
+           <li><a href="/donate">sör</a>
+       </ul>
+   </div>
+   <div class="social">
+     <ul>
+            <a href="https://twitter.com/szs0ma" target="_blank" class="smaller">
+              <span class="icon-twitter"></span>
+            </a>
+       <li>
+            <a href="https://github.com/szsoma" target="_blank" class="smaller">
+              <span class="icon-github"></span>
+            </a>
+       <li>
+            <a href="mailto:soma.szoboszlai@innonic.com" target="_blank">
+              <span class="icon-mail_outline"></span>
+            </a>
+       <li>
+            <a href="/feed.xml" target="_blank">
+                <span class="icon-rss_feed"></span>
+            </a>
+     </ul>
+   </div>
+</header>
+           <style>
+  .progress-bar {
+      background: linear-gradient(to right, #1825e0 var(--scroll), transparent 0);
+      background-repeat: no-repeat;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      z-index: 1;
+  }
+</style>
+<div class="progress-bar"></div>
+<script>
+  var element = document.documentElement,
+    body = document.body,
+    scrollTop = 'scrollTop',
+    scrollHeight = 'scrollHeight',
+    progress = document.querySelector('.progress-bar'),
+    scroll;
+  document.addEventListener('scroll', function() {
+    scroll = (element[scrollTop]||body[scrollTop]) / ((element[scrollHeight]||body[scrollHeight]) - element.clientHeight) * 100;
+    progress.style.setProperty('--scroll', scroll + '%');
+  }); 
+</script>
+<article class="post">
+<style>
+  .animacio-es-ux {
+    margin-bottom: 2em;
+  }
+  .animacio-es-ux::before {
+    background-image: url('https://i.pinimg.com/564x/b9/b5/8d/b9b58da6a098bf61fc72ccd613a5666b--barter-animation.jpg');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .animacio-es-ux::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(100,0,255,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .animacio-es-ux-container,
+  .animacio-es-ux-container::before,
+  .animacio-es-ux-container::after {
+    height: 25rem;
+  }
+  .animacio-es-ux-bleed-container,
+  .animacio-es-ux-bleed-container::before,
+  .animacio-es-ux-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .animacio-es-ux-container,
+        .animacio-es-ux-container::before,
+        .animacio-es-ux-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="post-title-container
+  animacio-es-ux animacio-es-ux-bleed-container bleed-hero-container
+    ">
+    <!--Post hero image source-->
+   <div class="heading-container hero-heading hero-heading-post">
+     <h1>
+          UX és a webes animációk
+     </h1>
+     <div class="post-meta">
+        <span>10/09/2017</span>
+        <span>
+              <a href="/tag/blog">#blog</a>
+              <a href="/tag/design">#design</a>
+              <a href="/tag/ux">#ux</a>
+              <a href="/tag/animation">#animation</a>
+        </span>
+        <span class="post-meta-link-nohero">
+    4 perc
+</span>  
+     </div>
+   </div>
+ </div>
+   <h3 id="elvonja-a-figyelmet-vagy-vezeti-a-tekintetet">Elvonja a figyelmet vagy vezeti a tekintetet?</h3>
+<p class="lead">Kalandozásomat a animációk világába nem is kezdhettem volna mással, mint a User Experience vizsgálatával. Van-e létjogosultsága az animációknak egy weboldalon?
+<!--break-->
+
+<blockquote>
+ <p>Attól függ…
+</blockquote>
+
+<p>És itt be is fejezhetném az elmélkedést. :) Na de menjünk ebbe bele kicsit.
+
+<p>Az agyunkat arra kódolta az evolúció, hogy észlelje a mozgást és minél gyorsabban reagáljon rá. Ezért képes egy animáció bevonzani a tekintetet, akkor is, amikor semmi más nem tudja. Tehát egy jó animációval képesek vagyunk a user figyelmét újból felkelteni vagy esetleg tovább vezetni valami fontos dologra. Viszont ha rosszul van időzítve vagy rossz helyen van akkor egy fontos dologról (pl. CTA gomb) vonhatja el a figyelmet. Hogy is működik ez?
+
+<p>Ha böngészünk egy weboldalon, akkor egy térképet készítünk magunkba az ott található információkról. Egy animációval át tudjuk formálni ezt a térképet, összpontosítani tudjuk a figyelmet egy fontos pontra. Viszont ha az animációnk nincs jól megírva (általában JS), akkor belassítja vagy meg is ölheti az oldalt és oda minden szorgalmasan összeszedett jó User Experience-ünk.
+
+<h2 id="hol-működnek-a-legjobban">Hol működnek a legjobban?</h2>
+
+<p>Ha egy weboldalra tévedünk akkor azonnal elkezdjük feldolgozni az oldalt. Keressük a kis információ morzsákat: megnézzük a képeket, elolvassuk a nagy, vastag betűvel írt címeket, stb. Előfordulnak olyan helyzetek, hogy valamiért több időre van szükségünk, hogy betöltsünk egy oldalt vagy alkalmazást. Az azonnali információéhséget például el lehet fedni egy jó loaderrel. Az animációkban elég sok információt lehet elrejteni még akkor is ha csak egy rövid ismétlődő mozgást nézünk.
+Itt van egy példa:
+<img src="https://soma.shoprenter.hu/custom/soma/image/data/om-loading.gif" alt="800x400" title="Optimonk loader" class="lead" />
+<h3 id="bennem-ezek-a-kérdések-vetődnek-fel">Bennem ezek a kérdések vetődnek fel:</h3>
+<blockquote>
+ <p>Mozog a kis Monk is vagy csak a szöveg? Hogyan mozog a szöveg? Mi a rendszer benne?
+</blockquote>
+
+<p>Mire megválaszolja a user betöltöttünk neki az alkalmazásunkat, és már fogyaszthatja is a jól megérdemelt tartalmát. Egy kutatás szerint az emberek sokkal tovább hajlandóak várni egy betöltődésre akkor, ha egyedi loading animációt használ az oldal vagy app.
+
+<p>Ha például egy applikációnk van akkor használhatunk progresszív tartalom megjelenítést is. Ezt elkészíthetjük div-ekkel vagy épp SVG-vel is úgy, hogy ahol szöveges tartalmat akarunk betölteni ott kicsíkozzuk a tartalmat és egy finom pulzáló színváltó animálást is tehetünk rá.
+<img src="https://soma.shoprenter.hu/custom/soma/image/data/1-3-4h8EC6DnTPlpNQnww_vA.gif" alt="800x400" title="progressive content" class="lead" />
+
+<p>A Slack és a Facebook is sikeresen alkalmazza ezt a technikát. Amíg be nem töltünk mindent a user-ünket leköti, hogy megértse a különböző alakzatokat és a pulzálást. Ezzel időt nyerhetünk és mindenki boldog lesz.
+
+<p>Egy másik példában egy megértést könnyítő funkciót mutatok. Ezt szintén az egyik termékünkhöz készítettük és Landing page-eken használunk hasonlókat a különböző funkciók bemutatásánál. Én inkább annak a híve vagyok, hogy elég egyszer lejátszani, és meg kell hagyni a usernek, hogyha szeretné kattintásra újból megnézheti. Így letisztultabb lesz a blokk, és nem vonja el a figyelmet a fontosabb szövegről.
+
+<p><img src="https://soma.shoprenter.hu/custom/soma/image/data/1-ZphBYfXEcpBI8THilv9lvg.gif" alt="800x400" title="progressive content" class="lead" />
+
+<p>Egy időben UI animációkat is akartunk készíteni az egyedi projektjeinkhez, viszont ezt evetettük időhiány miatt. Mindenesetre egy hasonló animáció jelentősen tudná növelni egy olyan ügyfelünk elégedettségét, aki mondjuk semmit nem ért a szakmához és nem tudja elképzelni, a mozgásokat az új webáruházában.
+
+<p>Ezeken kívül rengeteg más lehetőségünk van még ahol használni tudjuk az animációk adta lehetőségeket. Ezeket sorra ki is akarom tárgyalni a jövőben, mert le vannak gyártva élesben az SVG előadásomhoz.
+
+<p>Szóval úgy gondolom, hogy ha nem esünk túlzásokba az animációk terén akkor fel tudják dobni az oldalunkat, segíteni tudnak fontos információk átadásában, jobb megértésében. Ehhez viszont szükséges, hogy amennyire csak lehet próbáljuk mellőzni a méretes gif file-okat és használjunk SVG- grafikákat CSS-sel vagy JS-sel animálva.
+
+</article>
+<div class="share-btn">
+    <span> Köszi, hogy elolvastad. Oszd meg a barátaiddal is!</span> <br>
+    <a href="https://twitter.com/intent/tweet?text=UX és a webes animációk&url=http://localhost:4000/posts/animacio-es-ux&via=szs0ma&related=szs0ma" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/posts/animacio-es-ux" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://plus.google.com/share?url=http://localhost:4000/posts/animacio-es-ux" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+</div>
+<aside class="related">
+<h2>Related posts</h2>
+<ul class="related-posts">
+   <li>
+    <a href="/posts/font-weights">
+        <span>Nem szeretem már a vékonyat</span>
+        <small>03/12</small>
+    </a>
+   <li>
+    <a href="/posts/luckywheel">
+        <span>Spin 2 Win!</span>
+        <small>04/11</small>
+    </a>
+   <li>
+    <a href="/posts/figma-zeplin">
+        <span>Itt a Zeplin ↔ Figma integráció!</span>
+        <small>29/10</small>
+    </a>
+   <li>
+    <a href="/posts/merre-tudsz-fejlodni">
+        <span>Merre tud fejlődni egy designer?</span>
+        <small>04/10</small>
+    </a>
+</aside>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+   (function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = 'https://https-szsoma-github-io.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+           <footer>
+    <span>© UIthings.hu - UI, UX, egy csöpp frontend és
+</span>
+    <span>Szoboszlai Soma</span>
+</footer>
+       </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-107802094-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    

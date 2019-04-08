@@ -1,0 +1,6 @@
+{% assign words = {{include.text}} | number_of_words %}
+  {% if words < 260 %}
+    1 perc
+  {% else %}
+    {{ words | divided_by:130 }} perc
+{% endif %}

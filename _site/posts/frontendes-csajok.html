@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>6 fejlesztő, akit érdemes követned 👩🏼‍🏭 &#9642; UIthings Blog</title>
+<meta name="description" content="Egy ideje már nyomon követek több front-endest is, főleg az SVG, animáció és Grid Layout területről. Ezek között elég nagy számban vannak a nagyon tehetséges nők. Lehet, hogy ez az arány csak ebben a témakörben ilyen nagy, mindenesetre én nagyon imádom őket!
+
+">
+<meta name="description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+">
+<meta name="keywords" content="frontend, tech">
+<link rel="canonical" href="http://localhost:4000/posts/frontendes-csajok">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="6 fejlesztő, akit érdemes követned 👩🏼‍🏭" />
+<meta name="twitter:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+" />
+<meta name="twitter:image" content="http://localhost:4000" />
+<meta name="author" content="">
+<link rel="author" href="">
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="6 fejlesztő, akit érdemes követned 👩🏼‍🏭">
+<meta property="og:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+">
+<meta property="og:url" content="http://localhost:4000/posts/frontendes-csajok">
+<meta property="og:site_name" content="UIthings Blog">
+<link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic">
+<style>
+    html {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    }
+</style>
+<link rel="shortcut icon" type="image/png" href="/assets/img/fav.png"/>
+   <body>
+       <div class="wrapper" id="blep">
+          <header>
+   <div class="menu">
+     <div class="logo">
+      <link rel="canonical" href="https://uithings.hu/cloudflare-ssl-for-github-pages/">
+          <object type="image/svg+xml" data="/assets/img/uithings.svg" class="logosvg">Your browser does not support svg images</object>
+     </div>
+       <ul>
+           <li><a href="/about">rólam</a>
+           <li><a href="/archive">archive</a>
+           <li><a href="/donate">sör</a>
+       </ul>
+   </div>
+   <div class="social">
+     <ul>
+            <a href="https://twitter.com/szs0ma" target="_blank" class="smaller">
+              <span class="icon-twitter"></span>
+            </a>
+       <li>
+            <a href="https://github.com/szsoma" target="_blank" class="smaller">
+              <span class="icon-github"></span>
+            </a>
+       <li>
+            <a href="mailto:soma.szoboszlai@innonic.com" target="_blank">
+              <span class="icon-mail_outline"></span>
+            </a>
+       <li>
+            <a href="/feed.xml" target="_blank">
+                <span class="icon-rss_feed"></span>
+            </a>
+     </ul>
+   </div>
+</header>
+           <style>
+  .progress-bar {
+      background: linear-gradient(to right, #1825e0 var(--scroll), transparent 0);
+      background-repeat: no-repeat;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      z-index: 1;
+  }
+</style>
+<div class="progress-bar"></div>
+<script>
+  var element = document.documentElement,
+    body = document.body,
+    scrollTop = 'scrollTop',
+    scrollHeight = 'scrollHeight',
+    progress = document.querySelector('.progress-bar'),
+    scroll;
+  document.addEventListener('scroll', function() {
+    scroll = (element[scrollTop]||body[scrollTop]) / ((element[scrollHeight]||body[scrollHeight]) - element.clientHeight) * 100;
+    progress.style.setProperty('--scroll', scroll + '%');
+  }); 
+</script>
+<article class="post">
+<style>
+  .frontendes-csajok {
+    margin-bottom: 2em;
+  }
+  .frontendes-csajok::before {
+    background-image: url('https://assets.awwwards.com/awards/images/2017/09/sarah-drasner-thumb.jpg');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .frontendes-csajok::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,100,255,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .frontendes-csajok-container,
+  .frontendes-csajok-container::before,
+  .frontendes-csajok-container::after {
+    height: 25rem;
+  }
+  .frontendes-csajok-bleed-container,
+  .frontendes-csajok-bleed-container::before,
+  .frontendes-csajok-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .frontendes-csajok-container,
+        .frontendes-csajok-container::before,
+        .frontendes-csajok-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="post-title-container
+  frontendes-csajok frontendes-csajok-bleed-container bleed-hero-container
+    ">
+    <!--Post hero image source-->
+   <div class="heading-container hero-heading hero-heading-post">
+     <h1>
+          6 fejlesztő, akit érdemes követned 👩🏼‍🏭
+     </h1>
+     <div class="post-meta">
+        <span>15/01/2018</span>
+        <span>
+              <a href="/tag/frontend">#frontend</a>
+              <a href="/tag/tech">#tech</a>
+        </span>
+        <span class="post-meta-link-nohero">
+    7 perc
+</span>  
+     </div>
+   </div>
+ </div>
+   <p class="lead">Egy ideje már nyomon követek több front-endest is, főleg az SVG, animáció és Grid Layout területről. Ezek között elég nagy számban vannak a nagyon tehetséges nők. Lehet, hogy ez az arány csak ebben a témakörben ilyen nagy, mindenesetre én nagyon imádom őket!
+<!--break-->
+
+<p>Igen, ez a 6 fejlesztő, mind front-endes lányok lesznek! <br />
+Szeretném röviden bemutatni a őket, milyen területen dolgoznak, miről adnak elő konferenciákon, hol lehet őket követni és milyen publikációkat lehet olvasni tőlük. Ezekhez adok linkeket és Youtube lejátszási listákat is!
+<h3 id="miért">Miért?</h3>
+<p>Mert tanulni jó, és ha eddig esetleg nem ismerte őket valaki, most megnézhet pár jó előadást ebben a témában is. <br />
+A fejlesztés nem csak fiús dolog és remélem ettől össze-vissza motiválódnak majd itt a lányok. 😊
+
+<h2 id="1-lea-verou---web-standards-geek">1. Lea Verou - web standards geek</h2>
+
+<p><img src="https://monterail-share.s3.amazonaws.com/public/codetunes/2014-05-20-front-trends-2014-impressions/ft-l-verou.jpg" alt="800x400" title="Lea Verou" />
+
+<h3 id="linkek">Linkek:</h3>
+<p><a href="http://lea.verou.me/" target="_blank">web</a> | 
+<a href="https://twitter.com/leaverou" target="_blank">twitter</a> | 
+<a href="https://www.amazon.com/CSS-Secrets-Lea-Verou/dp/1449372635" target="_blank">könyv</a>
+
+<p>A görög származású Bostonban élő Lea nem kisebb helyeken ténykedett/ik mint az MIT, W3C, O’Reilly.
+
+<p>Jelenleg egy Mavo nevű appon dolgozik. Ez egy olyan eszköz, amivel web appokat tudunk készíteni - természetesen egyszerűen, felhőben.
+CSS Secrets című könyvét 2015-ben publikálta, amit én is elolvastam és inkább azoknak ajánlanlom, akik a kezdő szintnél már kicsit jobbaknak.
+A könyv tele van interaktív példákkal. Ezek linkek formájában jelennek meg a témakörök végén és segítségükkel kipróbálhatjuk élesben is a tanultakat.
+
+<p>Lea prezentációkat is szokott tartani, 
+<a href="https://www.youtube.com/playlist?list=PLY-VJzkUl1jzG6LXrgEaUc0KfqB9yBSgl" target="_blank">különböző témákban</a>.
+
+<hr />
+
+<h2 id="2-sara-soueidan---svg-geek">2. Sara Soueidan - SVG geek</h2>
+
+<p><img src="https://i.ytimg.com/vi/NkLDuPf5P0A/maxresdefault.jpg" alt="800x400" title="Sara Soueidan" />
+
+<h3 id="linkek-1">Linkek:</h3>
+<p><a href="https://www.sarasoueidan.com/" target="_blank">web+blog</a> | 
+<a href="https://twitter.com/SaraSoueidan" target="_blank">twitter</a> | 
+<a href="https://www.sarasoueidan.com/workshops/" target="_blank">workshop</a>
+
+<p>Sara egy libanoni front-end, UI fejlesztő, aki nagy híve az SVG technológiának. <br /> Igen.. ezért aztán muszáj követnem a munkásságát. 🤓 <br />
+Korábban dolgozott többek között a Netflixnek, Smashing magazine-nak is. Jelenleg freelancer, emellett workshopokat tart Sarah Drasnerrel és rengeteg konferenciára jár előadni. Egy igazi világjáró vendégelőadó. 2017-ben nálunk is járt Budapesten, a CSS Confon.
+
+<p>Amikor az SVG előadásomra készültem rengeteg prezentációját megnéztem. Igazán elhivatott fejlesztő és nagyon jó előadó. 2014-ben írott <a href="https://www.sarasoueidan.com/blog/svg-coordinate-systems/" target="_blank">cikke</a> az SVG viewport/viewbox magyarázatáról még 2018-ban is hasznos és nem lehet elégszer elolvasni és próbálgatni a demóját.
+
+<p>Nézzetek meg tőle is néhány <a href="https://www.youtube.com/playlist?list=PLY-VJzkUl1jxdKdyCwUGKQkCl0nR6cSFX" target="_blank">előadást SVG témában</a>
+
+<hr />
+
+<h2 id="3-rachel-andrew---a-mogorva-néni">3. Rachel Andrew - a mogorva néni</h2>
+
+<p><img src="http://www.tomango.co.uk/wp-content/uploads/2016/11/TRM_0146.jpg" alt="800x400" title="Rachel Andrew" />
+
+<h3 id="linkek-2">Linkek:</h3>
+<p><a href="https://rachelandrew.co.uk/" target="_blank">web+blog</a> | 
+<a href="https://twitter.com/rachelandrew" target="_blank">twitter</a> | 
+<a href="https://gridbyexample.com/" target="_blank">Grid by Example</a> | 
+<a href="https://rachelandrew.co.uk/books" target="_blank">könyvek</a> |
+
+<p>A brit Rachel Andrew neve sokaknak ismerős lehet, hiszen elég régóta a pályán van. Web fejlesztő, előadó és szerzője/társszerzője rengeteg webbel kapcsolatos könyvnek 2002 óta. Ezen felül társalapítója a Perch nevű CRM-nek és van egy három részből álló CSS Layout online kurzusa is.
+
+<p>Andrew nagyban hozzájárult a <a href="http://uithings.hu/posts/cssgrid" target="_blank">Grid Layout</a> fejlesztéséhez, megismertetéséhez. 2012 óta - nagyjából a kezdetektől - a layout technológia mellett áll. A linkek között említett Grid by Example bemutató oldala a mai napig nagy segítséget nyújt a Griddel ismerkedőknek és a tapasztaltabbaknak is. Több előadó is hivatkozik rá előadásaiban.
+
+<p>Az ő <a href="https://www.youtube.com/playlist?list=PLY-VJzkUl1jwkBOYyL4d6sQyiTOA7NlmE" target="_blank">előadásai</a> közül is gyűjtöttem párat.
+
+<hr />
+
+<h2 id="4-sarah-drasner---akinek-a-hobbija-a-web-animálás">4. Sarah Drasner - akinek a hobbija a web animálás</h2>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*C4g-IV1Jm6zoVTKl7cWErQ.jpeg" alt="800x400" title="Sarah Drasner" />
+
+<h3 id="linkek-3">Linkek:</h3>
+<p><a href="https://sarahdrasnerdesign.com/" target="_blank">web</a> | 
+<a href="https://twitter.com/sarah_edo" target="_blank">twitter</a> | 
+<a href="http://a.co/0BrUMQb" target="_blank">könyv</a> | 
+<a href="https://css-tricks.com/author/sdrasner/" target="_blank">CSS Tricks</a>
+
+<p>Ő az az ember, aki imádja, amit csinál és én ezt imádom. Energikus, lelkes, jó előadó, igazán motiváló személyiség. Azt hiszem ő fertőzött meg a webes animálással, aminek köszönhetően az SVG-be és a Greensock js-be is beleástam magam.
+<br />
+Sarah jelenleg a Microsoftnál dolgozik és a CSS-Tricksnek ír. CSS Dev Conf díjnyertes előadója, senior fejlesztő és UX designer 15 év tapasztalattal. Ezek mellett Val Headdel és Sara Soueidannal is workshopokat tart.
+
+<p>Egy éve jött ki az első, SVG Animációval foglalkozó könyve az O’Reilly szériában. Természetesen le is csaptam rá, mert egy csomó trükköt lehet belőle tanulni. Minden fontosabb animációs eszközről ír (CSS/keyframes, Snap.svg, Greensock 🤘, Mo.js, Smil, Velocity.js, stb.), így mindenki megtalálhatja a kedvére valót, ha animálni akar.
+
+<p>Nézz rá az <a href="https://www.youtube.com/playlist?list=PLY-VJzkUl1jx-pDXNoFMNVMFNh6YKpt75" target="_blank">előadásaira itt!</a>
+
+<hr />
+
+<h2 id="5-jen-simmons---podcaster">5. Jen Simmons - podcaster</h2>
+
+<p><img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2016/08/1472522253versioning_jensimmons.png" alt="800x400" title="Jen Simmons" />
+
+<h3 id="linkek-4">Linkek:</h3>
+<p><a href="http://jensimmons.com" target="_blank">web</a> | 
+<a href="https://twitter.com/jensimmons" target="_blank">twitter</a> | 
+<a href="http://thewebahead.net/" target="_blank">podcast</a> | 
+<a href="http://labs.jensimmons.com/" target="_blank">Grid Layout Lab</a>
+
+<p>Jen Simmons egy másik “nagyöreg” Rachel Andrew mellett. <br />
+A hölgy jelenleg a Mozillánál web designer, tanácsadó és előadó szakmai konferenciákon. Korábban a CERNnek, Googlenak  és a W3Cnek is dolgozott.
+
+<p>Jen mániája a web layoutok kutatása. Nagy híve a Gridnek, amivel már 2013-óta dolgozik. Ezzel kapcsolatban érdemes olvasni az <a href="http://jensimmons.com/writing" target="_blank">írásait</a> is.
+
+<p>Azon kevesek egyike, aki podcastot is készít..ett. A The Web Aheadben hozzá hasonló szakértőkkel beszélgetett, érdemes böngészni a témák között. 2015-ben elnyerte a Net Awards Podcast of the Year díjat is.
+Én mára már podcast függő lettem, ilyeneket például munka közben is szoktam hallgatni. Sajnos az utolsó adás 2016-ban került fel.
+
+<p><a href="https://www.youtube.com/playlist?list=PLY-VJzkUl1jxCNr0ztpwCYfUQ09R_BLOB" target="_blank">Előadásokért erre!</a>
+
+<hr />
+
+<h2 id="6-val-head---a-pro">6. Val Head - a pro</h2>
+
+<p><img src="http://valhead.com/wp-content/uploads/2015/07/Val-at-FOWD-London2.jpg" alt="800x400" title="Rachel Andrew" />
+
+<h3 id="linkek-5">Linkek:</h3>
+<p><a href="http://valhead.com/" target="_blank">web</a> | 
+<a href="https://twitter.com/vlh" target="_blank">twitter</a> | 
+<a href="http://a.co/7MPUPTG" target="_blank">könyv</a> | 
+<a href="http://uianimationnewsletter.com/" target="_blank">hírlevél</a>
+
+<p>Val Head a web animációk La Ferrarija, Ronaldinhoja, Marilyn Monroeja stb, stb. Direkt a UI/UX animációkra specializálódott. Ebben a témában ír, ad elő és tart workshopokat. Mindeközben 2017-ben az Adobe Design csapatába is becsatlakozott. Kezdetben az Adobe XD drótváz és prototípus készítő szoftveren fejleszti a beépített UI animáció lehetőségeket.
+
+<p>Ha még nem íratkoztál fel 100 szakmai hírlevélre, akkor mindenképp ajánlom figyelmedbe az övét: The UI Animation Newsletter.<br />
+2016-ban jelent meg a Designing Interface Animation című könyve. Ezt még nem tudtam elolvasni, de már be van tervezve! A könyv motion design-al foglalkozik és front-endeseknek, designereknek, UX-eseknek ajánlja legfőképp.
+
+<p>Ha kezdő vagy animálásban, de kíváncsi vagy a témára, akkor töltsd le az ingyenes <a href="http://cssanimationspocketguide.com/" target="_blank">The CSS Animations Pocket Guide</a>-ját! Régi, de hasznos lehet.
+
+<p>A csaj elég pörgős személyiség, vicces, érdekes előadásokat tart. Sok közülük Youtubeon is fent van: <a href="https://www.youtube.com/playlist?list=PLY-VJzkUl1jyJ1yRpxscjA0HTr9-3-qrP" target="_blank">ide gyűjtöttem párat!</a>
+
+<p>2017 októberében, Budapesten az Amuse UX Conferencen talalkozhattunk vele. Az előadásának címe UX in motion volt <a href="https://www.slideshare.net/valhead/ux-in-motion-81394198" target="_blank">a slideot itt</a> pörgethetitek végig!
+
+<p>Remélem sokan ránéztek majd a Youtube listákra és tetszeni fognak az előadások! Kommentben pedig írjátok meg ti is, hogy kiket követtek aktívan és milyen szakmai hírlevelekre vagytok feliratkozva. 📰
+
+</article>
+<div class="share-btn">
+    <span> Köszi, hogy elolvastad. Oszd meg a barátaiddal is!</span> <br>
+    <a href="https://twitter.com/intent/tweet?text=6 fejlesztő, akit érdemes követned 👩🏼‍🏭&url=http://localhost:4000/posts/frontendes-csajok&via=szs0ma&related=szs0ma" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/posts/frontendes-csajok" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://plus.google.com/share?url=http://localhost:4000/posts/frontendes-csajok" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+</div>
+<aside class="related">
+<h2>Related posts</h2>
+<ul class="related-posts">
+</aside>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+   (function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = 'https://https-szsoma-github-io.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+           <footer>
+    <span>© UIthings.hu - UI, UX, egy csöpp frontend és
+</span>
+    <span>Szoboszlai Soma</span>
+</footer>
+       </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-107802094-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    

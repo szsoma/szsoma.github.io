@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>Termék tervezés Google Design Sprinttel 🏃 &#9642; UIthings Blog</title>
+<meta name="description" content="Hogyan juss el 0-ról egy felhasználói teszten átesett prototípusig 4 nap alatt. 🏃
+
+">
+<meta name="description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+">
+<meta name="keywords" content="design, sprint">
+<link rel="canonical" href="http://localhost:4000/posts/design-sprint">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Termék tervezés Google Design Sprinttel 🏃" />
+<meta name="twitter:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+" />
+<meta name="twitter:image" content="http://localhost:4000" />
+<meta name="author" content="">
+<link rel="author" href="">
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Termék tervezés Google Design Sprinttel 🏃">
+<meta property="og:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+">
+<meta property="og:url" content="http://localhost:4000/posts/design-sprint">
+<meta property="og:site_name" content="UIthings Blog">
+<link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic">
+<style>
+    html {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    }
+</style>
+<link rel="shortcut icon" type="image/png" href="/assets/img/fav.png"/>
+   <body>
+       <div class="wrapper" id="blep">
+          <header>
+   <div class="menu">
+     <div class="logo">
+      <link rel="canonical" href="https://uithings.hu/cloudflare-ssl-for-github-pages/">
+          <object type="image/svg+xml" data="/assets/img/uithings.svg" class="logosvg">Your browser does not support svg images</object>
+     </div>
+       <ul>
+           <li><a href="/about">rólam</a>
+           <li><a href="/archive">archive</a>
+           <li><a href="/donate">sör</a>
+       </ul>
+   </div>
+   <div class="social">
+     <ul>
+            <a href="https://twitter.com/szs0ma" target="_blank" class="smaller">
+              <span class="icon-twitter"></span>
+            </a>
+       <li>
+            <a href="https://github.com/szsoma" target="_blank" class="smaller">
+              <span class="icon-github"></span>
+            </a>
+       <li>
+            <a href="mailto:soma.szoboszlai@innonic.com" target="_blank">
+              <span class="icon-mail_outline"></span>
+            </a>
+       <li>
+            <a href="/feed.xml" target="_blank">
+                <span class="icon-rss_feed"></span>
+            </a>
+     </ul>
+   </div>
+</header>
+           <style>
+  .progress-bar {
+      background: linear-gradient(to right, #1825e0 var(--scroll), transparent 0);
+      background-repeat: no-repeat;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      z-index: 1;
+  }
+</style>
+<div class="progress-bar"></div>
+<script>
+  var element = document.documentElement,
+    body = document.body,
+    scrollTop = 'scrollTop',
+    scrollHeight = 'scrollHeight',
+    progress = document.querySelector('.progress-bar'),
+    scroll;
+  document.addEventListener('scroll', function() {
+    scroll = (element[scrollTop]||body[scrollTop]) / ((element[scrollHeight]||body[scrollHeight]) - element.clientHeight) * 100;
+    progress.style.setProperty('--scroll', scroll + '%');
+  }); 
+</script>
+<article class="post">
+<style>
+  .design-sprint {
+    margin-bottom: 2em;
+  }
+  .design-sprint::before {
+    background-image: url('https://designsprintkit.storage.googleapis.com/media/heros/HOME.jpg');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .design-sprint::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(100,255,0,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .design-sprint-container,
+  .design-sprint-container::before,
+  .design-sprint-container::after {
+    height: 25rem;
+  }
+  .design-sprint-bleed-container,
+  .design-sprint-bleed-container::before,
+  .design-sprint-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .design-sprint-container,
+        .design-sprint-container::before,
+        .design-sprint-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="post-title-container
+  design-sprint design-sprint-bleed-container bleed-hero-container
+    ">
+    <!--Post hero image source-->
+   <div class="heading-container hero-heading hero-heading-post">
+     <h1>
+          Termék tervezés Google Design Sprinttel 🏃
+     </h1>
+     <div class="post-meta">
+        <span>22/05/2018</span>
+        <span>
+              <a href="/tag/design">#design</a>
+              <a href="/tag/sprint">#sprint</a>
+        </span>
+        <span class="post-meta-link-nohero">
+    11 perc
+</span>  
+     </div>
+   </div>
+ </div>
+   <p class="lead">Hogyan juss el 0-ról egy felhasználói teszten átesett prototípusig 4 nap alatt. 🏃
+<!--break-->
+
+<h2 id="apropo">Apropo</h2>
+<p>Aki már tervezett appot/szolgáltatást/teljesen új funkciót nulláról az tudja, hogy mennyire nehéz belekezdeni:<br />
+<ul>
+ <li>Kezdjünk inkább a designnal?
+ <li>Vagy egy rövid fejlesztéssel?
+ <li>Simán csak gyűjtsünk leadeket egy landing page-el?
+</ul>
+
+<h3 id="a-framework">A Framework</h3>
+<p>Nos a Google már erre is talált megoldást, mégpedig már 2010-ben. Ekkor kezdett kísérletezni a Design Sprint módszertannal. Ők azt mondták kezdjünk a Designnal!<br />
+Lényegében a célok meghatározása után egyből neki ugrunk a  tervezésnek. A Design Sprint során erősen a UX designra koncentrálnak. Arra, hogy valami jól használható és szép dolgot hozzanak létre már az elején. Ehhez pedig természetesen designereket is vonnak be, már a tervezés korai fázisától.
+
+<p>Jogosan vetődik fel a kérdés, hogy ha ez a Design Sprint akkor mi a <strong>Design Thinking</strong>?
+
+<p><img src="https://designthinking.ideo.com/wp-content/uploads/2017/07/design_thinking_law_hires.jpg" alt="800x400" title="Design Thinking" />
+
+<h2 id="design-thinking-">Design Thinking 🤔</h2>
+<p>Mostanában elég sok szó esik a Design Thinking-ről. Tekinthetjük akár trendnek is a szó pozitív értelmében. Ez az innováció felhasználó-központú megközelítése, ami a tervezői eszköztárat használja arra, hogy a felhasználói igényeket, az új technológiai lehetőségeket és az üzleti siker feltételeit egy megoldásban egyesítse.
+
+<p>Nem újkeletű dolog ez, sok cégnél ülnek már designerek, esetleg designerekből átképzett vezetők magas pozíciókban.<br />
+Egy kimutatás szerint a design központú cégek, például az Apple, Coca Cola, IBM, Google sokkal jobban teljesítenek hosszú távon, mint a többiek.
+
+<p>Ez persze nem azt jelenti, hogy mindenhova designereket kell ültetni, hogy szabadon “művészkedhessenek”. Ezzel a módszertannal inkább csak azt akarjuk biztosítani, hogy a termékünk sokkal felhasználóbarátabb és szebb legyen már a korai fázistól. Emellett reméljük azt, hogy nagyobb elégedettséggel fogják azt használni.
+
+<h3 id="achtung44">Achtung!!44!</h3>
+<p>És itt kötnék át egy problémára, ami nem más mint a Design Thinking és a Design Sprint keverése.
+
+<blockquote>
+ <p>A Design Thinking egy módszertan, a Design Sprint pedig egy 4 lépcsős folyamat a tervezésre.
+</blockquote>
+
+<p>Az előbbi egy nagyon klassz gondolkodásmód, amit én nagyon szeretek, de az nem konkrét megvalósítás, csak egy megközelítése a design központú tervezésnek. Tök jó, ha ezt követjük a cégünknél és a folyamatainkál, de ezzel önmagában nem kapunk eszközt. Természetesen a Design Sprint alapját is ez képezi, hiszen a termék tervezését egyből design-nal kezdjük. <br />
+Maga a Design Thinking (vajon hányszor írtam le már ezt a fogalmat?! 🤔) egy megvalósulása a <em>Design Sprint. Az a folyamat, ami segít nekünk abban, hogy kevesebb mint 1 hét alatt eldöntsük valamiről, hogy megéri-e vele foglalkozni vagy sem.</em>
+
+<p><img src="https://soma.shoprenter.hu/custom/soma/image/data/2018/05-ds.jpg" alt="800x400" title="Design sprint" />
+
+<h2 id="design-sprint-">Design Sprint 🏃</h2>
+<p>Általában egy olyan team ül össze, akik előzetesen semmit sem foglalkoztak az ötlettel, témával. Ezért a startnál az ötlet megértésével kezdünk, a végén pedig elkészül egy olyan kattintható prototípus, amit user testeknek vethetünk alá.
+
+<p>A Sprintek mögött egy jól felépített órarend van. Ez a kulcs, ez biztosítja, hogy pörögjön a munka, az ötletelés és a végén kész legyünk magával a prototípussal is. Itt észben kell tartani, hogy nem készterméket tervezünk. Drótvázakat próbálunk ki, amikből egy használható funkciót, folyamatot próbálunk meg kihozni. Ha prototípus tervezésnél marad időnk kicsit csinosíthatunk a projekten. A lényeg az, hogy jól reprezentálja a célunkat, az app lényegét és tesztelhető legyen embereken.
+
+<h3 id="amik-kellenek-nekünk">Amik kellenek nekünk</h3>
+<ol>
+ <li>Egy jó team, aki tud együtt dolgozni és képesek elnyomni az egójukat a cél érdekében
+ <li>Egy sprint vezető, aki tisztában van a menetrenddel és képes kézben tartani az időt és az indulatokat egyaránt
+ <li>Timer a határidők mérésére
+ <li>Rengeteg sticky notes, toll, papír, ceruza, stb.
+ <li>Egy jókora tábla és egy adag filc a rajzolásokhoz és a sticky notes-ok felragasztásához
+</ol>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*2nH0cW-EnJuBcqa6D839bA.jpeg" alt="800x400" title="Design sprint" />
+
+<h2 id="napirend-">Napirend 📅</h2>
+<p>Kezdetben a Design Sprint 5 napos volt, most már a Design Sprint 2.0 korát éljük 2018-ban, itt már 4 nap alatt lezavarják. Talán a 4 napos annyiból jobb, hogy ha véletlen valamivel megcsúsztunk, akkor +1 napot be lehet iktatni. A következő pár bekezdésben megpróbálom átadni, hogy miket kell csináljunk a hét napjain. Fontos, hogy ez az én nézőpontom lesz, hogy nekem hogy áll kézre ez az egész. Lehet pár dolgot akarva-akaratlanul kicsit személyre szabtam. 😉
+
+<h2 id="hÉtfŐ">HÉTFŐ</h2>
+<p>Mivel még mindenki vakon van a projekttel kapcsolatban, a hétfőt arra szánjuk, hogy megértsük azt, amit létre akarunk hozni. <br />
+Először határozzuk meg, hogy mit akarunk elérni a sprint végére (optimális esetben csütörtökre esetleg péntekre)
+
+<p>Ha ezzel készen vagyunk nekiugorhatunk a célok kitűzésének! Legyen egy 6 hónapos és egy 12 hónapos célunk is.<br />
+Határozzunk meg víziót, kérdőjelezzünk meg dolgokat!
+
+<blockquote>
+ <p>Pl.: Meg fogják-e érteni a folyamatot, amit tervezünk?
+</blockquote>
+
+<p><em>Készítsünk térképet!</em><br />
+Ez az egyik legfontosabb része az első napnak. Írjuk fel a tábla egyik végébe a felhasználói csoportokat, a másik végébe pedig a célt, amit el akarunk érni a termékünkkel. A különböző felhasználók különbözőképpen fogják bejárni az utat a célunkig.
+
+<p><img src="https://soma.shoprenter.hu/custom/soma/image/data/2018/05-map.jpg" alt="800x400" title="Map" />
+
+<p>A térképünk kitárgyalásához hívjunk meg szakértőket. Például egy fejlesztőt, aki rávilágíthat a fejlesztői gondokra. A korábban felírt problémákat most a térképünk megfelelő helyére tudjuk ragasztani, ezzel kiemelve a problémásabb részeket.<br />
+Végül körvonalazódni fog az a terület, amivel a legtöbb gondunk lehet, vagy amit érdemesebb lesz kidolgozni a következő részben.
+
+<p>A nap második fele már izgalmasabbnak ígérkezik. Vázlatozni fogunk! Mégpedig megoldásokat!<br />
+Szánjunk időt az ötletgyűjtésre. Nézzük meg mit tud a konkurencia, találjuk ki mi miben akarunk jobbak lenni náluk. Az ötleteinket, feature javaslatainkat rendszerezzük! Nyugodtan lehet rajzolni, vázlatozni, nyilazgatni. A fő <strong>hangsúly az ötletgyártáson van</strong>! Nem baj ha most nem tudjuk felhasználni párat, a legjobbakat osszuk meg a csapattal, beszéljük meg közösen mindenki ötletét.
+
+<p><em>Crazy8s</em> 🤯 <br />
+Az egyik legizgalmasabb esemény a sprint alatt! 
+Mindenki kapjon egy A/4-es lapot, amit hajtogassunk össze háromszor. Ezt kihajtogatva 8 kis téglalapot kapunk. Képzeljük el, hogy ezek iPhone screenek - ez fontos, Androiddal elképzelve nem működik sajnos! A feladat, hogy a legeslegjobb / szerintünk legfontosabb funkcióra, oldalra készítsünk 8 vázlatot 8 perc alatt. <br />
+Bizony, ez 1 perc / változat, iszonyat gyorsan kell gondolkodni és kitalálni layoutokat, de ez adja a boostot!
+
+<p><img src="https://soma.shoprenter.hu/custom/soma/image/data/2018/05-sketch.jpg" alt="800x400" title="Map" />
+
+<p>A hétfői nap végső eredményének egy “solution sketch-nek” kell legyen mindenkitől. Hogyan épül fel? Kapjon mindenki 3db A/4-es lapot. Ezekre a crazy8s alatt felskiccelt legjobb ötletünket fejtsük ki. Tekintsünk rá úgy, mint egy 3 diás prezentációra. Ragasszuk össze a lapokat, reprezentálva, hogy ez egy folyamat. Nem kell szépnek legyen, de mindhárom részhez fűzzünk pár megjegyzést, hogy érthető legyen. Legyen anonim, adjunk neki egy becenevet, hogy szerdán (a döntésnél) tudjunk rá hivatkozni. Adjuk le a sprint vezetőjének.
+
+<h2 id="kedd">KEDD</h2>
+<p>A vezetőnek fel kell ragasztania az előző napi solution sketch-eket. A napot szavazással kezdjük. A Google <strong>Heat Map szavazásnak</strong> hívja ezt a módszert. A lényege, hogy mindenki kap pár pontot, amivel szabadon rendelkezhet. Ennek mennyisége szerintem a létrejött vázlatok mennyiségétől függjön. Mindenki szavazhat a szerinte legjobb részmegoldásra, ötletre. Akár a saját magáéra is. Ha valaki egy megoldást nagyon jó ötletnek tart, tehet rá 3 pontot is.
+
+<p><img src="https://storage.googleapis.com/designsprintkit/media/03c_01_heatmap.jpg" alt="800x400" title="Heatmap vote" />
+
+<p>A legjobban teljesítő megoldásokat beszéljük meg a csapattal, módosítsuk, tökéletesítsük őket. Végül gyúrjuk össze egy szuper megoldássá.
+
+<h3 id="storyboard">Storyboard</h3>
+<p>Tervezzük meg lépésről lépésre, hogy mit fogunk fejleszteni, milyen történetet akarunk átadni a tesztelőknek!<br />
+A győztes megoldást figyelembe véve - igazából azt beépítve egy történetbe - megtervezzük azt a folyamatot, amit prototípusként meg akarunk alkotni.
+
+<p><img src="https://designsprintkit.storage.googleapis.com/media/04a_01_storyboard.png" alt="800x400" title="Heatmap vote" />
+
+<h2 id="szerda">SZERDA</h2>
+<p>A sok agyalás és döntés után végre dolgozni kezdünk valami “kézzel foghatón”. 👨‍💻 Legyen 2 vagy több prototípusunk is, de a designerek dolgozzanak ugyan abból a készletből (színek, ikonok, stb). Így egy viszonylag egységes látvánnyal kapunk különböző megvalósításokat.<br />
+
+<p>A prototípusunkat készíthetjük Sketchben, Figmában, Adobe XDben, Invision Studioban esetleg ha valami kód közelibbet szeretnénk akkor megpróbálkozhatunk React Studioval is!
+
+<p>Kooperáció megengedett, a csapat többi tagjával lehet egyeztetni, akár pár fős társulásokban is lehet dolgozni. Az utolsó nap a user teszté lesz. Aki ezt fogja vezetni nézelődjön, kérdezősködjön a designereknél, hogy mi hogy működik. Próbálja megérteni a koncepciókat, hogy át tudja majd adni a teszt alanyoknak.
+
+<h2 id="csÜtÖrtÖk">CSÜTÖRTÖK</h2>
+<p>Eljött a nagy nap! Irány tesztelni! 👆<br />
+Érdemes már hétfőn megkeresni a tesztelőket, nagyjából 3-5 főre lesz szükségünk.
+
+<p><img src="https://soma.shoprenter.hu/custom/soma/image/data/2018/05-test.jpg" alt="800x400" title="Map" />
+
+<p>Ha van lehetőségünk 2 szobát befoglalni a teszt idejére, tegyük meg és a sprint csapattagok számára streameljük a másik szobában lévő felhasználók munkáját. A teszt vezetője próbáljon minden fontos információt átadni az embereknek, a csapat pedig szorgalmasan jegyzetelje észrevételeit. Nap végén szánjunk kellő időt a teszt megbeszélésére.
+
+<h2 id="konklúzió">Konklúzió</h2>
+<p>Design sprintünk a végéhez ért. Egy nehéz döntést kell még meghoznunk, hogyan is értékeljük az ötletünket? 3 lehetőségünk van:
+<ol>
+ <li>Elbukott
+ <li>Részben validált ötlet
+ <li>Validált ötlet
+</ol>
+
+<p>Remélem mindenkinek a 3. verzió fog megszületni csütörtökre!<br />
+Ha szeretnétek többet olvasni a témáról keressétek fel a <a href="https://designsprintkit.withgoogle.com/" target="_blank">Google Design Sprint</a> bemutató oldalát!
+
+<p>Amiért elolvastátok ezt a bazihosszú cikkemet szeretnélek meglepni titeket egy kis aprósággal, ami hasznos lehet sprintelésnél. Egy <a href="https://drive.google.com/file/d/1H9c3WfiWZ1dsZ0zsIH9Z_3RkIkD9-Ag_/view?usp=sharing" target="_blank">böngésző ablak</a> (4 screen / lap) és egy <a href="https://drive.google.com/file/d/1BxschK9NO6BDN4c6zpmJJp2GvuRVf6OP/view?usp=sharing" target="_blank">Crazy8s</a> sablont (8 mobil screen / lap) találtok a linkeken.
+Jó tervezést, pre validálást! Remélem hasznos lesz számotokra! 😉
+
+</article>
+<div class="share-btn">
+    <span> Köszi, hogy elolvastad. Oszd meg a barátaiddal is!</span> <br>
+    <a href="https://twitter.com/intent/tweet?text=Termék tervezés Google Design Sprinttel 🏃&url=http://localhost:4000/posts/design-sprint&via=szs0ma&related=szs0ma" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/posts/design-sprint" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://plus.google.com/share?url=http://localhost:4000/posts/design-sprint" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+</div>
+<aside class="related">
+<h2>Related posts</h2>
+<ul class="related-posts">
+</aside>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+   (function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = 'https://https-szsoma-github-io.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+           <footer>
+    <span>© UIthings.hu - UI, UX, egy csöpp frontend és
+</span>
+    <span>Szoboszlai Soma</span>
+</footer>
+       </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-107802094-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    

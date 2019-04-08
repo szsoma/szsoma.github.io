@@ -1,0 +1,110 @@
+# Base blog settings
+baseurl                      : "" # the subpath of your site,
+                              # set to '' in case of hosting on GitHub
+url                          : "http://szsoma.github.io" # the base hostname & protocol for your site
+
+blog:
+  title                      : "UIthings Blog"
+  description                : >
+                               © UIthings.hu - UI, UX, egy csöpp frontend és
+
+# Layout configuration
+  logo_path                  : "assets/img/uithings.svg" # path to logo file
+  search_path                : 
+                               # needed for searchbox in archive page
+  hero_layout                : true # turn on hero layout for blog and posts
+  hero_placeholder           : "assets/img/generic_hero.jpg" # placeholder for hero image
+  excerpts                   : true # show excerpts instead of full post content on blog page
+  inline_footnotes           : false # enable/disable barefoot inline footnotes
+  titles_only                : false # show post titles only on main blog page
+
+# Fonts
+  font                       : '"Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif'
+  load_google_fonts          : 'Roboto:400,400italic,500,500italic'
+
+
+# Author info
+author:
+  fullname                  : Szoboszlai Soma
+  rss                       : true # generate RSS feed and show it's icon in header
+  mail                      : soma.szoboszlai@innonic.com
+  twitter                   : szs0ma
+  github                    : szsoma
+  youtube                   : channel/UClmiHHj7qpBMGxv-LTlKdSg
+  stackoverflow             : # stackoverflow-user-name
+  disqus                    : https-szsoma-github-io
+  google_analytics          : UA-107802094-1
+  paypalme                  : szoboszlaisoma
+  photo                     : "uploads/me2.png"
+  photo2x                   : "uploads/me2.png"
+
+
+## Advanced blog settings
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+
+# Permalinks
+permalink                    : posts/:slug
+
+# Posts
+excerpt_separator            : <!--break-->
+
+# Pagination
+paginate                     : 5
+paginate_path                : '/page-:num/'
+
+# Tags
+collections:
+  my_tags:
+    output: true
+    permalink: /tag/:slug/
+defaults:
+  -
+    scope:
+      path: ""
+      type: my_tags
+    values:
+      layout: blog-by-tag
+
+# Handling Reading
+exclude                    : ["README.md", "README.html"]
+
+# Markdown and highlighter settings
+markdown: kramdown
+
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+  # Rouge Highlighter in Kramdown › http://kramdown.gettalong.org/syntax_highlighter/rouge.html
+  # span, block element options fall back to global
+  syntax_highlighter_opts:
+    # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: 'highlight'
+    #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+# Sass settings
+sass:
+  sass_dir                : _sass
+  style                   : compressed
+
+# HTML Compression
+# - http://jch.penibelst.de/
+compress_html:
+  clippings               : all
+  endings                 : all
+  comments                : ["<!-- ", " -->"]
+  blanklines              : true
+  profile                 : false
+  ignore:
+  envs                    : [local]

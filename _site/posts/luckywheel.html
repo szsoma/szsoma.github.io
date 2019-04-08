@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>Spin 2 Win! &#9642; UIthings Blog</title>
+<meta name="description" content="Szerencse kerék pörgetős demó SVG-vel és Greensock JS-sel. Továbbá, hogy lehet ennyire menő dolgot csinálni, mint a Codepen?? 🤓
+
+">
+<meta name="description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+">
+<meta name="keywords" content="frontend, design, animation, svg, codepen">
+<link rel="canonical" href="http://localhost:4000/posts/luckywheel">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Spin 2 Win!" />
+<meta name="twitter:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+" />
+<meta name="twitter:image" content="http://localhost:4000" />
+<meta name="author" content="">
+<link rel="author" href="">
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spin 2 Win!">
+<meta property="og:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+">
+<meta property="og:url" content="http://localhost:4000/posts/luckywheel">
+<meta property="og:site_name" content="UIthings Blog">
+<link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic">
+<style>
+    html {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    }
+</style>
+<link rel="shortcut icon" type="image/png" href="/assets/img/fav.png"/>
+   <body>
+       <div class="wrapper" id="blep">
+          <header>
+   <div class="menu">
+     <div class="logo">
+      <link rel="canonical" href="https://uithings.hu/cloudflare-ssl-for-github-pages/">
+          <object type="image/svg+xml" data="/assets/img/uithings.svg" class="logosvg">Your browser does not support svg images</object>
+     </div>
+       <ul>
+           <li><a href="/about">rólam</a>
+           <li><a href="/archive">archive</a>
+           <li><a href="/donate">sör</a>
+       </ul>
+   </div>
+   <div class="social">
+     <ul>
+            <a href="https://twitter.com/szs0ma" target="_blank" class="smaller">
+              <span class="icon-twitter"></span>
+            </a>
+       <li>
+            <a href="https://github.com/szsoma" target="_blank" class="smaller">
+              <span class="icon-github"></span>
+            </a>
+       <li>
+            <a href="mailto:soma.szoboszlai@innonic.com" target="_blank">
+              <span class="icon-mail_outline"></span>
+            </a>
+       <li>
+            <a href="/feed.xml" target="_blank">
+                <span class="icon-rss_feed"></span>
+            </a>
+     </ul>
+   </div>
+</header>
+           <style>
+  .progress-bar {
+      background: linear-gradient(to right, #1825e0 var(--scroll), transparent 0);
+      background-repeat: no-repeat;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      z-index: 1;
+  }
+</style>
+<div class="progress-bar"></div>
+<script>
+  var element = document.documentElement,
+    body = document.body,
+    scrollTop = 'scrollTop',
+    scrollHeight = 'scrollHeight',
+    progress = document.querySelector('.progress-bar'),
+    scroll;
+  document.addEventListener('scroll', function() {
+    scroll = (element[scrollTop]||body[scrollTop]) / ((element[scrollHeight]||body[scrollHeight]) - element.clientHeight) * 100;
+    progress.style.setProperty('--scroll', scroll + '%');
+  }); 
+</script>
+<article class="post">
+<style>
+  .luckywheel {
+    margin-bottom: 2em;
+  }
+  .luckywheel::before {
+    background-image: url('https://soma.shoprenter.hu/custom/soma/image/data/codepen.JPG');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .luckywheel::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255,0,100,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .luckywheel-container,
+  .luckywheel-container::before,
+  .luckywheel-container::after {
+    height: 25rem;
+  }
+  .luckywheel-bleed-container,
+  .luckywheel-bleed-container::before,
+  .luckywheel-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .luckywheel-container,
+        .luckywheel-container::before,
+        .luckywheel-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="post-title-container
+  luckywheel luckywheel-bleed-container bleed-hero-container
+    ">
+    <!--Post hero image source-->
+   <div class="heading-container hero-heading hero-heading-post">
+     <h1>
+          Spin 2 Win!
+     </h1>
+     <div class="post-meta">
+        <span>04/11/2017</span>
+        <span>
+              <a href="/tag/frontend">#frontend</a>
+              <a href="/tag/design">#design</a>
+              <a href="/tag/animation">#animation</a>
+              <a href="/tag/svg">#svg</a>
+              <a href="/tag/codepen">#codepen</a>
+        </span>
+        <span class="post-meta-link-nohero">
+    6 perc
+</span>  
+     </div>
+   </div>
+ </div>
+   <p class="lead">Szerencse kerék pörgetős demó SVG-vel és Greensock JS-sel. Továbbá, hogy lehet ennyire menő dolgot csinálni, mint a Codepen?? 🤓
+<!--break-->
+
+<h2 id="codepen">Codepen</h2>
+<p>Amikor elkezdi az embergyerek tanulni ezt a kiváló front-end szakmát, akkor először is szétnéz a YouTube-on. Esetleg valamilyen akciós Udemy-s kurzust megvásárol és nekikezd a rögös útnak.
+Ezekben a kurzusokban a legtöbbször saját gépen dolgoznak a készítők, így mi is. Felcsapjuk kedvenc text editorunkat, mint pl. a <a href="https://code.visualstudio.com/" target="_blank">VS Codeot, </a> <a href="https://atom.io/" target="_blank">Atomot</a> vagy a <a href="https://www.sublimetext.com/" target="_blank">Sublime Textet</a> és mehet a menet.
+
+<p>Azonban, ha elszaporodtak az apróbb projektjeink, kísérleteink és már 23923718 db mappát csináltunk nekik, akkor el lehet gondolkozni a<a href="https://codepen.io/" target="_blank"> Codepen</a>-en. 
+A Codepen 2012 óta létezik, és egy olyan online közösség, ahol az emberek megírhatják kisebb projektjeiket (ők pennek hívják). Ezeket rendszerezhetjük, megoszthatjuk, mint portfóliót vagy épp beágyazhatjuk a blogunkba mint ahogy én is szoktam. Az online editorban HTML, CSS és JavaScript kódokkal dolgozhatunk a különböző füleken és a készterméket is látjuk. Nagyon klassz platform, ha valaki inspirálódni és tanulni szeretne. Ha tanár lennék, verném a gyerekeket, hogy használják tanuláshoz. (dehogy…ez family frendly blog) <br />
+Azt is szeretem benne, hogy ready-to-use, egyszerűen csak kiválasztjuk milyen JS pluginnal (esetleg CSS keretrendszerrel, preprocessor-ral) szeretnénk dolgozni és lehet is kódolni. Nem kell headet, meg titlet írni, csak kezdeni in medias res.
+
+<p>Két full-stack developer (Alex Vazquez, Tim Sabat) és egy front-end designer Chris Coyier alapította. <a href="https://chriscoyier.net/" target="_blank">Chris Coyier</a> egy hatalmas figura, kiváló előadó és író. A Codepen mellett a <a href="https://css-tricks.com" target="_blank">CSS-tricks</a>-et is ő hozta létre. De amiért én különös módon szeretem a munkásságát az az, hogy elég jó SVG témakörben. Amikor az <a href="http://slides.com/szsoma/svg-svg-animationon-the-web-1" target="_blank">SVG előadásomra</a> készültem sok cikket és előadását megnéztem tőle. Na de elég ebből, térjünk a lényegre! 👆
+
+<h2 id="lucky-wheel">Lucky Wheel</h2>
+<p>A webes animációk az új kedvenc témaköröm. Ezek nem nagy projektek, ha eszembe jut valami csak felugrok Codepenre és nekilátok valaminek. Általában Greensock JS-sel csinálok animációkat, ami az SVG-vel nagyon jó barátok. De erről majd később.
+
+<p>Szóval pénteken hazatekertem munkából és leültem megcsinálni valamit, ami nagyon piszkálta a fantáziámat. Ez pedig egy szerencsekerék. A grafika Illustratorban készült, semmi nagy dologra nem kell gondolni, néhány vektoros alakzat az egész. Utána neki álltam megtervezni magát a mozgást Greensock JS-sel. A kerék egy folyamatosan lassuló mozgással forog a nyeremény jelölő pedig egy gyors oda-vissza mozdulatot tesz. TransformOrigin kb a szürke pont.
+
+<p data-height="591" data-theme-id="30084" data-slug-hash="bYEXGx" data-default-tab="result" data-user="szsoma" data-embed-version="2" data-pen-title="luckywheel" class="codepen">See the Pen <a href="https://codepen.io/szsoma/pen/bYEXGx/">luckywheel</a> by Soma Szoboszlai (<a href="https://codepen.io/szsoma">@szsoma</a>) on <a href="https://codepen.io">CodePen</a>.
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<h3 id="a-nyeremény-jelölő-pöcök-már-érdekesebb">A nyeremény jelölő pöcök már érdekesebb</h3>
+<p>Itt az volt a cél, hogy a 12 részre osztott kör minden pálcikájánál biccentsen egyet. 
+Tehát a pozícióját is így kell megválasztani, én a 2. pálcikához (60 fokhoz) tettem. Nem tökéletes, de elfogadható a szem számára.
+<h3 id="hogy-lett-ez-megoldva-rafináltan">Hogy lett ez megoldva? Rafináltan.</h3>
+<p>Először is a tween(mozgás) kódjába bekerült egy onUpdate tulajdonság. Ez azt jelenti, hogy az onUpdate: utáni függvény valamit csinálni fog a kerék framenkénti mozgásának következtében. Fú, ez bonyolult. :)
+Egészen pontosan ez a mágikus kódrészlet:
+
+<pre><code class="language-JS">    function(){    
+      currentRotation = Math.round(this.target[0]._gsTransform.rotation);
+      tolerance = currentRotation - lastRotation;
+
+      if(Math.round(currentRotation) % (360/12) &lt;= tolerance){
+        if(indicator.progress() &gt; .3 || indicator.progress() === 0){
+          indicator.play(0);
+        }
+      }
+      lastRotation = currentRotation;
+    }
+</code></pre>
+
+<p>Ami itt történik, az röviden annyi, hogy számolunk egy tolerance-t a pillanatyi forgásból és az utolsó forgásból. Ha gyorsan pörög a kerék akkor magas ez a változó, ha lassul az ease-ing miatt, akkor elkezd csökkenni.
+
+<p>Mit jelent ez? A gyors pörgésnél mindig 30%-os progress után kezdi újra a biccentést a kis pöckünk (indicator.progress() &gt; .3). Vissza se áll az eredeti helyére már kezdi előlről. Ez tolerance = 5-ig van. Az ennél lasabb forgásnál már csak a 360/12=30 fokonként fog biccenteni.
+
+<h2 id="színezés">Színezés</h2>
+<p>A CSS SASS előfeldolgozóval készült, így könnyen meg lehetett oldani a színezést változókkal. <br />
+A keret, középpont, és a nyereményjelölő egyszerű volt: a változókban lévő színeket az SVG class színezésére használom:
+
+<pre><code class="language-CSS">.frame, .sticks {
+  fill: $frameColor;
+}
+</code></pre>
+
+<p>A szerencsekerék 12 szeletéhez egy egyszerű listát csináltam, amiben eltároltam a 12 színt:
+
+<pre><code class="language-CSS">$colors: 
+  #ba4d4e     //sector 1 color
+  #1592e8     //sector 2 color
+  #14c187     //sector 3 color
+  #fc7800     //sector 4 color
+  #14c187     //sector 5 color
+  #1592e8     //sector 6 color
+  #ba4d4e     //sector 7 color
+  #1592e8     //sector 8 color
+  #14c187     //sector 9 color
+  #fc7800     //sector 10 color
+  #14c187     //sector 11 color
+  #1592e8;    //sector 12 color
+</code></pre>
+
+<p>A színbeállításhoz egy mixint és egy ciklust írtam. A mixin kap egy sorszámot és nem tesz mást, mint a fill tulajdonságnak beállítja a lista $n-edik színkódját. Az ezután következő for ciklus pedig ezt a mixint haszánlja a 12 körcikk színezésére:
+
+<pre><code class="language-CSS">@mixin setColor($n){
+  fill: nth($colors, $n);
+}
+
+@for $i from 1 through 12 {
+  #_#{$i} {
+    @include setColor($i);
+  }
+}
+</code></pre>
+
+<p>Így aztán elég csak ezeket a változókat átírni ha egyedi szerencsekereket akarunk magunknak.
+
+<h2 id="teljesítmény">Teljesítmény</h2>
+<p>Az animáció 60FPS-t produkál, ez látszik a 17ms/frame körüli render időből.
+
+<p><img src="https://soma.shoprenter.hu/custom/soma/image/data/luckywheel-perf.JPG" alt="800x600" title="performance" />
+
+<p>A CPU 6 szoros lassításával én 30FPS-t kaptam betöltődésnél, második pörgetésre pedig már 60-at.
+
+<p><img src="https://soma.shoprenter.hu/custom/soma/image/data/luckywheel-perf-6x.JPG" alt="800x600" title="performance 6x slowdown" />
+
+<p>Még tovább fogom fejleszteni a kis szerencse kerekemet, mert nem tökéletes. Használjátok ti is a Codepent, főleg most #codevember-ben!
+
+</article>
+<div class="share-btn">
+    <span> Köszi, hogy elolvastad. Oszd meg a barátaiddal is!</span> <br>
+    <a href="https://twitter.com/intent/tweet?text=Spin 2 Win!&url=http://localhost:4000/posts/luckywheel&via=szs0ma&related=szs0ma" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/posts/luckywheel" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://plus.google.com/share?url=http://localhost:4000/posts/luckywheel" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+</div>
+<aside class="related">
+<h2>Related posts</h2>
+<ul class="related-posts">
+   <li>
+    <a href="/posts/cssgrid-2">
+        <span>CSS Grid Layout Part2 - Alapok</span>
+        <small>29/12</small>
+    </a>
+   <li>
+    <a href="/posts/cssgrid">
+        <span>CSS Grid Layout Part1 - Kezdetek</span>
+        <small>26/12</small>
+    </a>
+   <li>
+    <a href="/posts/luckywheel-popup">
+        <span>Éles a szerencsekerekünk!</span>
+        <small>26/11</small>
+    </a>
+   <li>
+    <a href="/posts/box-shadow">
+        <span>Mi a franc az a spread?</span>
+        <small>23/11</small>
+    </a>
+</aside>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+   (function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = 'https://https-szsoma-github-io.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+           <footer>
+    <span>© UIthings.hu - UI, UX, egy csöpp frontend és
+</span>
+    <span>Szoboszlai Soma</span>
+</footer>
+       </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-107802094-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>CSS Grid Layout Part1 - Kezdetek &#9642; UIthings Blog</title>
+<meta name="description" content="Grid layout témában hetente jönnek ki a cikkek, tutoriálok és előadások. Kíváncsi voltam, hogy is néz ez ki gyakorlatban ezért kicsit beleástam magam - grafikus szemmel. 
+Továbbá: karácsonyi ömlengések, podcast gyanús tervek és UIthings.hu start! 😫
+
+">
+<meta name="description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+">
+<meta name="keywords" content="frontend, ui, design, grid">
+<link rel="canonical" href="http://localhost:4000/posts/cssgrid">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="CSS Grid Layout Part1 - Kezdetek" />
+<meta name="twitter:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+" />
+<meta name="twitter:image" content="http://localhost:4000" />
+<meta name="author" content="">
+<link rel="author" href="">
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS Grid Layout Part1 - Kezdetek">
+<meta property="og:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+">
+<meta property="og:url" content="http://localhost:4000/posts/cssgrid">
+<meta property="og:site_name" content="UIthings Blog">
+<link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic">
+<style>
+    html {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    }
+</style>
+<link rel="shortcut icon" type="image/png" href="/assets/img/fav.png"/>
+   <body>
+       <div class="wrapper" id="blep">
+          <header>
+   <div class="menu">
+     <div class="logo">
+      <link rel="canonical" href="https://uithings.hu/cloudflare-ssl-for-github-pages/">
+          <object type="image/svg+xml" data="/assets/img/uithings.svg" class="logosvg">Your browser does not support svg images</object>
+     </div>
+       <ul>
+           <li><a href="/about">rólam</a>
+           <li><a href="/archive">archive</a>
+           <li><a href="/donate">sör</a>
+       </ul>
+   </div>
+   <div class="social">
+     <ul>
+            <a href="https://twitter.com/szs0ma" target="_blank" class="smaller">
+              <span class="icon-twitter"></span>
+            </a>
+       <li>
+            <a href="https://github.com/szsoma" target="_blank" class="smaller">
+              <span class="icon-github"></span>
+            </a>
+       <li>
+            <a href="mailto:soma.szoboszlai@innonic.com" target="_blank">
+              <span class="icon-mail_outline"></span>
+            </a>
+       <li>
+            <a href="/feed.xml" target="_blank">
+                <span class="icon-rss_feed"></span>
+            </a>
+     </ul>
+   </div>
+</header>
+           <style>
+  .progress-bar {
+      background: linear-gradient(to right, #1825e0 var(--scroll), transparent 0);
+      background-repeat: no-repeat;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      z-index: 1;
+  }
+</style>
+<div class="progress-bar"></div>
+<script>
+  var element = document.documentElement,
+    body = document.body,
+    scrollTop = 'scrollTop',
+    scrollHeight = 'scrollHeight',
+    progress = document.querySelector('.progress-bar'),
+    scroll;
+  document.addEventListener('scroll', function() {
+    scroll = (element[scrollTop]||body[scrollTop]) / ((element[scrollHeight]||body[scrollHeight]) - element.clientHeight) * 100;
+    progress.style.setProperty('--scroll', scroll + '%');
+  }); 
+</script>
+<article class="post">
+<style>
+  .cssgrid {
+    margin-bottom: 2em;
+  }
+  .cssgrid::before {
+    background-image: url('https://images.unsplash.com/photo-1458608840153-2f87e0418d50?auto=format&fit=crop&w=704&q=80');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .cssgrid::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255,100,0,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .cssgrid-container,
+  .cssgrid-container::before,
+  .cssgrid-container::after {
+    height: 25rem;
+  }
+  .cssgrid-bleed-container,
+  .cssgrid-bleed-container::before,
+  .cssgrid-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .cssgrid-container,
+        .cssgrid-container::before,
+        .cssgrid-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="post-title-container
+  cssgrid cssgrid-bleed-container bleed-hero-container
+    ">
+    <!--Post hero image source-->
+   <div class="heading-container hero-heading hero-heading-post">
+     <h1>
+          CSS Grid Layout Part1 - Kezdetek
+     </h1>
+     <div class="post-meta">
+        <span>26/12/2017</span>
+        <span>
+              <a href="/tag/frontend">#frontend</a>
+              <a href="/tag/ui">#ui</a>
+              <a href="/tag/design">#design</a>
+              <a href="/tag/grid">#grid</a>
+        </span>
+        <span class="post-meta-link-nohero">
+    7 perc
+</span>  
+     </div>
+   </div>
+ </div>
+   <p class="lead">Grid layout témában hetente jönnek ki a cikkek, tutoriálok és előadások. Kíváncsi voltam, hogy is néz ez ki gyakorlatban ezért kicsit beleástam magam - grafikus szemmel. <br />
+Továbbá: karácsonyi ömlengések, podcast gyanús tervek és UIthings.hu start! 😫
+<!--break-->
+
+<h2 id="prológus-és-uithingshu-beta">Prológus és UIthings.hu beta</h2>
+<p>Kicsit sűrű volt az utóbbi időszak, volt szülinap, Karácsony, költözés, minden. Végre elhatároztam, hogy tényleg szeretnék írni erről a folyamatról, ami most elindult. Elsődlegesen front-end tanulásról, ami jelenleg hobbi, illetve egy plusz skill, amit grafikusként magamra szedek és használok. Másodsorban tapasztalatszerzés és <a href="http://uithings.hu/posts/tudasmegosztas" target="_blank">tudásmegosztás</a> a célom, amit fontosnak tartok ebben a szakmában.
+Persze ezen kívül még sok minden van a tarsolyban, például podcast is. de azt majd később. 😎 <br />
+Ha akár egy ember is ihletet merít vagy motiválódik esetleg tanul az írásaimból, tapasztalataimból én már nagyon fogok örülni.
+
+<p>Most viszont megcsináltam egy adag forralt bort, belököm a Spotify-t és kezdjük is ezt a grid dolgot, erőssen grafikus szemmel! Az első részben egy unalmas témával készültem. Azzal, hogy honnan indult ez az egész kezdeményezés.
+
+<h2 id="def">Def</h2>
+<p>CSS Grid Layout nem más, mint egy technológia, ami segít, hogy a weboldalunk vagy appunk elemeit egyszerűen el tudjunk helyezni 2 dimenzióban a rendelkezésünkre álló területen.
+
+<h2 id="Újhullámos-layoutozás">Újhullámos layoutozás</h2>
+<p>Így tudnám leírni. Mára már mindenki ettől várja a megváltást és meg kell hogy mondjam, elég ígéretes és egyszerűen használható. <br />
+*2017. október 17-étől támogatja az MS Edge is, ami azért nagy szó mert az összes nagy böngésző egy éven belül megcsinálta a támogatását.
+
+<h3 id="de-tényleg-ennyire-új-lenne-ez-a-technológia-">De tényleg ennyire új lenne ez a technológia? <br /></h3>
+<p>Nem… Dr. Bert Bos szerint - aki Håkon Wium Lie-val a CSS szülő atyja is - a grid alapú elrendezés már kezdetek óta tervben volt. 1996-ban Bos, Lie és Dave Ragett előjött egy új modellel, ami az első próbálkozás volt. Ezután 2005-ben Bos publikálta az <a href="https://www.w3.org/TR/2007/WD-css3-layout-20070809/#property-index" target="_blank">Advanced Layout Module</a>-t. Ennek az alapjai már hasonlítanak a most használt grid rendszerre. A logikája legalább is.
+
+<table>
+<thead>
+   <tr>
+     <th><img src="https://www.w3.org/TR/2007/WD-css3-layout-20070809/diagram.png" alt="800x400" title="css grid anno 2005" />
+    
+  
+ <tbody>
+   <tr>
+     <td><em><center>Four regions, called a, b, c and d, each receive a part of a document.</center></em>
+    
+  
+</table>
+
+<p>Ezeket a koncepciókat viszont sose vették tényleges használatba. A dolgok akkor kezdtek felpörögni, amikor Phill Cupp egy terméket akart létrehozni a Microsoftnál. Egy olyan eszköz kellett neki, amivel hatékonyan lehet webes felületeket létrehozni. Elkezdte ütni a UI csapatot, hogy találjanak ki valamit. Ez az egész amúgy a Windows 8 tervezése közben történt, amikor rengeteg appot kellett gyártania a Microsoftnak. Cupp egyre jobban felismerte, hogy a webnek szüksége van egy eszközre, ami megkönnyíti a layout tervezést.<br />
+Cupp a Silverlightban<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> lévő grid rendszert látta a legjobbnak. 
+Ezt kezdték el reszelgetni, végül - <em>kapaszkodjon meg mindenki a székében</em> - 2011 elején az Eplorer 10-be elkészült egy kezdetleges grid layout rendszer. Ment is a W3C-nek a <a href="https://www.w3.org/TR/2011/WD-css3-grid-layout-20110407/" target="_blank">vázlat</a> április 7-én. A megírásban Elika J. Etemad, egy W3C-s munkatárs is segédkezett. Az alapok tehát már jópár évesek. Ez a verzió persze még nem volt az igazi, hiányoztak belőle mostani funkciók.
+
+<table>
+<thead>
+   <tr>
+     <th style="text-align: center"><img src="https://www.w3.org/TR/2011/WD-css3-grid-layout-20110407/images/grid-concepts.png" alt="800x400" title="css grid anno 2011" />
+    
+  
+ <tbody>
+   <tr>
+     <td style="text-align: center"><em><center>A diagram illustrating the relationship between the Grid element and its Tracks, Lines, Cells and Items.</center></em>
+    
+  
+</table>
+
+<p>Ha nézelődtünk már grid témában akkor ismernünk kell egy mogorván kinéző brit nénit, akinek <a href="https://rachelandrew.co.uk/" target="_blank">Rachel Andrew</a> a neve. Ő (is) felkarolta a gyerekcipőben járó technológiát és több cikket is írt róla. Hihetetlen ilyeneket olvasni tőle 2012-ből:
+
+<blockquote>
+ <p>Before we get started, it is important to note that, at the time of writing, these examples work only in Internet Explorer 10. CSS3 grid layout is a module created by Microsoft, and implemented using the -ms prefix in IE10.
+</blockquote>
+
+<p>Sok döcögés után Rachel elkezdett megalkotni egy átfogó oldalt a gridnek, rengeteg demóval és példával. Ezen kereszül akarták bemutatni a benne rejlő lehetőségeket a közönségnek. A <a href="https://gridbyexample.com/" target="_blank">Grid by Example</a> még mindig frissül és hasznos tudást rejt, ha bele akarsz kezdeni a kipróbálásába.
+
+<p>2013-tól a Grid Layout egyre több front-end fejlesztőt kezdett meghódítani. Létrejöttek menő projektek Codepenen és egész demó oldalak is pl. <a href="http://labs.jensimmons.com/" target="_blank">Jen Simmonstól</a>, aki nagyon jó példákat készített, érdemes átnézni őket! (ugyanitt: fejlesztő csajok előre!! 💪)
+
+<p>2017 elejétől már támogatják a böngészők is a Gridet. Március 7-én a Firefox majd rögtön utána a Chrome 9-én, az Opera 21-én, a Safari 27-én. Ez igazából azért vicces mert az úgymond “új” Gridet a Microsoft implementálta legkésőbb. Korábbi Grid Layout verziókat persze támogatott az Explorer 2012-től az Edge pedig már 2015-ben. De az újat nem sikerült azonnal befogadni.
+
+<p><img src="https://soma.shoprenter.hu/custom/soma/image/data/2017/caniuse-grid.JPG" alt="800x400" title="can i use grid" />
+
+<h2 id="konklúzió">Konklúzió</h2>
+<p>A Grid Layout logikája nagyon átgondolt, könnyű értelmezni és azt kell, hogy mondjam UI designer barát. 😈 <br />
+A rácsos elrendezésben egészen könnyű eligazodni, hiszen mindenhol találkozunk vele: ott van a naptárunkban az Excelben, mindenféle táblázatban. Ha tágan értelmezzük még a billentyűzetünkben is. Nem csoda, hogy gyorsan rááll az agyunk és rajzolgatások nélkül ki tudjuk számolni, hogy hány oszlop és sor kell nekünk,  hogy mit hova akarunk elhelyezni stb.
+Különböző képernyő méretekre való tervezés mára már nem nyűg, nem kell semmilyen keretrendszer hozzá. Ha valamit át akarunk pozícionálni, akkor nem kell 600 dolgot átírnunk. A grid-areas segítségével pedig vizuálisan is értelmezhető kódot írhatunk. A Grid Layout hatékonysága elgondolkodtat, hogy lehetne-e fejlesztő közelibb drótvázazásra is használni…
+
+<p>Kb pár óra olvasás és tutorialozás után sikerült csinálni egy responsive layoutot vele, ami most egy kis játékként működik most a cégen belül. A következő részben ezen keresztül szeretném bemutatni az alap dolgokat.
+
+<p>Végezetül pedig szeretnék kellemes ünnepeket kívánni mindenkinek és sikerekben gazdag 2018-at! 🍾
+Olvassatok sok szakmai cikket, blogot, hallgassatok podcastokat és próbáljatok ki új dolgokat!
+
+<p class="notice">Aaron Gustafson <a href="https://alistapart.com/article/the-story-of-css-grid-from-its-creators" target="_blank">cikke</a> alapján
+
+<div class="footnotes">
+ <ol>
+   <li id="fn:1">
+     <p>A Microsoft (gyenge) próbálkozása a flash helyére. <a href="#fnref:1" class="reversefootnote">&#8617;</a>
+    
+ </ol>
+</div>
+
+</article>
+<div class="share-btn">
+    <span> Köszi, hogy elolvastad. Oszd meg a barátaiddal is!</span> <br>
+    <a href="https://twitter.com/intent/tweet?text=CSS Grid Layout Part1 - Kezdetek&url=http://localhost:4000/posts/cssgrid&via=szs0ma&related=szs0ma" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/posts/cssgrid" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://plus.google.com/share?url=http://localhost:4000/posts/cssgrid" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+</div>
+<aside class="related">
+<h2>Related posts</h2>
+<ul class="related-posts">
+   <li>
+    <a href="/posts/cssgrid-2">
+        <span>CSS Grid Layout Part2 - Alapok</span>
+        <small>29/12</small>
+    </a>
+   <li>
+    <a href="/posts/font-weights">
+        <span>Nem szeretem már a vékonyat</span>
+        <small>03/12</small>
+    </a>
+   <li>
+    <a href="/posts/luckywheel-popup">
+        <span>Éles a szerencsekerekünk!</span>
+        <small>26/11</small>
+    </a>
+   <li>
+    <a href="/posts/box-shadow">
+        <span>Mi a franc az a spread?</span>
+        <small>23/11</small>
+    </a>
+</aside>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+   (function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = 'https://https-szsoma-github-io.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+           <footer>
+    <span>© UIthings.hu - UI, UX, egy csöpp frontend és
+</span>
+    <span>Szoboszlai Soma</span>
+</footer>
+       </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-107802094-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    

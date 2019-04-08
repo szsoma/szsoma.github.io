@@ -1,1 +1,1 @@
-# szsoma.github.io
+Szemelyes blog melorol

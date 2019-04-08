@@ -1,0 +1,4 @@
+---
+slug: dell
+name: Dell
+---
