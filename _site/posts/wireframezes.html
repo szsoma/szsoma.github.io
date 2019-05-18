@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>Tényleg szükségünk van wireframezésre? ✏️ &#9642; UIthings Blog</title>
+<meta name="description" content="Pár hete egy olyan szűk csapathoz volt szerencsém becsatlakozni egy sörre. Egy debreceni business rendezvény alapjait fektették le és közben persze be kellett mutatkozzak, mivel 3 emberből 2-őt egyáltalán nem ismertem. 🙂
+
+">
+<meta name="description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+">
+<meta name="keywords" content="news, tech">
+<link rel="canonical" href="http://localhost:4000/posts/wireframezes">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Tényleg szükségünk van wireframezésre? ✏️" />
+<meta name="twitter:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+" />
+<meta name="twitter:image" content="http://localhost:4000" />
+<meta name="author" content="">
+<link rel="author" href="">
+<meta property="og:locale" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tényleg szükségünk van wireframezésre? ✏️">
+<meta property="og:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
+">
+<meta property="og:url" content="http://localhost:4000/posts/wireframezes">
+<meta property="og:site_name" content="UIthings Blog">
+<link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic">
+<style>
+    html {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    }
+</style>
+<link rel="shortcut icon" type="image/png" href="/assets/img/fav.png"/>
+   <body>
+       <div class="wrapper" id="blep">
+          <header>
+   <div class="menu">
+     <div class="logo">
+      <link rel="canonical" href="https://uithings.hu/cloudflare-ssl-for-github-pages/">
+          <object type="image/svg+xml" data="/assets/img/uithings.svg" class="logosvg">Your browser does not support svg images</object>
+     </div>
+       <ul>
+           <li><a href="/about">rólam</a>
+           <li><a href="/archive">archive</a>
+           <li><a href="/donate">sör</a>
+       </ul>
+   </div>
+   <div class="social">
+     <ul>
+            <a href="https://twitter.com/szs0ma" target="_blank" class="smaller">
+              <span class="icon-twitter"></span>
+            </a>
+       <li>
+            <a href="https://github.com/szsoma" target="_blank" class="smaller">
+              <span class="icon-github"></span>
+            </a>
+       <li>
+            <a href="mailto:soma.szoboszlai@innonic.com" target="_blank">
+              <span class="icon-mail_outline"></span>
+            </a>
+       <li>
+            <a href="/feed.xml" target="_blank">
+                <span class="icon-rss_feed"></span>
+            </a>
+     </ul>
+   </div>
+</header>
+           <style>
+  .progress-bar {
+      background: linear-gradient(to right, #1825e0 var(--scroll), transparent 0);
+      background-repeat: no-repeat;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      z-index: 1;
+  }
+</style>
+<div class="progress-bar"></div>
+<script>
+  var element = document.documentElement,
+    body = document.body,
+    scrollTop = 'scrollTop',
+    scrollHeight = 'scrollHeight',
+    progress = document.querySelector('.progress-bar'),
+    scroll;
+  document.addEventListener('scroll', function() {
+    scroll = (element[scrollTop]||body[scrollTop]) / ((element[scrollHeight]||body[scrollHeight]) - element.clientHeight) * 100;
+    progress.style.setProperty('--scroll', scroll + '%');
+  }); 
+</script>
+<article class="post">
+<style>
+  .wireframezes {
+    margin-bottom: 2em;
+  }
+  .wireframezes::before {
+    background-image: url('../assets/img/wireframing/hero.jpg');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .wireframezes::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(100,255,0,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .wireframezes-container,
+  .wireframezes-container::before,
+  .wireframezes-container::after {
+    height: 25rem;
+  }
+  .wireframezes-bleed-container,
+  .wireframezes-bleed-container::before,
+  .wireframezes-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .wireframezes-container,
+        .wireframezes-container::before,
+        .wireframezes-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="post-title-container
+  wireframezes wireframezes-bleed-container bleed-hero-container
+    ">
+    <!--Post hero image source-->
+   <div class="heading-container hero-heading hero-heading-post">
+     <h1>
+          Tényleg szükségünk van wireframezésre? ✏️
+     </h1>
+     <div class="post-meta">
+        <span>18/05/2019</span>
+        <span>
+              <a href="/tag/news">#news</a>
+              <a href="/tag/tech">#tech</a>
+        </span>
+        <span class="post-meta-link-nohero">
+    6 perc
+</span>  
+     </div>
+   </div>
+ </div>
+   <p class="lead">Pár hete egy olyan szűk csapathoz volt szerencsém becsatlakozni egy sörre. Egy debreceni business rendezvény alapjait fektették le és közben persze be kellett mutatkozzak, mivel 3 emberből 2-őt egyáltalán nem ismertem. 🙂
+<!--break-->
+
+<p>Jogosan vetődik fel a kérdés, hogy mi köze van a címnek a bevezető szöveghez?
+
+<p>…Természetesen semmi, csak kontextusba szerettem volna helyezni a történetemet. Nagy híve vagyok a “mindent kontextusában vizsgáljunk” dolognak!
+
+<p>Szóval a bemutatkozásom alkalmával kiderült, hogy UX-szel is foglalkozok és meglepődve tapasztaltam, hogy bizniszben meglehetősen otthon lévő partnerem nem igazán hallotta még ezt a kifejezést sőt a drótvázazás témakörét is körbejártuk.
+
+<h2 id="wireframe--drótváz">Wireframe / drótváz</h2>
+
+<p>A drótváz gyakorlatilag az aminek tűnik első hallásra.
+
+<blockquote>
+ <p>Egy weboldal vagy app alacsony kidolgozottságú vázlata.
+</blockquote>
+
+<p>A kezdeti fázisokban akár papíron is születhet csupán négyzetek, körök és vonalak felrajzolásával. Az elrendezések próbálgatásánál használhatunk benne Lorem ipsum szövegeket, később pedig beilleszthetjük a kész szöveg elemeket.
+
+<p>Egy drótváz tehát választ ad az oldallal kapcsolatos Mi? Hol? Hogyan? kérdésre Így segítve a designernek és az ügyfélnek egyaránt. Egyrészt jó az ügyfélnek mert gyorsan, már a tervezés egy korai fázisában láthat egy körülbelüli elrendezést és kontent tervet a jövőbeli oldalára / appjára, másrészt jó a designernek, mert nem egy kész terven bukik ki, hogy az ügyfél számára mégis inkább egy teljesen más layout lenne megfelelő.
+
+<p>Skiccelni elég sokféleképpen lehet. Kezdésnek egy papír ceruza simán megteszi.
+
+<p><img src="../assets/img/wireframing/wireframe-skicc.jpg" alt="800x400" title="wireframe paper" />
+
+<p>Következő fázisban pedig használjunk egy szoftvert rá:
+
+<ul>
+ <li>Sketch (100$ / év): ipari standard lett az elmúlt években, rengeteg kész moduláris wireframe kit közül választhatunk és a Sketch Cloudon keresztül prezentálhatjuk a stakeholdereknek. Nagy előnye, hogy a látványtervet is elkészíthetjük benne.
+ <li>Figma (Freemium): a fenti feature-öket ez is tudja. Live-ban lehet kooperálni a design-on. Előnye és egyben nagy hátránya, hogy webapp (a desktop alkalmazás is electron alapú)
+ <li>Adobe XD (Free): a fenti feature-öket ez is tudja.
+ <li>Axure (29$ / hó): Ez egy kicsit más tészta. HTML drótvázat és egy működő, kattintható kitölthető prototípust építhetünk vele.
+</ul>
+
+<p><img src="../assets/img/wireframing/wireframe.jpg" alt="800x400" title="wireframe" />
+
+<h2 id="És-mi-van-ha-terméket-fejlesztünk">És mi van, ha terméket fejlesztünk?</h2>
+
+<p>Termékek fejlesztésénél is kiemelt szerepet játszik a drótvázazás és prototipizálás.
+<blockquote>
+ <p>A prototípus egy részben működő szimulációja a termékünknek vagy annak egy tesztelni kívánt funkciójának.
+</blockquote>
+
+<p>Termékfejlesztéseknél kiemelt szerepe van az alacsony kidolgozottságú prototípusoknak, wireframeknek, mert az idő pénz. Főleg, ha a mindig időhiányban küszködő dev teamet nézzük. Egy átgondolatlan ötletet lefejleszteni olyan luxus, amit nem sok csapat engedhet meg magának a rohanó világunkban.
+
+<p>Korábban írtam a <a href="https://uithings.hu/posts/dual-track-design" target="_blank">termékfejlesztési módszerekről</a>, ahol a process nagyjából így néz ki:
+
+<p><img src="../assets/img/wireframing/pd.jpg" alt="800x400" title="product development" />
+
+<p>Mondjuk ez minden rendes folyamatban így néz ki 🤓
+
+<p>A képlet bennem akkor változott meg, amikor nagyjából használható állapotba került a Figmával közös szerelemgyerekünk…az új Design System UI kit része. Erről egy következő cikkben részletesebben fogok írni! Stay Tuned! ☝️
+
+<h2 id="És-mi-van-ha-van-design-systemünk">És mi van, ha van Design Systemünk?</h2>
+
+<p>Szóval elkészültem a DS 1.0-val. Bekerültek a logók, typók, buttonok, ikonok, formázott reszponzív boxok, modalok, form és más komponensek. Minden szépen elnevezve, kategorizálva, kimérve, komponensezve. Külön a UI kit, külön a prototípusok és külön a UI design. Ahh designer énem máris benedvesedett!
+
+<p><img src="../assets/img/wireframing/om-ds.jpg" alt="800x400" title="design system" />
+
+<p>A process ugyan úgy folyt tovább, megbeszéltük az ötleteket, csinálok rá egy gyors prototípust és megnézzük hogy működne. Aztán iterálunk párat.
+
+<p>…Egy idő után viszont rájöttem, hogy a prototípus page-en konkrét UI-ok jelentek meg és összemosódtak a drótvázakkal. Egyszerűen nem volt értelme szürke négyzetekkel és körökkel wirreframezni, mert minden UI kész komponensem ott volt és csak be kellett húzzam az új tervre. Pixel pontos paddingokkal és méretekkel nem foglalkoztam, de prototípust már egy nagyon high-fidelity állapotban tudtam prezentálni a csapatnak. Arról már nem is beszélek, hogy user teszteken szintén sokkal praktikusabb, ha a prototípusunk élethűbb, hiszen jobban bele tudják képzelni a kontextusba magukat a teszt alanyaink.
+
+<p>A design systemünk természetesen meg van osztva a csapat többi részével is, tehát ők is tudják használni az ötleteik prezentálására. Eddig csak jó tapasztalataink vannak. Mások is - akik nem designerek - össze tudnak illeszteni kisebb UI kész felületeket, hiszen csak be kell húzni a komponenseket az artboardra.
+
+<p>A wireframezés tehát megmaradt a papír stádiumban skiccként. Én egyre kevesebbet használom a klasszikus elnagyolt, szürke négyzet formákat. Az új rendszerben egyből képesek vagyunk kialakítani az arányokat is, ha épp szükséges. A “drótvázazásba” fektetett időt nem rövidítettük le, de a UI-hoz mostmár csak finomítások szükségesek. Például a paddingok, méretek, színek tisztázása és a prototípus linkek megtervezése kell, hogy mehessen reviewba.
+
+<h2 id="konklúzió">Konklúzió:</h2>
+
+<p>A hagyományos wireframezés jó és szükséges, ehhez kétség sem fér. Segítségével lehetőségünk nyílik feltárni a kezdeti bakikat, logikátlanságokat, amiket ha benne hagynánk a tervekben sok időt vesztenénk.
+
+<ul>
+ <li>Ezen kívül segít kitalálni a kezdeti layoutot és struktúrát
+ <li>Az információs hiearachiát
+ <li>Az egyszerű szürke alakzatos drótváz segít a felhasználói élményre fókuszálni,
+ <li>és letisztázni a feature igényeket
+ <li>Időt spórol
+</ul>
+
+<p>Az egész <strong>elmélkedésem</strong>, hogy akár ki is válthatjuk high fidelity tervekkel, az <strong>arra vonatkozik, ha épp egy UI Kittel rendelkező terméket fejlesztünk!</strong>
+
+<p>Ha tehát ti is lusta designerek vagytok, építsetek design systemet, hogy magas kidolgozottságú wireframeket használhassatok.
+
+<ul>
+ <li>Jó a terméketeknek, mert egységesíti a kinézetet
+ <li>Gyorsítja a UI tervezést
+ <li>Magas kidolgozottságú prototípusokkal tesztelhettek különösebb időbefektetés nélkül
+ <li>A többiek elvégezhetik a munkát helyetted☝️
+</ul>
+
+<p>Hamarosan jelentkezem a mi design systemünk bemutatásával. Stay tuned! 💪
+
+<p><sub>Borítókép forrása: Pexels</sub>
+
+</article>
+<div class="share-btn">
+    <span> Köszi, hogy elolvastad. Oszd meg a barátaiddal is!</span> <br>
+    <a href="https://twitter.com/intent/tweet?text=Tényleg szükségünk van wireframezésre? ✏️&url=http://localhost:4000/posts/wireframezes&via=szs0ma&related=szs0ma" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/posts/wireframezes" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://plus.google.com/share?url=http://localhost:4000/posts/wireframezes" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+</div>
+<aside class="related">
+<h2>Related posts</h2>
+<ul class="related-posts">
+   <li>
+    <a href="/posts/illusztracio">
+        <span>iPad-et vettem</span>
+        <small>17/09</small>
+    </a>
+   <li>
+    <a href="/posts/podcaster-felmeres">
+        <span>Podcaster Felmérés</span>
+        <small>07/09</small>
+    </a>
+   <li>
+    <a href="/posts/podcast-update-1">
+        <span>Esti Meeting update</span>
+        <small>07/06</small>
+    </a>
+   <li>
+    <a href="/posts/svg-preview">
+        <span>SVG thumbnail bővítmény Windowsra</span>
+        <small>07/12</small>
+    </a>
+</aside>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+   (function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = 'https://https-szsoma-github-io.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+           <footer>
+    <span>© UIthings.hu - UI, UX, egy csöpp frontend és
+</span>
+    <span>Szoboszlai Soma</span>
+</footer>
+       </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-107802094-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    

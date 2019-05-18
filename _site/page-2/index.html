@@ -67,6 +67,85 @@
 </header>
 <article class="blog">
 <style>
+  .illusztracio {
+    margin-bottom: 2em;
+  }
+  .illusztracio::before {
+    background-image: url('https://scontent.fbud5-1.fna.fbcdn.net/v/t1.0-9/42164619_10213257829025577_2816627458088894464_n.jpg?_nc_cat=102&oh=1dcafe329e5a5d9b9aea4a889f845f79&oe=5C300EC7');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .illusztracio::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(100,255,0,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .illusztracio-container,
+  .illusztracio-container::before,
+  .illusztracio-container::after {
+    height: 25rem;
+  }
+  .illusztracio-bleed-container,
+  .illusztracio-bleed-container::before,
+  .illusztracio-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .illusztracio-container,
+        .illusztracio-container::before,
+        .illusztracio-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="
+    post-title-container
+        illusztracio illusztracio-container hero-hov
+  ">
+   <div class="heading-container hero-heading hero-heading-blog">
+     <h1>
+          <a href="/posts/illusztracio" title="iPad-et vettem">iPad-et vettem</a>
+     </h1>
+     <div class="
+        post-meta
+      ">
+        <span>17/09/2018</span>
+        <span>
+              <a href="/tag/news">#news</a>
+              <a href="/tag/tech">#tech</a>
+              <a href="/tag/design">#design</a>
+        </span>
+        <span class="post-meta-link-nohero">
+    3 perc
+</span>  
+     </div>
+   </div>
+ </div>
+     <p class="lead">Sajnos nem bírtam tovább vissza tartani a művész énem és bevásároltam egy iPad-et. Igen… Apple Pencilt is vettem… És igen, csodálatos élmény. 🖊
+
+
+       <div class="readmore">
+          <a href="/posts/illusztracio" role="button">Tovább</a>
+       <div>
+</article>
+ <hr>
+<article class="blog">
+<style>
   .podcaster-felmeres {
     margin-bottom: 2em;
   }
@@ -377,84 +456,6 @@
 
        <div class="readmore">
           <a href="/posts/estimeeting" role="button">Tovább</a>
-       <div>
-</article>
- <hr>
-<article class="blog">
-<style>
-  .update {
-    margin-bottom: 2em;
-  }
-  .update::before {
-    background-image: url('https://images.unsplash.com/photo-1472457974886-0ebcd59440cc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=47a1ac13afe8bc24e32f7807800a0746&auto=format&fit=crop&w=1049&q=80');
-    background-size: cover;
-    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: -2;
-  }
-  .update::after {
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgba(100,0,255,0.8);
-    /*mix-blend-mode: darken;
-    mix-blend-mode: color-burn;
-    mix-blend-mode: hard-light;*/
-    mix-blend-mode: overlay;
-    z-index: -1;
-  }
-  .update-container,
-  .update-container::before,
-  .update-container::after {
-    height: 25rem;
-  }
-  .update-bleed-container,
-  .update-bleed-container::before,
-  .update-bleed-container::after {
-    height: 35rem;
-  }
-    @media (max-width: 48rem) {
-        .update-container,
-        .update-container::before,
-        .update-container::after{
-            height: 20rem;
-            margin-bottom: 3rem;
-        }
-    }
-</style>
- <div class="
-    post-title-container
-        update update-container hero-hov
-  ">
-   <div class="heading-container hero-heading hero-heading-blog">
-     <h1>
-          <a href="/posts/update" title="Update!">Update!</a>
-     </h1>
-     <div class="
-        post-meta
-      ">
-        <span>06/02/2018</span>
-        <span>
-              <a href="/tag/blog">#blog</a>
-              <a href="/tag/tech">#tech</a>
-        </span>
-        <span class="post-meta-link-nohero">
-    2 perc
-</span>  
-     </div>
-   </div>
- </div>
-     <p class="lead">Végre itt a led és podcastgyanús tervek 2.0
-
-
-       <div class="readmore">
-          <a href="/posts/update" role="button">Tovább</a>
        <div>
 </article>
 <nav class="pagination" role="navigation">

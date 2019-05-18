@@ -67,6 +67,85 @@
 </header>
 <article class="blog">
 <style>
+  .svg-preview {
+    margin-bottom: 2em;
+  }
+  .svg-preview::before {
+    background-image: url('https://images.unsplash.com/photo-1503525148566-ef5c2b9c93bd?auto=format&fit=crop&w=3900&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .svg-preview::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(100,255,0,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .svg-preview-container,
+  .svg-preview-container::before,
+  .svg-preview-container::after {
+    height: 25rem;
+  }
+  .svg-preview-bleed-container,
+  .svg-preview-bleed-container::before,
+  .svg-preview-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .svg-preview-container,
+        .svg-preview-container::before,
+        .svg-preview-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="
+    post-title-container
+        svg-preview svg-preview-container hero-hov
+  ">
+   <div class="heading-container hero-heading hero-heading-blog">
+     <h1>
+          <a href="/posts/svg-preview" title="SVG thumbnail bővítmény Windowsra">SVG thumbnail bővítmény Windowsra</a>
+     </h1>
+     <div class="
+        post-meta
+      ">
+        <span>07/12/2017</span>
+        <span>
+              <a href="/tag/news">#news</a>
+              <a href="/tag/tech">#tech</a>
+              <a href="/tag/ui">#ui</a>
+        </span>
+        <span class="post-meta-link-nohero">
+    1 perc
+  </span>  
+     </div>
+   </div>
+ </div>
+     <p class="lead">Ami MacOS alatt egyértelmű az Windowson már annyira nem. Ilyen idegesítő dolog, hogy az SVG képeknek csak ikonja van a file kezelőben, nem pedig magát a képet jeleníti meg thumbnailként. Erre kínál megoldást ez a kis Explorer bővítmény → Továbbá pár szó az SVG ikon rendszerünkről.
+
+
+       <div class="readmore">
+          <a href="/posts/svg-preview" role="button">Tovább</a>
+       <div>
+</article>
+ <hr>
+<article class="blog">
+<style>
   .font-weights {
     margin-bottom: 2em;
   }
@@ -380,88 +459,6 @@ Az utóbbi években versenyt űztek a designerek, hogy ki tud vékonyabb fontot 
 
        <div class="readmore">
           <a href="/posts/tudasmegosztas" role="button">Tovább</a>
-       <div>
-</article>
- <hr>
-<article class="blog">
-<style>
-  .bb8 {
-    margin-bottom: 2em;
-  }
-  .bb8::before {
-    background-image: url('https://www.metro.us/sites/default/files/styles/mystyle/public/main/articles/2015/12/18/bb8_4.jpg');
-    background-size: cover;
-    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: -2;
-  }
-  .bb8::after {
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgba(255,100,0,0.8);
-    /*mix-blend-mode: darken;
-    mix-blend-mode: color-burn;
-    mix-blend-mode: hard-light;*/
-    mix-blend-mode: overlay;
-    z-index: -1;
-  }
-  .bb8-container,
-  .bb8-container::before,
-  .bb8-container::after {
-    height: 25rem;
-  }
-  .bb8-bleed-container,
-  .bb8-bleed-container::before,
-  .bb8-bleed-container::after {
-    height: 35rem;
-  }
-    @media (max-width: 48rem) {
-        .bb8-container,
-        .bb8-container::before,
-        .bb8-container::after{
-            height: 20rem;
-            margin-bottom: 3rem;
-        }
-    }
-</style>
- <div class="
-    post-title-container
-        bb8 bb8-container hero-hov
-  ">
-   <div class="heading-container hero-heading hero-heading-blog">
-     <h1>
-          <a href="/posts/bb8" title="És megszületé' BB8, kinek csupa div a teste">És megszületé' BB8, kinek csupa div a teste</a>
-     </h1>
-     <div class="
-        post-meta
-      ">
-        <span>14/11/2017</span>
-        <span>
-              <a href="/tag/fejlodes">#fejlodes</a>
-              <a href="/tag/animation">#animation</a>
-              <a href="/tag/frontend">#frontend</a>
-              <a href="/tag/sass">#sass</a>
-              <a href="/tag/codepen">#codepen</a>
-        </span>
-        <span class="post-meta-link-nohero">
-    4 perc
-</span>  
-     </div>
-   </div>
- </div>
-     <p class="lead">Akárhányszor láttam egy div-ekkel összehákolt CSS rajzot Codepenen, mindig arra gondoltam, hogy mekkora beteg állat, aki ilyeneket csinál.<br />
-Aztán megcsináltam én is <strong>BB8</strong>-et…
-
-
-       <div class="readmore">
-          <a href="/posts/bb8" role="button">Tovább</a>
        <div>
 </article>
 <nav class="pagination" role="navigation">

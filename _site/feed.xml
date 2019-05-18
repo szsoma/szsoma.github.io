@@ -6,9 +6,116 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 08 Apr 2019 08:47:21 +0200</pubDate>
-    <lastBuildDate>Mon, 08 Apr 2019 08:47:21 +0200</lastBuildDate>
-    <generator>Jekyll v3.7.3</generator>
+    <pubDate>Sat, 18 May 2019 22:42:25 +0200</pubDate>
+    <lastBuildDate>Sat, 18 May 2019 22:42:25 +0200</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Tényleg szükségünk van wireframezésre? ✏️</title>
+        <description>&lt;p class=&quot;lead&quot;&gt;Pár hete egy olyan szűk csapathoz volt szerencsém becsatlakozni egy sörre. Egy debreceni business rendezvény alapjait fektették le és közben persze be kellett mutatkozzak, mivel 3 emberből 2-őt egyáltalán nem ismertem. 🙂&lt;/p&gt;
+&lt;!--break--&gt;
+
+&lt;p&gt;Jogosan vetődik fel a kérdés, hogy mi köze van a címnek a bevezető szöveghez?&lt;/p&gt;
+
+&lt;p&gt;…Természetesen semmi, csak kontextusba szerettem volna helyezni a történetemet. Nagy híve vagyok a “mindent kontextusában vizsgáljunk” dolognak!&lt;/p&gt;
+
+&lt;p&gt;Szóval a bemutatkozásom alkalmával kiderült, hogy UX-szel is foglalkozok és meglepődve tapasztaltam, hogy bizniszben meglehetősen otthon lévő partnerem nem igazán hallotta még ezt a kifejezést sőt a drótvázazás témakörét is körbejártuk.&lt;/p&gt;
+
+&lt;h2 id=&quot;wireframe--drótváz&quot;&gt;Wireframe / drótváz&lt;/h2&gt;
+
+&lt;p&gt;A drótváz gyakorlatilag az aminek tűnik első hallásra.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Egy weboldal vagy app alacsony kidolgozottságú vázlata.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A kezdeti fázisokban akár papíron is születhet csupán négyzetek, körök és vonalak felrajzolásával. Az elrendezések próbálgatásánál használhatunk benne Lorem ipsum szövegeket, később pedig beilleszthetjük a kész szöveg elemeket.&lt;/p&gt;
+
+&lt;p&gt;Egy drótváz tehát választ ad az oldallal kapcsolatos Mi? Hol? Hogyan? kérdésre Így segítve a designernek és az ügyfélnek egyaránt. Egyrészt jó az ügyfélnek mert gyorsan, már a tervezés egy korai fázisában láthat egy körülbelüli elrendezést és kontent tervet a jövőbeli oldalára / appjára, másrészt jó a designernek, mert nem egy kész terven bukik ki, hogy az ügyfél számára mégis inkább egy teljesen más layout lenne megfelelő.&lt;/p&gt;
+
+&lt;p&gt;Skiccelni elég sokféleképpen lehet. Kezdésnek egy papír ceruza simán megteszi.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/img/wireframing/wireframe-skicc.jpg&quot; alt=&quot;800x400&quot; title=&quot;wireframe paper&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Következő fázisban pedig használjunk egy szoftvert rá:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sketch (100$ / év): ipari standard lett az elmúlt években, rengeteg kész moduláris wireframe kit közül választhatunk és a Sketch Cloudon keresztül prezentálhatjuk a stakeholdereknek. Nagy előnye, hogy a látványtervet is elkészíthetjük benne.&lt;/li&gt;
+  &lt;li&gt;Figma (Freemium): a fenti feature-öket ez is tudja. Live-ban lehet kooperálni a design-on. Előnye és egyben nagy hátránya, hogy webapp (a desktop alkalmazás is electron alapú)&lt;/li&gt;
+  &lt;li&gt;Adobe XD (Free): a fenti feature-öket ez is tudja.&lt;/li&gt;
+  &lt;li&gt;Axure (29$ / hó): Ez egy kicsit más tészta. HTML drótvázat és egy működő, kattintható kitölthető prototípust építhetünk vele.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/img/wireframing/wireframe.jpg&quot; alt=&quot;800x400&quot; title=&quot;wireframe&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;És-mi-van-ha-terméket-fejlesztünk&quot;&gt;És mi van, ha terméket fejlesztünk?&lt;/h2&gt;
+
+&lt;p&gt;Termékek fejlesztésénél is kiemelt szerepet játszik a drótvázazás és prototipizálás.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;A prototípus egy részben működő szimulációja a termékünknek vagy annak egy tesztelni kívánt funkciójának.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Termékfejlesztéseknél kiemelt szerepe van az alacsony kidolgozottságú prototípusoknak, wireframeknek, mert az idő pénz. Főleg, ha a mindig időhiányban küszködő dev teamet nézzük. Egy átgondolatlan ötletet lefejleszteni olyan luxus, amit nem sok csapat engedhet meg magának a rohanó világunkban.&lt;/p&gt;
+
+&lt;p&gt;Korábban írtam a &lt;a href=&quot;https://uithings.hu/posts/dual-track-design&quot; target=&quot;_blank&quot;&gt;termékfejlesztési módszerekről&lt;/a&gt;, ahol a process nagyjából így néz ki:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/img/wireframing/pd.jpg&quot; alt=&quot;800x400&quot; title=&quot;product development&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Mondjuk ez minden rendes folyamatban így néz ki 🤓&lt;/p&gt;
+
+&lt;p&gt;A képlet bennem akkor változott meg, amikor nagyjából használható állapotba került a Figmával közös szerelemgyerekünk…az új Design System UI kit része. Erről egy következő cikkben részletesebben fogok írni! Stay Tuned! ☝️&lt;/p&gt;
+
+&lt;h2 id=&quot;És-mi-van-ha-van-design-systemünk&quot;&gt;És mi van, ha van Design Systemünk?&lt;/h2&gt;
+
+&lt;p&gt;Szóval elkészültem a DS 1.0-val. Bekerültek a logók, typók, buttonok, ikonok, formázott reszponzív boxok, modalok, form és más komponensek. Minden szépen elnevezve, kategorizálva, kimérve, komponensezve. Külön a UI kit, külön a prototípusok és külön a UI design. Ahh designer énem máris benedvesedett!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/img/wireframing/om-ds.jpg&quot; alt=&quot;800x400&quot; title=&quot;design system&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A process ugyan úgy folyt tovább, megbeszéltük az ötleteket, csinálok rá egy gyors prototípust és megnézzük hogy működne. Aztán iterálunk párat.&lt;/p&gt;
+
+&lt;p&gt;…Egy idő után viszont rájöttem, hogy a prototípus page-en konkrét UI-ok jelentek meg és összemosódtak a drótvázakkal. Egyszerűen nem volt értelme szürke négyzetekkel és körökkel wirreframezni, mert minden UI kész komponensem ott volt és csak be kellett húzzam az új tervre. Pixel pontos paddingokkal és méretekkel nem foglalkoztam, de prototípust már egy nagyon high-fidelity állapotban tudtam prezentálni a csapatnak. Arról már nem is beszélek, hogy user teszteken szintén sokkal praktikusabb, ha a prototípusunk élethűbb, hiszen jobban bele tudják képzelni a kontextusba magukat a teszt alanyaink.&lt;/p&gt;
+
+&lt;p&gt;A design systemünk természetesen meg van osztva a csapat többi részével is, tehát ők is tudják használni az ötleteik prezentálására. Eddig csak jó tapasztalataink vannak. Mások is - akik nem designerek - össze tudnak illeszteni kisebb UI kész felületeket, hiszen csak be kell húzni a komponenseket az artboardra.&lt;/p&gt;
+
+&lt;p&gt;A wireframezés tehát megmaradt a papír stádiumban skiccként. Én egyre kevesebbet használom a klasszikus elnagyolt, szürke négyzet formákat. Az új rendszerben egyből képesek vagyunk kialakítani az arányokat is, ha épp szükséges. A “drótvázazásba” fektetett időt nem rövidítettük le, de a UI-hoz mostmár csak finomítások szükségesek. Például a paddingok, méretek, színek tisztázása és a prototípus linkek megtervezése kell, hogy mehessen reviewba.&lt;/p&gt;
+
+&lt;h2 id=&quot;konklúzió&quot;&gt;Konklúzió:&lt;/h2&gt;
+
+&lt;p&gt;A hagyományos wireframezés jó és szükséges, ehhez kétség sem fér. Segítségével lehetőségünk nyílik feltárni a kezdeti bakikat, logikátlanságokat, amiket ha benne hagynánk a tervekben sok időt vesztenénk.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ezen kívül segít kitalálni a kezdeti layoutot és struktúrát&lt;/li&gt;
+  &lt;li&gt;Az információs hiearachiát&lt;/li&gt;
+  &lt;li&gt;Az egyszerű szürke alakzatos drótváz segít a felhasználói élményre fókuszálni,&lt;/li&gt;
+  &lt;li&gt;és letisztázni a feature igényeket&lt;/li&gt;
+  &lt;li&gt;Időt spórol&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Az egész &lt;strong&gt;elmélkedésem&lt;/strong&gt;, hogy akár ki is válthatjuk high fidelity tervekkel, az &lt;strong&gt;arra vonatkozik, ha épp egy UI Kittel rendelkező terméket fejlesztünk!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Ha tehát ti is lusta designerek vagytok, építsetek design systemet, hogy magas kidolgozottságú wireframeket használhassatok.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Jó a terméketeknek, mert egységesíti a kinézetet&lt;/li&gt;
+  &lt;li&gt;Gyorsítja a UI tervezést&lt;/li&gt;
+  &lt;li&gt;Magas kidolgozottságú prototípusokkal tesztelhettek különösebb időbefektetés nélkül&lt;/li&gt;
+  &lt;li&gt;A többiek elvégezhetik a munkát helyetted☝️&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hamarosan jelentkezem a mi design systemünk bemutatásával. Stay tuned! 💪&lt;/p&gt;
+
+&lt;p&gt;&lt;sub&gt;Borítókép forrása: Pexels&lt;/sub&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 18 May 2019 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/posts/wireframezes</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/wireframezes</guid>
+        
+        <category>news</category>
+        
+        <category>tech</category>
+        
+        
+      </item>
     
       <item>
         <title>Termékfejlesztési próbálkozások</title>
@@ -643,35 +750,6 @@ Próbálgatjuk a Figma-t és addiktív, kraftolós játék a Ylands. &lt;br /&gt
         <category>podcast</category>
         
         <category>news</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Update!</title>
-        <description>&lt;p class=&quot;lead&quot;&gt;Végre itt a led és podcastgyanús tervek 2.0&lt;/p&gt;
-&lt;!--break--&gt;
-
-&lt;p&gt;Az utóbbi időben időhiányban küszködöm. Hétvégén elkezdtem az előadás diáit csinálni Slides-on és mellette gőzerővel rajta vagyok a podcast dolgon is. 
-Ma megjött a mikrofon és a beállításokat tesztelgetem. Elég új még a dolog és nem tudom mi lesz belőle, de meglátjuk! 😊&lt;/p&gt;
-
-&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned=&quot;&quot; data-instgrm-permalink=&quot;https://www.instagram.com/p/Be3BVD0gPAh/&quot; data-instgrm-version=&quot;8&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=&quot; margin:8px 0 0 0; padding:0 4px;&quot;&gt; &lt;a href=&quot;https://www.instagram.com/p/Be3BVD0gPAh/&quot; style=&quot; color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;&quot; target=&quot;_blank&quot;&gt;#mic&lt;/a&gt;&lt;/p&gt; &lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://www.instagram.com/szsoma/&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;&quot; target=&quot;_blank&quot;&gt; Soma&lt;/a&gt; (@szsoma) által megosztott bejegyzés, &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2018-02-06T15:07:55+00:00&quot;&gt;Febr 6., 2018, időpont: 7:07 (PST időzóna szerint)&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; defer=&quot;&quot; src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
-
-&lt;h2 id=&quot;más&quot;&gt;Más&lt;/h2&gt;
-&lt;p&gt;Végre a korábban megrendelt LED fények is megjöttek és fel is ragasztottam az íróasztal asztallapja mögé. Imádom! 😍&lt;/p&gt;
-
-&lt;blockquote class=&quot;instagram-media&quot; data-instgrm-captioned=&quot;&quot; data-instgrm-permalink=&quot;https://www.instagram.com/p/Be0lyLFA9NF/&quot; data-instgrm-version=&quot;8&quot; style=&quot; background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);&quot;&gt;&lt;div style=&quot;padding:8px;&quot;&gt; &lt;div style=&quot; background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;&quot;&gt; &lt;div style=&quot; background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;&quot;&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=&quot; margin:8px 0 0 0; padding:0 4px;&quot;&gt; &lt;a href=&quot;https://www.instagram.com/p/Be0lyLFA9NF/&quot; style=&quot; color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;&quot; target=&quot;_blank&quot;&gt;ItsOn! :D #rgb #led #desk&lt;/a&gt;&lt;/p&gt; &lt;p style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;&quot;&gt;&lt;a href=&quot;https://www.instagram.com/szsoma/&quot; style=&quot; color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;&quot; target=&quot;_blank&quot;&gt; Soma&lt;/a&gt; (@szsoma) által megosztott bejegyzés, &lt;time style=&quot; font-family:Arial,sans-serif; font-size:14px; line-height:17px;&quot; datetime=&quot;2018-02-05T16:29:55+00:00&quot;&gt;Febr 5., 2018, időpont: 8:29 (PST időzóna szerint)&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
-&lt;script async=&quot;&quot; defer=&quot;&quot; src=&quot;//platform.instagram.com/en_US/embeds.js&quot;&gt;&lt;/script&gt;
-
-</description>
-        <pubDate>Tue, 06 Feb 2018 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/posts/update</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/update</guid>
-        
-        <category>blog</category>
-        
-        <category>tech</category>
         
         
       </item>

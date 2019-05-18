@@ -3,6 +3,21 @@
   
     
     <url>
+      <loc>http://localhost:4000/posts/wireframezes/</loc>
+      
+        <lastmod>2019-05-18T00:00:00+02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.7</priority>
+      
+    </url>
+    
+  
+    
+    <url>
       <loc>http://localhost:4000/posts/dual-track-design/</loc>
       
         <lastmod>2019-01-31T00:00:00+01:00</lastmod>
@@ -503,7 +518,7 @@
     <url>
       <loc>http://localhost:4000/about/</loc>
       
-        <lastmod>2019-04-08T08:47:21+02:00</lastmod>
+        <lastmod>2019-05-18T22:42:25+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -518,7 +533,7 @@
     <url>
       <loc>http://localhost:4000/archive/</loc>
       
-        <lastmod>2019-04-08T08:47:21+02:00</lastmod>
+        <lastmod>2019-05-18T22:42:25+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -535,7 +550,7 @@
     <url>
       <loc>http://localhost:4000/donate/</loc>
       
-        <lastmod>2019-04-08T08:47:21+02:00</lastmod>
+        <lastmod>2019-05-18T22:42:25+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -552,7 +567,7 @@
     <url>
       <loc>http://localhost:4000/</loc>
       
-        <lastmod>2019-04-08T08:47:21+02:00</lastmod>
+        <lastmod>2019-05-18T22:42:25+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -573,7 +588,7 @@
     <url>
       <loc>http://localhost:4000/page-2/</loc>
       
-        <lastmod>2019-04-08T08:47:21+02:00</lastmod>
+        <lastmod>2019-05-18T22:42:25+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -588,7 +603,7 @@
     <url>
       <loc>http://localhost:4000/page-3/</loc>
       
-        <lastmod>2019-04-08T08:47:21+02:00</lastmod>
+        <lastmod>2019-05-18T22:42:25+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -603,7 +618,7 @@
     <url>
       <loc>http://localhost:4000/page-4/</loc>
       
-        <lastmod>2019-04-08T08:47:21+02:00</lastmod>
+        <lastmod>2019-05-18T22:42:25+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -618,7 +633,7 @@
     <url>
       <loc>http://localhost:4000/page-5/</loc>
       
-        <lastmod>2019-04-08T08:47:21+02:00</lastmod>
+        <lastmod>2019-05-18T22:42:25+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -633,7 +648,7 @@
     <url>
       <loc>http://localhost:4000/page-6/</loc>
       
-        <lastmod>2019-04-08T08:47:21+02:00</lastmod>
+        <lastmod>2019-05-18T22:42:25+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -648,7 +663,7 @@
     <url>
       <loc>http://localhost:4000/page-7/</loc>
       
-        <lastmod>2019-04-08T08:47:21+02:00</lastmod>
+        <lastmod>2019-05-18T22:42:25+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>

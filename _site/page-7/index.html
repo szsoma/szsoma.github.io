@@ -67,6 +67,85 @@
 </header>
 <article class="blog">
 <style>
+  .slides {
+    margin-bottom: 2em;
+  }
+  .slides::before {
+    background-image: url('https://una.im/images/speaking/cssconfeu-2017.jpg');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .slides::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,100,255,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .slides-container,
+  .slides-container::before,
+  .slides-container::after {
+    height: 25rem;
+  }
+  .slides-bleed-container,
+  .slides-bleed-container::before,
+  .slides-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .slides-container,
+        .slides-container::before,
+        .slides-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="
+    post-title-container
+        slides slides-container hero-hov
+  ">
+   <div class="heading-container hero-heading hero-heading-blog">
+     <h1>
+          <a href="/posts/slides" title="Egy menő online prezentáció készítő - Slides.com">Egy menő online prezentáció készítő - Slides.com</a>
+     </h1>
+     <div class="
+        post-meta
+      ">
+        <span>16/09/2017</span>
+        <span>
+              <a href="/tag/blog">#blog</a>
+              <a href="/tag/prezentacio">#prezentacio</a>
+              <a href="/tag/svg">#svg</a>
+        </span>
+        <span class="post-meta-link-nohero">
+    2 perc
+</span>  
+     </div>
+   </div>
+ </div>
+     <p class="lead">Semmi más, csak ami kell!
+
+
+       <div class="readmore">
+          <a href="/posts/slides" role="button">Tovább</a>
+       <div>
+</article>
+ <hr>
+<article class="blog">
+<style>
   .animacio-es-ux {
     margin-bottom: 2em;
   }

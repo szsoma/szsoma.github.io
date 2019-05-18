@@ -67,6 +67,84 @@
 </header>
 <article class="blog">
 <style>
+  .update {
+    margin-bottom: 2em;
+  }
+  .update::before {
+    background-image: url('https://images.unsplash.com/photo-1472457974886-0ebcd59440cc?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=47a1ac13afe8bc24e32f7807800a0746&auto=format&fit=crop&w=1049&q=80');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .update::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(100,0,255,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .update-container,
+  .update-container::before,
+  .update-container::after {
+    height: 25rem;
+  }
+  .update-bleed-container,
+  .update-bleed-container::before,
+  .update-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .update-container,
+        .update-container::before,
+        .update-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="
+    post-title-container
+        update update-container hero-hov
+  ">
+   <div class="heading-container hero-heading hero-heading-blog">
+     <h1>
+          <a href="/posts/update" title="Update!">Update!</a>
+     </h1>
+     <div class="
+        post-meta
+      ">
+        <span>06/02/2018</span>
+        <span>
+              <a href="/tag/blog">#blog</a>
+              <a href="/tag/tech">#tech</a>
+        </span>
+        <span class="post-meta-link-nohero">
+    2 perc
+</span>  
+     </div>
+   </div>
+ </div>
+     <p class="lead">Végre itt a led és podcastgyanús tervek 2.0
+
+
+       <div class="readmore">
+          <a href="/posts/update" role="button">Tovább</a>
+       <div>
+</article>
+ <hr>
+<article class="blog">
+<style>
   .eloadas {
     margin-bottom: 2em;
   }
@@ -381,85 +459,6 @@ Továbbá: karácsonyi ömlengések, podcast gyanús tervek és UIthings.hu star
 
        <div class="readmore">
           <a href="/posts/cssgrid" role="button">Tovább</a>
-       <div>
-</article>
- <hr>
-<article class="blog">
-<style>
-  .svg-preview {
-    margin-bottom: 2em;
-  }
-  .svg-preview::before {
-    background-image: url('https://images.unsplash.com/photo-1503525148566-ef5c2b9c93bd?auto=format&fit=crop&w=3900&q=80&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
-    background-size: cover;
-    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: -2;
-  }
-  .svg-preview::after {
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgba(100,255,0,0.8);
-    /*mix-blend-mode: darken;
-    mix-blend-mode: color-burn;
-    mix-blend-mode: hard-light;*/
-    mix-blend-mode: overlay;
-    z-index: -1;
-  }
-  .svg-preview-container,
-  .svg-preview-container::before,
-  .svg-preview-container::after {
-    height: 25rem;
-  }
-  .svg-preview-bleed-container,
-  .svg-preview-bleed-container::before,
-  .svg-preview-bleed-container::after {
-    height: 35rem;
-  }
-    @media (max-width: 48rem) {
-        .svg-preview-container,
-        .svg-preview-container::before,
-        .svg-preview-container::after{
-            height: 20rem;
-            margin-bottom: 3rem;
-        }
-    }
-</style>
- <div class="
-    post-title-container
-        svg-preview svg-preview-container hero-hov
-  ">
-   <div class="heading-container hero-heading hero-heading-blog">
-     <h1>
-          <a href="/posts/svg-preview" title="SVG thumbnail bővítmény Windowsra">SVG thumbnail bővítmény Windowsra</a>
-     </h1>
-     <div class="
-        post-meta
-      ">
-        <span>07/12/2017</span>
-        <span>
-              <a href="/tag/news">#news</a>
-              <a href="/tag/tech">#tech</a>
-              <a href="/tag/ui">#ui</a>
-        </span>
-        <span class="post-meta-link-nohero">
-    1 perc
-  </span>  
-     </div>
-   </div>
- </div>
-     <p class="lead">Ami MacOS alatt egyértelmű az Windowson már annyira nem. Ilyen idegesítő dolog, hogy az SVG képeknek csak ikonja van a file kezelőben, nem pedig magát a képet jeleníti meg thumbnailként. Erre kínál megoldást ez a kis Explorer bővítmény → Továbbá pár szó az SVG ikon rendszerünkről.
-
-
-       <div class="readmore">
-          <a href="/posts/svg-preview" role="button">Tovább</a>
        <div>
 </article>
 <nav class="pagination" role="navigation">
