@@ -8,7 +8,7 @@ hero: ../assets/img/wireframing/hero.jpg
 overlay: green
 published: true
 ---
-Pár hete egy olyan szűk csapathoz volt szerencsém becsatlakozni egy sörre. Egy debreceni business rendezvény alapjait fektették le és közben persze be kellett mutatkozzak, mivel 3 emberből 2-őt egyáltalán nem ismertem. 🙂
+Pár hete egy szűk csapathoz volt szerencsém becsatlakozni egy sörre. Egy debreceni business rendezvény alapjait fektették le és közben persze be kellett mutatkozzak, mivel 3 emberből 2-őt egyáltalán nem ismertem. 🙂
 {: .lead}
 <!--break-->
 
