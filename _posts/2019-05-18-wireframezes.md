@@ -2,8 +2,10 @@
 layout: post
 title: Tényleg szükségünk van wireframezésre? ✏️
 tags:
-  - news
-  - tech
+  - ux
+  - design
+  - designsystem
+  - productdesign
 hero: ../assets/img/wireframing/hero.jpg
 overlay: green
 published: true
