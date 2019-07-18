@@ -6,19 +6,19 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 18 Jul 2019 08:30:23 +0200</pubDate>
-    <lastBuildDate>Thu, 18 Jul 2019 08:30:23 +0200</lastBuildDate>
-    <generator>Jekyll v3.7.3</generator>
+    <pubDate>Thu, 18 Jul 2019 19:45:43 +0200</pubDate>
+    <lastBuildDate>Thu, 18 Jul 2019 19:45:43 +0200</lastBuildDate>
+    <generator>Jekyll v3.8.6</generator>
     
       <item>
         <title>Design System, UI kit és miegymás 📐✏️</title>
         <description>&lt;p class=&quot;lead&quot;&gt;Két hete kezdtem el dolgozni a CodersRank.io-nál és az első dolgunk az volt, hogy elkezdtünk építeni egy UI Kitet, hogy könnyítsünk és gyorsítsunk a jövőbeli munkákon. Erről tartok most egy kis beszámolót!&lt;/p&gt;
 &lt;!--break--&gt;
 
-&lt;h2 id=&quot;komponens-&quot;&gt;Komponens 📦&lt;/h2&gt;
+&lt;h1 id=&quot;komponens-&quot;&gt;Komponens 📦&lt;/h1&gt;
 &lt;p&gt;A számítógépek fejlődésével a szoftver programozásban egyre nagyobb káosz kerekedett. A fejlesztők sorra vesztek el a sok egyedi kódrészletben mígnem Douglas McIlroy 1968-ban bemutatta a komponens alapú programozást. A komponensek újrafelhasználható kódrészletek, amik felgyorsították a fejlesztéseket.&lt;/p&gt;
 
-&lt;p&gt;A szoftver design iparban is valami hasonló zajlott le az utóbbi években. A komponenseket már ismertük az újhullámos design szoftverek előtt is, hiszen a Photoshop Smart Object-jei már tulajdonképpen komponensek voltak. Mégis a nagy változást a 2010-ben megjelent Sketch hozta el. Sokkal nagyobb hangsúlyt fektettek a komponens alapú designra ezért a software népszerűsége ugrásszerűen nőtt lassan veszélyeztetve a Photoshop egyeduralmát a webdesignban.&lt;/p&gt;
+&lt;p&gt;A szoftver design iparban is valami hasonló zajlott le az utóbbi években. A komponenseket már ismertük az újhullámos design szoftverek előtt is, hiszen a Photoshop Smart Object-jei már tulajdonképpen komponensek voltak. Mégis a nagy változást a 2010-ben megjelent &lt;strong&gt;Sketch&lt;/strong&gt; hozta el. Sokkal nagyobb hangsúlyt fektettek a komponens alapú designra ezért a software népszerűsége ugrásszerűen nőtt lassan veszélyeztetve a Photoshop egyeduralmát a webdesignban.&lt;/p&gt;
 
 &lt;p&gt;Mivel a Photoshop nem webdesign eszközként született, egy csomó mindent meg lehet vele oldani, amit amúgy front-end szempontból nem…&lt;/p&gt;
 
@@ -26,9 +26,75 @@
   &lt;p&gt;“It is possible to design impossible things.” - Adobe Photoshop&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;A Sketch, - és akkor említsük meg most már a többi eszközt is - &lt;strong&gt;Adobe Xd, Figma, UX Pin&lt;/strong&gt; stb. ilyen szempontból sokkal korlátoltabbak, kevesebb az esélye, hogy elszabadul a designer és lehetetlen dolgokat tervez.&lt;/p&gt;
+
+&lt;h1 id=&quot;na-de-a-ui-kit&quot;&gt;Na de a UI Kit!&lt;/h1&gt;
+&lt;p&gt;Pár évvel ezelőtt összeszámoltam a ShopRenter által használt gombokat. KB 15 féle gomb volt a domain alatt. Mit ad a UI kit? Nagyjából az első mondat választ ad erre: konzisztens design-t egy termék fejlesztésénél.
+A UI kit előre definiált, komponens alapú rendszer, ami minden olyan design elemet tartalmaz, ami a termék fejlesztéséhez szükséges. Egy folyamatosan fejlődő rendszer, amivel foglalkozni kell és sosincs kész, mivel a termék sem nyilvánítható késznek.&lt;/p&gt;
+
+&lt;p&gt;Egy működő UI kit és a mögötte lévő rendszer sokkal inkább hasonlít egy software fejlesztéshez, mint egy hagyományos design munkához.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Kialakításánál együtt kell dolgoznia designernek, fejlesztőnek és stakeholdernek.&lt;/li&gt;
+  &lt;li&gt;Folyamatosan karban kell tartani&lt;/li&gt;
+  &lt;li&gt;Menedzselni kell a verziókat és változásokat, hogy a fejlesztők is értelsüljenek a változásokról&lt;/li&gt;
+  &lt;li&gt;Ha több designer alakítja ki, akkor fontos a verzió követés és a backup.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Igazából egy önálló termékként kell tekinteni rá, ami a más termékek fejlesztéséhez használandó.
+Hogy mik a pontos előnye és hogy hogyan fogj neki, azt nem én akarom elmondani! Ezernyi ilyen cikk van a neten és nincs kedvem ismételni őket. Inkább leírom a saját tapasztalataimat!&lt;/p&gt;
+
+&lt;h1 id=&quot;tapasztalatok&quot;&gt;Tapasztalatok&lt;/h1&gt;
+&lt;p&gt;Viszonylag már benne vagyok a témában és teljesen más UI kittel tervezni mint nélküle. Sokan mondják, hogy így oda a kreativitás és a tervezői szabadság, ami valamilyen szinten valid, viszont a szerepek is cserélődnek. A designer most már nem csak azért felelős, hogy egy adott terv szép legyen és használható. Sokkal inkább egy problémára kell általában több megoldást és megközelítést találni. Ez sok időbe, gondolkodásba telik és nincs idő apróbb dolgokkal foglalkozni, mint pl. a paddingok kiszámolása vagy a gombok méretének meghatározása. &lt;br /&gt;
+Ezeket elég egyszer, a UI kit alapjainál definiálni és utána már csak be kell húzni az adott komponenst és átírni a placeholderét. Egy jó rendszerrel akár a &lt;a href=&quot;https://uithings.hu/posts/wireframezes&quot; target=&quot;_blank&quot;&gt;wireframezést is ki lehet váltani&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Design szempontból, amik kihívást jelentettek az a konzisztencia megtartása. Ha Brad Frost Atomic UI terminológiáját követjük akkor fontos, hogy az atomok körültekintően és jól legyenek megtervezve.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;400px&quot; src=&quot;https://www.youtube.com/embed/q5CB1za0NfA&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Sok apró dologra kell odafigyelni. Csak hogy egy példát említsek: a lekerekítések. &lt;br /&gt;
+Ezt én úgy oldottam meg, hogy létrehoztam egy négyzet objektumot, majd ezt komponensé varázsoltam. Az ezután következő atomok, molekulák stb, kb. minden ebből lett származtatva. Ez a gombok, az inputok téglalapja, a box, badge komponensek háttere, a képek maszkja is. Így ha egy későbbi redesignnál úgy döntünk, hogy minden legyen lekerekített, akkor csak az első kis téglalap atomot kell lekerekíteni és ezt követően minden változik vele. 
+Ugyanez érvényes a színekre, betűtípusokra és az egyéb komponensekre.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/img/2019-07-18/cr.gif&quot; alt=&quot;ui kit rectangle&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A probléma ott kezdődik, amikor erre a kis trükkre azután jössz rá, hogy az összes primary, secondary, line és inverz gombot már megcsináltad… 🙄 Nem jó érzés, ha újra kell építeni mindent 😀 &lt;br /&gt;
+Ha egy tanácsot megfogadtok tőlem: ne éles projekten csináljátok az első UI kitet! Inkább csak úgy magatoknak hobbiból kezdjétek el, mert könnyen túl fogtok szaladni a rászánt időn.&lt;/p&gt;
+
+&lt;p&gt;Én eléggé megszerettem az ezzel való tervezést. A kreativitásom nem igazán korlátozza, igazából a UI kit bővítésénél, optimalizálásánál élem ki az ilyeneket mostanában. Ha kíváncsi vagy jelenleg hogy áll a UI kit itt megnézheted:
+&lt;a target=&quot;_blank&quot; href=&quot;../assets/img/2019-07-18/cr-uikit.png&quot;&gt;
+  &lt;img src=&quot;../assets/img/2019-07-18/cr-uikit.png&quot; alt=&quot;UI KIT&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;tovább-a-front-end-irányába-&quot;&gt;Tovább a front-end irányába 👨‍💻&lt;/h1&gt;
+&lt;p&gt;A következő lépés, hogy a fejlesztők hogyan dolgozzanak belőle.&lt;/p&gt;
+
+&lt;p&gt;Ez egy újabb fura téma lesz. Pont nálunk gondoltam, hogy el kell kezdeni egyből gyártani a kód snippeteket és mennyire király lesz majd. Egyrészt igen, király lenne és el is kezdtem ismerkedni a &lt;a href=&quot;https://storybook.js.org&quot; target=&quot;_blank&quot;&gt;Storybook&lt;/a&gt;-kal.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;iframe width=&quot;100%&quot; height=&quot;400px&quot; src=&quot;https://www.youtube.com/embed/p-LFh5Y89eM&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Ez egy szuper eszköz, hogy a UI kitünket életre keltsük és a fejlesztők könnyen ki tudják másolni az előre megírt UI komponenseket. A felépítése egyszerű, bl oldalon a fa szerkezet, jobb felül a UI, jobb alul a kód. Az ebben szereplő elemek már kattinthatóak, kipróbálhatóak és bizonyos keretek között Storybookban tesztelhetőek is. 
+Desinger szemmel kicsit melósabb szerkeszteni. Ismerni kell egy keretrendszert, hiszen így tudjuk felépíteni a komponenseket:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;React&lt;/li&gt;
+  &lt;li&gt;Angular&lt;/li&gt;
+  &lt;li&gt;Vue
+Viszont ha egy kicsit érdekel mind a két terület (Design és Front-end) akkor nagyon is érdemes vele foglalkozni. Én ilyen vagyok pont 🤓&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Példának okáért érdemes kattintgatni pár kész &lt;a href=&quot;https://storybook.js.org/docs/examples/&quot; target=&quot;_blank&quot;&gt;Storybookban&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;Szóval átbeszéltük a dolgot és végül arra jutottunk a fejlesztőkkel, hogy egyelőre nem igazán vagyunk olyan szinten, hogy erre megérje nekünk erőforrást fordítani. És igen ezt be kell látni, hogy nem minden világmegváltó ötletünk lesz elfogadva és implementálva.&lt;/p&gt;
+
+&lt;p&gt;Jelenleg home projektként kell majd időt szakítani erre az eszközre, de nagyon tetszik.&lt;/p&gt;
+
+&lt;p&gt;Folyt.köv.&lt;/p&gt;
+
 &lt;!--
 ## Link
-&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;blbkj&lt;/a&gt;
+[wireframezést is ki lehet váltani](https://uithings.hu/posts/wireframezes){:target=&quot;_blank&quot;}
 
 ## Kép
 ![800x400](https://soma.shoprenter.hu/custom/soma/image/data/liquid.jpg &quot;liquid mukodese&quot;)

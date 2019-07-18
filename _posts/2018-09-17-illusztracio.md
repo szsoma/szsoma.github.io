@@ -5,7 +5,7 @@ tags:
   - news
   - tech
   - design
-hero: https://scontent.fbud5-1.fna.fbcdn.net/v/t1.0-9/42164619_10213257829025577_2816627458088894464_n.jpg?_nc_cat=102&oh=1dcafe329e5a5d9b9aea4a889f845f79&oe=5C300EC7
+hero: https://images.pexels.com/photos/1334598/pexels-photo-1334598.jpeg?cs=srgb&dl=apple-brand-device-1334598.jpg&fm=jpg
 overlay: green
 published: true
 ---
