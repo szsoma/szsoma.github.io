@@ -31,6 +31,16 @@
     }
 </style>
 <link rel="shortcut icon" type="image/png" href="/assets/img/fav.png"/>
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:1339358,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
    <body>
        <div class="wrapper" id="blep">
           <header>
@@ -66,6 +76,85 @@
      </ul>
    </div>
 </header>
+<article class="blog">
+<style>
+  .design-system {
+    margin-bottom: 2em;
+  }
+  .design-system::before {
+    background-image: url('https://miro.medium.com/max/2000/1*dfSJ6Z8OXxriUq9oDJ95LA.png');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .design-system::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255,0,100,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .design-system-container,
+  .design-system-container::before,
+  .design-system-container::after {
+    height: 25rem;
+  }
+  .design-system-bleed-container,
+  .design-system-bleed-container::before,
+  .design-system-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .design-system-container,
+        .design-system-container::before,
+        .design-system-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="
+    post-title-container
+        design-system design-system-container hero-hov
+  ">
+   <div class="heading-container hero-heading hero-heading-blog">
+     <h1>
+          <a href="/posts/design-system" title="Design System, UI kit és miegymás 📐✏️">Design System, UI kit és miegymás 📐✏️</a>
+     </h1>
+     <div class="
+        post-meta
+      ">
+        <span>18/07/2019</span>
+        <span>
+              <a href="/tag/design">#design</a>
+              <a href="/tag/frontend">#frontend</a>
+              <a href="/tag/designsystem">#designsystem</a>
+        </span>
+        <span class="post-meta-link-nohero">
+    1 perc
+  </span>  
+     </div>
+   </div>
+ </div>
+     <p class="lead">Két hete kezdtem el dolgozni a CodersRank.io-nál és az első dolgunk az volt, hogy elkezdtünk építeni egy UI Kitet, hogy könnyítsünk és gyorsítsunk a jövőbeli munkákon. Erről tartok most egy kis beszámolót!
+
+
+       <div class="readmore">
+          <a href="/posts/design-system" role="button">Tovább</a>
+       <div>
+</article>
+ <hr>
 <article class="blog">
 <style>
   .wireframezes {
@@ -127,8 +216,10 @@
       ">
         <span>18/05/2019</span>
         <span>
-              <a href="/tag/news">#news</a>
-              <a href="/tag/tech">#tech</a>
+              <a href="/tag/ux">#ux</a>
+              <a href="/tag/design">#design</a>
+              <a href="/tag/designsystem">#designsystem</a>
+              <a href="/tag/productdesign">#productdesign</a>
         </span>
         <span class="post-meta-link-nohero">
     6 perc
@@ -205,9 +296,9 @@
       ">
         <span>31/01/2019</span>
         <span>
-              <a href="/tag/product design">#product design</a>
+              <a href="/tag/productdesign">#productdesign</a>
               <a href="/tag/tech">#tech</a>
-              <a href="/tag/UX">#UX</a>
+              <a href="/tag/ux">#ux</a>
               <a href="/tag/design">#design</a>
         </span>
         <span class="post-meta-link-nohero">
@@ -378,84 +469,6 @@
 
        <div class="readmore">
           <a href="/posts/idf-ux-kepzes" role="button">Tovább</a>
-       <div>
-</article>
- <hr>
-<article class="blog">
-<style>
-  .ux-tapasztalatok {
-    margin-bottom: 2em;
-  }
-  .ux-tapasztalatok::before {
-    background-image: url('https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-    background-size: cover;
-    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: -2;
-  }
-  .ux-tapasztalatok::after {
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgba(0,100,255,0.8);
-    /*mix-blend-mode: darken;
-    mix-blend-mode: color-burn;
-    mix-blend-mode: hard-light;*/
-    mix-blend-mode: overlay;
-    z-index: -1;
-  }
-  .ux-tapasztalatok-container,
-  .ux-tapasztalatok-container::before,
-  .ux-tapasztalatok-container::after {
-    height: 25rem;
-  }
-  .ux-tapasztalatok-bleed-container,
-  .ux-tapasztalatok-bleed-container::before,
-  .ux-tapasztalatok-bleed-container::after {
-    height: 35rem;
-  }
-    @media (max-width: 48rem) {
-        .ux-tapasztalatok-container,
-        .ux-tapasztalatok-container::before,
-        .ux-tapasztalatok-container::after{
-            height: 20rem;
-            margin-bottom: 3rem;
-        }
-    }
-</style>
- <div class="
-    post-title-container
-        ux-tapasztalatok ux-tapasztalatok-container hero-hov
-  ">
-   <div class="heading-container hero-heading hero-heading-blog">
-     <h1>
-          <a href="/posts/ux-tapasztalatok" title="UX tapasztalatok">UX tapasztalatok</a>
-     </h1>
-     <div class="
-        post-meta
-      ">
-        <span>23/09/2018</span>
-        <span>
-              <a href="/tag/design">#design</a>
-              <a href="/tag/UX">#UX</a>
-        </span>
-        <span class="post-meta-link-nohero">
-    10 perc
-</span>  
-     </div>
-   </div>
- </div>
-     <p class="lead"><em>Az információ ragályos és addiktív. Hajszolod, tanulsz, csinálod, szomjazod az új tudást, de egy idő után túlnő rajtad és megbénít. Teljesen megdermeszt és nem enged alkalmazkodni és tanulni.</em>
-
-
-       <div class="readmore">
-          <a href="/posts/ux-tapasztalatok" role="button">Tovább</a>
        <div>
 </article>
 <nav class="pagination" role="navigation">

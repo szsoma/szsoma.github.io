@@ -4,16 +4,16 @@
        <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<title>Tudásmegosztás for the win! &#9642; UIthings Blog</title>
-<meta name="description" content="Oszd meg, amit tanultál és tanulj belőle!
+<title>Design System, UI kit és miegymás 📐✏️ &#9642; UIthings Blog</title>
+<meta name="description" content="Két hete kezdtem el dolgozni a CodersRank.io-nál és az első dolgunk az volt, hogy elkezdtünk építeni egy UI Kitet, hogy könnyítsünk és gyorsítsunk a jövőbeli munkákon. Erről tartok most egy kis beszámolót!
 
 ">
 <meta name="description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
 ">
-<meta name="keywords" content="news, tech, blog, fejlodes">
-<link rel="canonical" href="http://localhost:4000/posts/tudasmegosztas">
+<meta name="keywords" content="design, frontend, designsystem">
+<link rel="canonical" href="http://localhost:4000/posts/design-system">
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Tudásmegosztás for the win!" />
+<meta name="twitter:title" content="Design System, UI kit és miegymás 📐✏️" />
 <meta name="twitter:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
 " />
 <meta name="twitter:image" content="http://localhost:4000" />
@@ -21,10 +21,10 @@
 <link rel="author" href="">
 <meta property="og:locale" content="">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Tudásmegosztás for the win!">
+<meta property="og:title" content="Design System, UI kit és miegymás 📐✏️">
 <meta property="og:description" content="© UIthings.hu - UI, UX, egy csöpp frontend és
 ">
-<meta property="og:url" content="http://localhost:4000/posts/tudasmegosztas">
+<meta property="og:url" content="http://localhost:4000/posts/design-system">
 <meta property="og:site_name" content="UIthings Blog">
 <link rel="stylesheet" href="/assets/vendor/normalize-css/normalize.css">
 <link rel="stylesheet" href="/assets/css/main.css">
@@ -107,11 +107,11 @@
 </script>
 <article class="post">
 <style>
-  .tudasmegosztas {
+  .design-system {
     margin-bottom: 2em;
   }
-  .tudasmegosztas::before {
-    background-image: url('https://images.unsplash.com/photo-1491186561459-68c36c4a54ae?auto=format&fit=crop&w=1352&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
+  .design-system::before {
+    background-image: url('https://miro.medium.com/max/2000/1*dfSJ6Z8OXxriUq9oDJ95LA.png');
     background-size: cover;
     -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
     content:'';
@@ -121,130 +121,126 @@
     top: 0;
     z-index: -2;
   }
-  .tudasmegosztas::after {
+  .design-system::after {
     content:'';
     position:absolute;
     width: 100%;
     left: 0;
     top: 0;
-    background-color: rgba(100,255,0,0.8);
+    background-color: rgba(255,0,100,0.8);
     /*mix-blend-mode: darken;
     mix-blend-mode: color-burn;
     mix-blend-mode: hard-light;*/
     mix-blend-mode: overlay;
     z-index: -1;
   }
-  .tudasmegosztas-container,
-  .tudasmegosztas-container::before,
-  .tudasmegosztas-container::after {
+  .design-system-container,
+  .design-system-container::before,
+  .design-system-container::after {
     height: 25rem;
   }
-  .tudasmegosztas-bleed-container,
-  .tudasmegosztas-bleed-container::before,
-  .tudasmegosztas-bleed-container::after {
+  .design-system-bleed-container,
+  .design-system-bleed-container::before,
+  .design-system-bleed-container::after {
     height: 35rem;
   }
     @media (max-width: 48rem) {
-        .tudasmegosztas-container,
-        .tudasmegosztas-container::before,
-        .tudasmegosztas-container::after{
+        .design-system-container,
+        .design-system-container::before,
+        .design-system-container::after{
             height: 20rem;
             margin-bottom: 3rem;
         }
     }
 </style>
  <div class="post-title-container
-  tudasmegosztas tudasmegosztas-bleed-container bleed-hero-container
+  design-system design-system-bleed-container bleed-hero-container
     ">
     <!--Post hero image source-->
    <div class="heading-container hero-heading hero-heading-post">
      <h1>
-          Tudásmegosztás for the win!
+          Design System, UI kit és miegymás 📐✏️
      </h1>
      <div class="post-meta">
-        <span>18/11/2017</span>
+        <span>18/07/2019</span>
         <span>
-              <a href="/tag/news">#news</a>
-              <a href="/tag/tech">#tech</a>
-              <a href="/tag/blog">#blog</a>
-              <a href="/tag/fejlodes">#fejlodes</a>
+              <a href="/tag/design">#design</a>
+              <a href="/tag/frontend">#frontend</a>
+              <a href="/tag/designsystem">#designsystem</a>
         </span>
         <span class="post-meta-link-nohero">
-    3 perc
-</span>  
+    1 perc
+  </span>  
      </div>
    </div>
  </div>
-   <p class="lead">Oszd meg, amit tanultál és tanulj belőle!
+   <p class="lead">Két hete kezdtem el dolgozni a CodersRank.io-nál és az első dolgunk az volt, hogy elkezdtünk építeni egy UI Kitet, hogy könnyítsünk és gyorsítsunk a jövőbeli munkákon. Erről tartok most egy kis beszámolót!
 <!--break-->
 
-<p>Mostanában rengeteg podcastot hallgatok. Köztük van a <a href="http://www.szertar.com/" target="_blank">Szertár</a> is. Eszméletlen érdekes témákban készítik a beszélgetéseket, mindig valamilyen szaktekintéllyel. A jó pár végighallgatott adás valamelyikében volt, hogy az ember azért is tudott ugrásszerűen fejlődni, mert képes volt megosztani a többiekkel a tapasztalatait. Például, hogy
+<h2 id="komponens-">Komponens 📦</h2>
+<p>A számítógépek fejlődésével a szoftver programozásban egyre nagyobb káosz kerekedett. A fejlesztők sorra vesztek el a sok egyedi kódrészletben mígnem Douglas McIlroy 1968-ban bemutatta a komponens alapú programozást. A komponensek újrafelhasználható kódrészletek, amik felgyorsították a fejlesztéseket.
+
+<p>A szoftver design iparban is valami hasonló zajlott le az utóbbi években. A komponenseket már ismertük az újhullámos design szoftverek előtt is, hiszen a Photoshop Smart Object-jei már tulajdonképpen komponensek voltak. Mégis a nagy változást a 2010-ben megjelent Sketch hozta el. Sokkal nagyobb hangsúlyt fektettek a komponens alapú designra ezért a software népszerűsége ugrásszerűen nőtt lassan veszélyeztetve a Photoshop egyeduralmát a webdesignban.
+
+<p>Mivel a Photoshop nem webdesign eszközként született, egy csomó mindent meg lehet vele oldani, amit amúgy front-end szempontból nem…
 
 <blockquote>
- <p>kipurcant egy mamut a dombon túl és menjünk szedjük ki a csülkét mielőtt jön a kardfogú tigris és felzabálja!
+ <p>“It is possible to design impossible things.” - Adobe Photoshop
 </blockquote>
 
-<p>Vagy valami ilyesmi…
+<!--
+## Link
+<a href="" target="_blank">blbkj</a>
 
-<p>Az ember életében mindig nagyon fontos volt a tapasztalatok és a tudás megosztása. Sok tízezer éven keresztül az emlékezet volt az egyetlen információtároló. Ahogy fejlődött a kultúránk egyre nagyobb igény lett a tudás megőrzésére. Kialakult az írás, ami mindent megváltoztatott.
+## Kép
+![800x400](https://soma.shoprenter.hu/custom/soma/image/data/liquid.jpg "liquid mukodese")
 
-<p><img src="https://images.unsplash.com/photo-1468779036391-52341f60b55d?auto=format&amp;fit=crop&amp;w=1521&amp;q=60&amp;ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="800x400" title="books" />
+## Képal áírással
+| ![800x400](https://www.pic.png "css grid anno 2011") |
+|:--:|
+| *<center>Képaláírás.</center>* |
 
-<p>Kis idő után a következő nagy lépés a könyvnyomtatás volt. Majd jött a távközlés forradalma végül az elektronikus információfeldolgozás korszaka.
+## Info
+Bibendum nulla sed consectetur.
+{: .notice}
 
-<p>Olvastam egy cikket<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>, hogy 2016-ban KB 4.66 billió weboldal volt a világhálón. És ebben nincs benne a DeepWeb. A weben tárolt adatokat pedig már a zettabyte-okban lehet mérni.
+## Footnote
+Valami[^1]
 
-<p>A mai IT világban tudásmegosztás nélkül elég nehéz lenne fejlődni. Cikkeket olvasunk, blogokat bújunk, konferenciákra járunk, hogy megismerjük az új technológiákat, praktikákat, trendeket, módszereket. Egy nagy önfejlődő hálózat vagyunk, ahol mindenki tud tanulni a másiktól. Ehhez viszont be kell kapcsolódnunk ebbe a hálózatba!
+## Forrás:
+<sub>A kép forrása</sub>
 
-<p>Szerencsére rengeteg olyan ember és oldal van, mint a Udemy, Udacity, Codepen, CSS-Tricks, FreeCodeCamp, Behance, Dribble, Kolboid, Stackoverflow, a Mediumon publikálók és sok-sok bloggertárs. Ezektől a közösségektől rengeteget tanultam az elmúlt évben és sokat formálódott a hozzáállásom is. Most megpróbálok én is tudást és tapasztalatot megosztani, hátha valakinek hasznos lesz. Már csak azért is, mert ha megosztunk egy témában valamit, akkor abban el kell merülni, utána kell olvasni. És ezzel pedig magadat is fejleszted. Mindemellett új kapcsolatokat építhetsz ki, talán egy kisebb közösség is köréd gyűlik és valljuk be: self marketingnek sem rossz! 👨‍💻
-
-<p>Le kell győzni azt az érzést, hogy ha megosztod a világgal a praktikáid, akkor már nem kellesz majd senkinek. Ez valószínű, hogy inkább pont fordítva lesz. Az embereknek imponál és később nem csak mások, de a saját hasznodra is válik. Ez is arra sarkall, hogy még jobb legyél a szakmában.
-
-<p><img src="http://new.canny-creative.com/wp-content/uploads/2014/04/How-to-Choose-a-Graphic-Design-Agency1.jpg" alt="800x400" title="bulbs" />
-
-<p>Szóval ideje megreformálni a hozzáállást, kilépni a komfortzónából és letenni valamit az asztalra! Belevágni új dolgok tanulásába, gyártani a projekteket és előadni, írni róluk, hogy aztán nagy beszélgetések szülessenek belőle. Ez fog minket előre lendíteni.
-
-<p><sub>
-	Képek: Unsplash <br />
-	Ihlet: <a href="https://blog.kolboid.eu/" target="_blank">Kolboid</a>
-</sub>
-
-<div class="footnotes">
- <ol>
-   <li id="fn:1">
-     <p><a href="https://www.livescience.com/54094-how-big-is-the-internet.html">How Big Is the Internet, Really?</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a>
-    
- </ol>
-</div>
+[^1]: Footnote valami csoda
+-->
 
 </article>
 <div class="share-btn">
     <span> Köszi, hogy elolvastad. Oszd meg a barátaiddal is!</span> <br>
-    <a href="https://twitter.com/intent/tweet?text=Tudásmegosztás for the win!&url=http://localhost:4000/posts/tudasmegosztas&via=szs0ma&related=szs0ma" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
-    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/posts/tudasmegosztas" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://twitter.com/intent/tweet?text=Design System, UI kit és miegymás 📐✏️&url=http://localhost:4000/posts/design-system&via=szs0ma&related=szs0ma" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://facebook.com/sharer.php?u=http://localhost:4000/posts/design-system" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
 </div>
 <aside class="related">
 <h2>Related posts</h2>
 <ul class="related-posts">
    <li>
-    <a href="/posts/illusztracio">
-        <span>iPad-et vettem</span>
-        <small>17/09</small>
+    <a href="/posts/wireframezes">
+        <span>Tényleg szükségünk van wireframezésre? ✏️</span>
+        <small>18/05</small>
     </a>
    <li>
-    <a href="/posts/podcaster-felmeres">
-        <span>Podcaster Felmérés</span>
-        <small>07/09</small>
+    <a href="/posts/cssgrid-2">
+        <span>CSS Grid Layout Part2 - Alapok</span>
+        <small>29/12</small>
     </a>
    <li>
-    <a href="/posts/podcast-update-1">
-        <span>Esti Meeting update</span>
-        <small>07/06</small>
+    <a href="/posts/cssgrid">
+        <span>CSS Grid Layout Part1 - Kezdetek</span>
+        <small>26/12</small>
     </a>
    <li>
-    <a href="/posts/estimeeting">
-        <span>Egy Esti Meeting</span>
-        <small>20/02</small>
+    <a href="/posts/luckywheel-popup">
+        <span>Éles a szerencsekerekünk!</span>
+        <small>26/11</small>
     </a>
 </aside>
 <div id="disqus_thread"></div>

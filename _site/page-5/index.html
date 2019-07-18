@@ -31,6 +31,16 @@
     }
 </style>
 <link rel="shortcut icon" type="image/png" href="/assets/img/fav.png"/>
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:1339358,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
    <body>
        <div class="wrapper" id="blep">
           <header>
@@ -66,6 +76,86 @@
      </ul>
    </div>
 </header>
+<article class="blog">
+<style>
+  .tudasmegosztas {
+    margin-bottom: 2em;
+  }
+  .tudasmegosztas::before {
+    background-image: url('https://images.unsplash.com/photo-1491186561459-68c36c4a54ae?auto=format&fit=crop&w=1352&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .tudasmegosztas::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(100,255,0,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .tudasmegosztas-container,
+  .tudasmegosztas-container::before,
+  .tudasmegosztas-container::after {
+    height: 25rem;
+  }
+  .tudasmegosztas-bleed-container,
+  .tudasmegosztas-bleed-container::before,
+  .tudasmegosztas-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .tudasmegosztas-container,
+        .tudasmegosztas-container::before,
+        .tudasmegosztas-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="
+    post-title-container
+        tudasmegosztas tudasmegosztas-container hero-hov
+  ">
+   <div class="heading-container hero-heading hero-heading-blog">
+     <h1>
+          <a href="/posts/tudasmegosztas" title="Tudásmegosztás for the win!">Tudásmegosztás for the win!</a>
+     </h1>
+     <div class="
+        post-meta
+      ">
+        <span>18/11/2017</span>
+        <span>
+              <a href="/tag/news">#news</a>
+              <a href="/tag/tech">#tech</a>
+              <a href="/tag/blog">#blog</a>
+              <a href="/tag/fejlodes">#fejlodes</a>
+        </span>
+        <span class="post-meta-link-nohero">
+    3 perc
+</span>  
+     </div>
+   </div>
+ </div>
+     <p class="lead">Oszd meg, amit tanultál és tanulj belőle!
+
+
+       <div class="readmore">
+          <a href="/posts/tudasmegosztas" role="button">Tovább</a>
+       <div>
+</article>
+ <hr>
 <article class="blog">
 <style>
   .bb8 {
@@ -383,85 +473,6 @@ Aztán megcsináltam én is <strong>BB8</strong>-et…
 
        <div class="readmore">
           <a href="/posts/luckywheel" role="button">Tovább</a>
-       <div>
-</article>
- <hr>
-<article class="blog">
-<style>
-  .figma-zeplin {
-    margin-bottom: 2em;
-  }
-  .figma-zeplin::before {
-    background-image: url('/assets/img/figma-zeplin.jpg');
-    background-size: cover;
-    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: -2;
-  }
-  .figma-zeplin::after {
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgba(100,0,255,0.8);
-    /*mix-blend-mode: darken;
-    mix-blend-mode: color-burn;
-    mix-blend-mode: hard-light;*/
-    mix-blend-mode: overlay;
-    z-index: -1;
-  }
-  .figma-zeplin-container,
-  .figma-zeplin-container::before,
-  .figma-zeplin-container::after {
-    height: 25rem;
-  }
-  .figma-zeplin-bleed-container,
-  .figma-zeplin-bleed-container::before,
-  .figma-zeplin-bleed-container::after {
-    height: 35rem;
-  }
-    @media (max-width: 48rem) {
-        .figma-zeplin-container,
-        .figma-zeplin-container::before,
-        .figma-zeplin-container::after{
-            height: 20rem;
-            margin-bottom: 3rem;
-        }
-    }
-</style>
- <div class="
-    post-title-container
-        figma-zeplin figma-zeplin-container hero-hov
-  ">
-   <div class="heading-container hero-heading hero-heading-blog">
-     <h1>
-          <a href="/posts/figma-zeplin" title="Itt a Zeplin ↔ Figma integráció!">Itt a Zeplin ↔ Figma integráció!</a>
-     </h1>
-     <div class="
-        post-meta
-      ">
-        <span>29/10/2017</span>
-        <span>
-              <a href="/tag/ux">#ux</a>
-              <a href="/tag/design">#design</a>
-              <a href="/tag/ui">#ui</a>
-        </span>
-        <span class="post-meta-link-nohero">
-    1 perc
-  </span>  
-     </div>
-   </div>
- </div>
-     <p class="lead">Zeplinhez eddig Sketch és Photoshop plugin volt elérhető. Mostantól Figmában készült látványterveket is ki tudunk exportálni Zeplinbe. Így könnyítve meg a front-end fejlesztést! 👋
-
-
-       <div class="readmore">
-          <a href="/posts/figma-zeplin" role="button">Tovább</a>
        <div>
 </article>
 <nav class="pagination" role="navigation">

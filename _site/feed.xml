@@ -6,9 +6,63 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 23 May 2019 19:14:20 +0200</pubDate>
-    <lastBuildDate>Thu, 23 May 2019 19:14:20 +0200</lastBuildDate>
-    <generator>Jekyll v3.8.5</generator>
+    <pubDate>Thu, 18 Jul 2019 08:30:23 +0200</pubDate>
+    <lastBuildDate>Thu, 18 Jul 2019 08:30:23 +0200</lastBuildDate>
+    <generator>Jekyll v3.7.3</generator>
+    
+      <item>
+        <title>Design System, UI kit és miegymás 📐✏️</title>
+        <description>&lt;p class=&quot;lead&quot;&gt;Két hete kezdtem el dolgozni a CodersRank.io-nál és az első dolgunk az volt, hogy elkezdtünk építeni egy UI Kitet, hogy könnyítsünk és gyorsítsunk a jövőbeli munkákon. Erről tartok most egy kis beszámolót!&lt;/p&gt;
+&lt;!--break--&gt;
+
+&lt;h2 id=&quot;komponens-&quot;&gt;Komponens 📦&lt;/h2&gt;
+&lt;p&gt;A számítógépek fejlődésével a szoftver programozásban egyre nagyobb káosz kerekedett. A fejlesztők sorra vesztek el a sok egyedi kódrészletben mígnem Douglas McIlroy 1968-ban bemutatta a komponens alapú programozást. A komponensek újrafelhasználható kódrészletek, amik felgyorsították a fejlesztéseket.&lt;/p&gt;
+
+&lt;p&gt;A szoftver design iparban is valami hasonló zajlott le az utóbbi években. A komponenseket már ismertük az újhullámos design szoftverek előtt is, hiszen a Photoshop Smart Object-jei már tulajdonképpen komponensek voltak. Mégis a nagy változást a 2010-ben megjelent Sketch hozta el. Sokkal nagyobb hangsúlyt fektettek a komponens alapú designra ezért a software népszerűsége ugrásszerűen nőtt lassan veszélyeztetve a Photoshop egyeduralmát a webdesignban.&lt;/p&gt;
+
+&lt;p&gt;Mivel a Photoshop nem webdesign eszközként született, egy csomó mindent meg lehet vele oldani, amit amúgy front-end szempontból nem…&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“It is possible to design impossible things.” - Adobe Photoshop&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;!--
+## Link
+&lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;blbkj&lt;/a&gt;
+
+## Kép
+![800x400](https://soma.shoprenter.hu/custom/soma/image/data/liquid.jpg &quot;liquid mukodese&quot;)
+
+## Képal áírással
+| ![800x400](https://www.pic.png &quot;css grid anno 2011&quot;) |
+|:--:|
+| *&lt;center&gt;Képaláírás.&lt;/center&gt;* |
+
+## Info
+Bibendum nulla sed consectetur.
+{: .notice}
+
+## Footnote
+Valami[^1]
+
+## Forrás:
+&lt;sub&gt;A kép forrása&lt;/sub&gt;
+
+[^1]: Footnote valami csoda
+--&gt;
+</description>
+        <pubDate>Thu, 18 Jul 2019 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/posts/design-system</link>
+        <guid isPermaLink="true">http://localhost:4000/posts/design-system</guid>
+        
+        <category>design</category>
+        
+        <category>frontend</category>
+        
+        <category>designsystem</category>
+        
+        
+      </item>
     
       <item>
         <title>Tényleg szükségünk van wireframezésre? ✏️</title>
@@ -110,9 +164,13 @@
         <link>http://localhost:4000/posts/wireframezes</link>
         <guid isPermaLink="true">http://localhost:4000/posts/wireframezes</guid>
         
-        <category>news</category>
+        <category>ux</category>
         
-        <category>tech</category>
+        <category>design</category>
+        
+        <category>designsystem</category>
+        
+        <category>productdesign</category>
         
         
       </item>
@@ -237,11 +295,11 @@ Szerencsésebb esetben a gyors moduláris designnak köszönhetően még maradha
         <link>http://localhost:4000/posts/dual-track-design</link>
         <guid isPermaLink="true">http://localhost:4000/posts/dual-track-design</guid>
         
-        <category>product design</category>
+        <category>productdesign</category>
         
         <category>tech</category>
         
-        <category>UX</category>
+        <category>ux</category>
         
         <category>design</category>
         
@@ -705,51 +763,6 @@ Jó tervezést, pre validálást! Remélem hasznos lesz számotokra! 😉&lt;/p&
         <category>design</category>
         
         <category>sprint</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Egy Esti Meeting</title>
-        <description>&lt;p class=&quot;lead&quot;&gt;Egy szilveszteri lan party közepette született podcast…&lt;/p&gt;
-&lt;!--break--&gt;
-
-&lt;p&gt;December végén szoktunk tartani egy lan partit, aminek apropóján összegyűlnek az Innonic kockái és pizzazás közepette mindenféle játékokkal játszanak. Most főleg CS GO volt terítéken.&lt;/p&gt;
-
-&lt;p&gt;Itt találkoztam egy gyors köszönésre Kovács Lalival, aki fejlesztő nálunk (back-end/front-end). Meséltem neki a blogról és hogy először podcastban gondolkodtam, de igazából egyedül felesleges volt belevágnom. Így keveredtünk el a podcast témakörhöz.&lt;/p&gt;
-
-&lt;p&gt;Egy kis csend után végül mégis arra jutottunk, hogy nekünk csinálni kéne egy podcastot. 🎙 &lt;br /&gt;
-Berendeltünk egy jó kis mikrofont és elkezdtük tesztelgetni. A felvételhez &lt;a href=&quot;https://www.zencastr.com&quot; target=&quot;_blank&quot;&gt;Zencastr&lt;/a&gt;-t fogunk használni. Itt online vehetjük fel az adásokat és még backupol is Dropboxba. Egy másik jó funkciója, hogy automatikusan beállítja a zajszűrést és a gaint. Tudom ajánlani nektek is! 😉&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://static1.squarespace.com/static/559529cae4b01f9a920c6236/t/58320037e58c625a737c7025/1479671882066/?format=750w&quot; alt=&quot;800x400&quot; title=&quot;Zencastr.com banner&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Nem is húznám az időt, itt van az első rész - ami még nem túl kiforrott, de simán lesz jobb is! 😊 Fogadjátok szeretettel: &lt;br /&gt;&lt;/p&gt;
-&lt;h&gt;
-
-&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; allow=&quot;autoplay&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/400993659&amp;amp;color=%236454ac&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&amp;amp;show_teaser=true&quot;&gt;&lt;/iframe&gt;
-
-&lt;h&gt;
-
-Shownotes &lt;br /&gt;
-Soma bevásárlás előtt, Lali fejlesztői tapasztalatai macOS alatt. &lt;br /&gt;
-Próbálgatjuk a Figma-t és addiktív, kraftolós játék a Ylands. &lt;br /&gt;
-&lt;a href=&quot;https://www.figma.com&quot; target=&quot;_blank&quot;&gt;Figma&lt;/a&gt; &lt;br /&gt;
-&lt;a href=&quot;www.innonic.com/academy-kovacs-lajos/&quot; targe=&quot;&quot; t=&quot;_blank&quot;&gt;Neo4J előadás&lt;/a&gt; &lt;br /&gt;
-&lt;a href=&quot;www.neo4j.com&quot; target=&quot;_blank&quot;&gt;Neo4J&lt;/a&gt; &lt;br /&gt;
-&lt;a href=&quot;www.ylands.com&quot; target=&quot;_blank&quot;&gt;Ylands&lt;/a&gt; &lt;br /&gt;
-
-&lt;sub&gt;Képek: Unsplash.com&lt;/sub&gt;
-&lt;/h&gt;&lt;/h&gt;
-</description>
-        <pubDate>Tue, 20 Feb 2018 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/posts/estimeeting</link>
-        <guid isPermaLink="true">http://localhost:4000/posts/estimeeting</guid>
-        
-        <category>blog</category>
-        
-        <category>podcast</category>
-        
-        <category>news</category>
         
         
       </item>

@@ -31,6 +31,16 @@
     }
 </style>
 <link rel="shortcut icon" type="image/png" href="/assets/img/fav.png"/>
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:1339358,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
    <body>
        <div class="wrapper" id="blep">
           <header>
@@ -66,6 +76,85 @@
      </ul>
    </div>
 </header>
+<article class="blog">
+<style>
+  .estimeeting {
+    margin-bottom: 2em;
+  }
+  .estimeeting::before {
+    background-image: url('https://images.pexels.com/photos/55800/microphone-audio-computer-sound-recording-55800.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -2;
+  }
+  .estimeeting::after {
+    content:'';
+    position:absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(100,0,255,0.8);
+    /*mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: hard-light;*/
+    mix-blend-mode: overlay;
+    z-index: -1;
+  }
+  .estimeeting-container,
+  .estimeeting-container::before,
+  .estimeeting-container::after {
+    height: 25rem;
+  }
+  .estimeeting-bleed-container,
+  .estimeeting-bleed-container::before,
+  .estimeeting-bleed-container::after {
+    height: 35rem;
+  }
+    @media (max-width: 48rem) {
+        .estimeeting-container,
+        .estimeeting-container::before,
+        .estimeeting-container::after{
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+ <div class="
+    post-title-container
+        estimeeting estimeeting-container hero-hov
+  ">
+   <div class="heading-container hero-heading hero-heading-blog">
+     <h1>
+          <a href="/posts/estimeeting" title="Egy Esti Meeting">Egy Esti Meeting</a>
+     </h1>
+     <div class="
+        post-meta
+      ">
+        <span>20/02/2018</span>
+        <span>
+              <a href="/tag/blog">#blog</a>
+              <a href="/tag/podcast">#podcast</a>
+              <a href="/tag/news">#news</a>
+        </span>
+        <span class="post-meta-link-nohero">
+    1 perc
+  </span>  
+     </div>
+   </div>
+ </div>
+     <p class="lead">Egy szilveszteri lan party közepette született podcast…
+
+
+       <div class="readmore">
+          <a href="/posts/estimeeting" role="button">Tovább</a>
+       <div>
+</article>
+ <hr>
 <article class="blog">
 <style>
   .update {
@@ -379,87 +468,6 @@ Ebben a postban megmutatom az alapokat egy példán át és még egy layout chal
 
        <div class="readmore">
           <a href="/posts/cssgrid-2" role="button">Tovább</a>
-       <div>
-</article>
- <hr>
-<article class="blog">
-<style>
-  .cssgrid {
-    margin-bottom: 2em;
-  }
-  .cssgrid::before {
-    background-image: url('https://images.unsplash.com/photo-1458608840153-2f87e0418d50?auto=format&fit=crop&w=704&q=80');
-    background-size: cover;
-    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: -2;
-  }
-  .cssgrid::after {
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgba(255,100,0,0.8);
-    /*mix-blend-mode: darken;
-    mix-blend-mode: color-burn;
-    mix-blend-mode: hard-light;*/
-    mix-blend-mode: overlay;
-    z-index: -1;
-  }
-  .cssgrid-container,
-  .cssgrid-container::before,
-  .cssgrid-container::after {
-    height: 25rem;
-  }
-  .cssgrid-bleed-container,
-  .cssgrid-bleed-container::before,
-  .cssgrid-bleed-container::after {
-    height: 35rem;
-  }
-    @media (max-width: 48rem) {
-        .cssgrid-container,
-        .cssgrid-container::before,
-        .cssgrid-container::after{
-            height: 20rem;
-            margin-bottom: 3rem;
-        }
-    }
-</style>
- <div class="
-    post-title-container
-        cssgrid cssgrid-container hero-hov
-  ">
-   <div class="heading-container hero-heading hero-heading-blog">
-     <h1>
-          <a href="/posts/cssgrid" title="CSS Grid Layout Part1 - Kezdetek">CSS Grid Layout Part1 - Kezdetek</a>
-     </h1>
-     <div class="
-        post-meta
-      ">
-        <span>26/12/2017</span>
-        <span>
-              <a href="/tag/frontend">#frontend</a>
-              <a href="/tag/ui">#ui</a>
-              <a href="/tag/design">#design</a>
-              <a href="/tag/grid">#grid</a>
-        </span>
-        <span class="post-meta-link-nohero">
-    7 perc
-</span>  
-     </div>
-   </div>
- </div>
-     <p class="lead">Grid layout témában hetente jönnek ki a cikkek, tutoriálok és előadások. Kíváncsi voltam, hogy is néz ez ki gyakorlatban ezért kicsit beleástam magam - grafikus szemmel. <br />
-Továbbá: karácsonyi ömlengések, podcast gyanús tervek és UIthings.hu start! 😫
-
-
-       <div class="readmore">
-          <a href="/posts/cssgrid" role="button">Tovább</a>
        <div>
 </article>
 <nav class="pagination" role="navigation">
