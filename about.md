@@ -23,7 +23,7 @@ Soma, full-stack designer, kocka, podcast host, próbálkozó. Szeret SVG-vel b�
 ### A blog célja
 Megosztani a gondolataimat, tapasztalataimat UI, UX és frontend fejlesztés témakörében. Bízom benne, hogy a blog írásával fejlődni fogok és új embereket megismerni.
 
-<a href="https://uithings.hu/me" target="_blank">A portfóliómat itt találod</a>
+<a href="https://uithings.hu" target="_blank">A portfóliómat itt találod</a>
 
 Nézz be ide is: <a href="https://codepen.io/szsoma" target="_blank">Codepen</a>
 
